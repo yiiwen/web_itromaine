@@ -478,9 +478,9 @@
         <div class="container">
         <div class="row">
             <div class="col-md-10">
-            <p>联系地址：广东省某某xxxxxxxxxxxxxxxxxxxxxxxxx 联系电话：400-xxx-xxxx</p>
-            <p>Copyright © 2009-2017,www.xxxxxx.com,All rights reserved  版权所有 © 您的网站名称</p>
-            <p>备案号：粤ICP备XXXXXX号</p>
+            <p>联系地址：广东省广州市南沙区丰泽东路106号  联系电话：15818848247</p>
+            <p>Copyright © 2018-2030,www.itromaine.com,All rights reserved  版权所有 © 您的网站名称</p>
+            <p>备案号：粤ICP备18091280号</p>
             </div>
             <div class="col-md-2">
             <img src="images/qr_code.png" class="qr_code" alt="">
