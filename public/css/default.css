@@ -30,8 +30,12 @@
 
 .logo{
   float:left;
-  margin-top:10px;
 }
+
+.logo img{
+  width: 220px;
+}
+
 .nav-container{
   float: right;
   height: 100%;
@@ -74,8 +78,13 @@
   padding-top: 3%;
 }
 
-.slide-content h2,.slide-content p,.slide-content h4{
+.slide-content h2,.slide-content p,.slide-content h3{
   color: #FFF !important;
+}
+
+.slide-content p{
+  width: 800px;
+  margin:0 auto;
 }
 
 .slide-content h2{
@@ -115,14 +124,15 @@
 
 /* our service */
 .services{
-  height: 320px;
+  height: 360px;
 }
 
 .english-title{
   text-align: center;
   font-weight: bold;
-  font-size: 2.5em;
-  color: #CCC;
+  font-size: 3em;
+  color: #d4d0d0;
+  height: 1.8em;
 }
 
 .chinese-title{
@@ -146,6 +156,9 @@
 .service-item{
   width: 280px;
   padding:10px;
+  -moz-transition: transform 1s;
+  -webkit-transition: transform 1s;	/* Safari 和 Chrome */
+  transition:transform 1s;	/* Firefox */
 }
 
 .service-item img{
@@ -184,6 +197,12 @@
 .about-us-right{
   width: 600px;
   left: 600px;
+  top: -20px;
+  transition: transform 1s;
+  -ms-transition: transform 1s;		/* IE 9 */
+  -webkit-transition: transform 1s;/* Safari and Chrome */
+  -o-transition: transform 1s;		/* Opera */
+  -moz-transition: transform 1s;		/* Firefox */
 }
 
 .about-us .english-title{
@@ -231,15 +250,16 @@
 
 .case-show{
   margin-top: 100px;
-  height: 800px;
+  height: 700px;
 }
 
 .case-show .relative{
-  height: 330px;
+  height: 300px;
 }
 
 .case-item{
-  width: 400px;
+  width: 370px;
+  height: 285px;
   position: absolute;
   padding:5px;
 }
@@ -374,24 +394,27 @@
 
 .new-content p {
   color: #938f8f !important;
+  width: 900px;
 }
 
-.logos{
-  background: #F2F2F2;
-}
+
 
 .logos li{
   list-style: none;
   float:left;
+  width: 220px;
+  text-align: center;
+  margin-top: 10px;
 }
 
 .logos li img{
-  width:150px;
+  width:200px;
 }
 
 .bottom-info{
   background: rgb(57,207,204);
   padding:20px;
+  margin-top: 30px;
 }
 
 .bottom-info p{
@@ -698,9 +721,56 @@
   list-style: none;
 }
 
-.case-img img{
+.case-img-container{
+  left:0;
+  top: 0;
+  position: relative;
+  height: 217px;
+  overflow: hidden;
+}
+
+.case-img-show{
+  position: absolute;
+  left: 0;
+  top: 0;
+  -moz-transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s;	/* Safari 和 Chrome */
+  transition:opacity 0.5s;	/* Firefox */
+}
+
+.case-img-hidden{
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #39cfcc;
+  z-index: -1;
+}
+
+.case-img-show img, .case-img-hidden img{
   width: 100%;
 }
+
+.case-text{
+    margin-top: 5px;
+    padding-left: 5px;
+}
+
+.case-text h4{
+  margin-bottom: 5px !important;
+}
+
+.case-text p{
+  height: 21px;
+	margin-top: 2px;
+	line-height: 21px;
+	font-size: 1em;
+	overflow : hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+
 .case h4{
   text-align: center;
 }
@@ -935,4 +1005,30 @@
   position: absolute;
   top: 50px;
   left:510px;
+}
+
+
+
+
+/*******animal*********/
+
+
+.service-item:hover{
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);	/* Safari 和 Chrome */
+  -moz-transform: rotateY(180deg);	/* Firefox */
+}
+
+
+.about-us-right:hover{
+  transform: translate(0px,-50px);
+  -ms-transform: translate(0px,-50px);		/* IE 9 */
+  -webkit-transform: translate(0px,-50px);	/* Safari and Chrome */
+  -o-transform: translate(0px,-50px);		/* Opera */
+  -moz-transform: translate(0px,-50px);		/* Firefox */
+}
+
+
+.case-item:hover .case-img-show{
+  opacity: 0.1;
 }
