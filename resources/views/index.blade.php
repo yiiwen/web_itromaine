@@ -1,21 +1,6 @@
 @include('header')
 <div class="content">
-    <div class="top-nav">
-        <div class="logo">
-        <img src="images/logo.png" alt="">
-        </div>
-        <div class="nav-container">
-        <ul>
-            <li><a href="#">首页</a></li>
-            <li><a href="#">关于我们</a></li>
-            <li><a href="#">服务范围</a></li>
-            <li><a href="#">案例展示</a></li>
-            <li><a href="#">新闻动态</a></li>
-            <li><a href="#">联系我们</a></li>
-            <div style="clear:both;"></div>
-        </ul>
-        </div>
-    </div>
+    @include('nav')
     <div class="banner">
         <div class="swiper-container">
         <div class="swiper-wrapper">
@@ -474,19 +459,4 @@
         </div>
     </div>
 
-    <div class="bottom-info">
-        <div class="container">
-        <div class="row">
-            <div class="col-md-10">
-            <p>联系地址：广东省广州市南沙区丰泽东路106号  联系电话：15818848247</p>
-            <p>Copyright © 2018-2030,www.itromaine.com,All rights reserved  版权所有 © 您的网站名称</p>
-            <p>备案号：粤ICP备18091280号</p>
-            </div>
-            <div class="col-md-2">
-            <img src="images/qr_code.png" class="qr_code" alt="">
-            </div>
-        </div>
-        </div>
-    </div>
-</div>
 @include('footer')
