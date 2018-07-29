@@ -225,37 +225,36 @@
         <div class="section-seperator"></div>
         <div class="section-content">
             <div class="relative">
-            <div class="absolute" style="width:700px;left:0;">
-                <img src="images/P14_8gis.png" class="advantage-img" alt="">
-            </div>
-            <div class="absolute" style="width:450px;left:750px;">
-                <ul class="advantage-item">
-                <li>
-                    <img src="images/01_399n.png" class="advantage-item-img" alt="">
-                    <span class="advantage-item-title">10年建站经验</span>
-                    <div class="advantage-item-text">
-                    丰富的网站建设经验，一对一网页设计及售后对接，为您的网站创造商业价值。
-                    </div>
-                </li>
-                <li>
-                    <img src="images/01_399n.png" class="advantage-item-img" alt="">
-                    <span class="advantage-item-title">300+客户选择</span>
-                    <div class="advantage-item-text">
-                    300+客户选择与我们合作，告诉您选择我们是一个正确的选择。
-                    </div>
-                </li>
-                <li>
-                    <img src="images/01_399n.png" class="advantage-item-img" alt="">
-                    <span class="advantage-item-title">24小时售后支持</span>
-                    <div class="advantage-item-text">
-                    提供24小时售后支持，为您保驾护航，不用担心出现问题无法解决。
-                    </div>
-                </li>
-                </ul>
-            </div>
+                <div class="absolute advancetage" style="width:700px;left:0;">
+                    <img src="/images/P14_8gis.png" class="advantage-img" alt="">
+                </div>
+                <div class="absolute" style="width:450px;left:750px;">
+                    <ul class="advantage-item">
+                        <li>
+                            <img src="images/01_399n.png" class="advantage-item-img" alt="">
+                            <span class="advantage-item-title">10年建站经验</span>
+                            <div class="advantage-item-text">
+                            丰富的网站建设经验，一对一网页设计及售后对接，为您的网站创造商业价值。
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/01_399n.png" class="advantage-item-img" alt="">
+                            <span class="advantage-item-title">300+客户选择</span>
+                            <div class="advantage-item-text">
+                            300+客户选择与我们合作，告诉您选择我们是一个正确的选择。
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/01_399n.png" class="advantage-item-img" alt="">
+                            <span class="advantage-item-title">24小时售后支持</span>
+                            <div class="advantage-item-text">
+                            提供24小时售后支持，为您保驾护航，不用担心出现问题无法解决。
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-
         </div>
     </div>
 

@@ -7,11 +7,27 @@
                     <p>备案号：粤ICP备18091280号</p>
                     </div>
                     <div class="col-md-2">
-                    <img src="/images/qr_code.png" class="qr_code" alt="">
+                    <img src="/images/qrcode.jpg" class="qr_code" alt="">
                     </div>
                 </div>
                 </div>
             </div>
+        </div>
+        <div class="right-nav">
+            <ul>
+                <li>
+                    <img src="/images/right/search.png" alt="">
+                </li>
+                <li>
+                    <img src="/images/right/message.png" alt="">
+                </li>
+                <li>
+                    <img src="/images/right/service.png" alt="">
+                </li>
+                <li>
+                    <img src="/images/right/top.png" alt="">
+                </li>
+            </ul>
         </div>
         <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
         <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>

@@ -24,12 +24,12 @@
             </div>
             <div class="call-me-bottom">
               <div class="call-me-bottom-left">
-                <img src="images/qr_layer56C31F7A71D5AAAEDFEA496968438651.png" alt="">
+                <img src="images/qrcode.jpg" alt="">
               </div>
               <div class="call-me-bottom-right">
-                <h4>联系地址：广东省某某xxxxxxxxxxxxxxxxxxxxxxxxxx</h4>
-                <h4>联系电话：400-000-0000</h4>
-                <h4>联系邮箱：xxxxx@qq.com</h4>
+                <h4>联系地址：广东省广州市南沙区丰泽东路106号</h4>
+                <h4>联系电话：15818848247</h4>
+                <h4>联系邮箱：youmaicai@163.com</h4>
               </div>
             </div>
           </div>
@@ -49,6 +49,17 @@
           var point = new BMap.Point(116.395645,39.929986);//定义一个中心点坐标
           map.centerAndZoom(point,12);//设定地图的中心点和坐标并将地图显示在地图容器中
           window.map = map;//将map变量存储在全局
+          // 创建地址解析器实例
+          var myGeo = new BMap.Geocoder();
+          // 将地址解析结果显示在地图上,并调整地图视野
+          myGeo.getPoint("广东省广州市南沙区丰泽东路106号", function(point){
+            if (point) {
+              map.centerAndZoom(point, 16);
+              map.addOverlay(new BMap.Marker(point));
+            }else{
+              alert("您选择地址没有解析到结果!");
+            }
+          }, "广东省");
       }
 
       //地图事件设置函数：
@@ -59,8 +70,8 @@
           map.enableKeyboard();//启用键盘上下左右键移动地图
       }
 
-      //地图控件添加函数：
-      function addMapControl(){
+    //地图控件添加函数：
+    function addMapControl(){
           //向地图中添加缩放控件
   	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
   	map.addControl(ctrl_nav);
@@ -69,8 +80,8 @@
   	map.addControl(ctrl_ove);
           //向地图中添加比例尺控件
   	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
-  	map.addControl(ctrl_sca);
-      }
+  	  map.addControl(ctrl_sca);
+    }
 
 
       initMap();//创建和初始化地图

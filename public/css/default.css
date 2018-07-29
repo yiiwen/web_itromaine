@@ -1008,6 +1008,49 @@
 }
 
 
+.advancetage {
+  transition: transform 0.7s;
+  -ms-transition: transform 0.7s;		/* IE 9 */
+  -webkit-transition: transform 0.7s;/* Safari and Chrome */
+  -o-transition: transform 0.7s;		/* Opera */
+  -moz-transition: transform 0.7s;		/* Firefox */
+}
+
+.advantage-item li {
+  transition: transform 0.3s;
+  -ms-transition: transform 0.3s;		/* IE 9 */
+  -webkit-transition: transform 0.3s;/* Safari and Chrome */
+  -o-transition: transform 0.3s;		/* Opera */
+  -moz-transition: transform 0.3s;		/* Firefox */
+}
+
+.right-nav{
+  position: fixed;
+  right:10px;
+  top:30%;
+  z-index: 9999;
+}
+
+.right-nav ul{
+  margin:0;
+  padding:0;
+}
+
+.right-nav li{
+  background: #CCC;
+  width: 50px;
+  height: 50px;
+  border-radius: 40px;
+  line-height: 50px;
+  margin-top: 10px;
+  list-style: none;
+  text-align: center;
+}
+
+.right-nav li img{
+  width: 80%;
+}
+
 
 
 /*******animal*********/
@@ -1026,6 +1069,22 @@
   -webkit-transform: translate(0px,-50px);	/* Safari and Chrome */
   -o-transform: translate(0px,-50px);		/* Opera */
   -moz-transform: translate(0px,-50px);		/* Firefox */
+}
+
+.advancetage:hover{
+  transform: translate(0px,-50px);
+  -ms-transform: translate(0px,-50px);		/* IE 9 */
+  -webkit-transform: translate(0px,-50px);	/* Safari and Chrome */
+  -o-transform: translate(0px,-50px);		/* Opera */
+  -moz-transform: translate(0px,-50px);		/* Firefox */
+}
+
+.advantage-item li:hover{
+  transform: translate(-15px,0px);
+  -ms-transform: translate(-15px,0px);		/* IE 9 */
+  -webkit-transform: translate(-15px,0px);	/* Safari and Chrome */
+  -o-transform: translate(-15px,0px);		/* Opera */
+  -moz-transform: translate(-15px,0px);		/* Firefox */
 }
 
 
