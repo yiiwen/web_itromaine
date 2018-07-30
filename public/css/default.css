@@ -1037,8 +1037,8 @@
 }
 
 .right-nav li{
-  background: #CCC;
-  width: 50px;
+  background: rgba(0, 0, 0, 0.3);
+  width: 50px;  
   height: 50px;
   border-radius: 40px;
   line-height: 50px;
@@ -1048,18 +1048,54 @@
 }
 
 .right-nav li img{
-  width: 80%;
+  width: 60%;
 }
 
+.right-nav li:last-child{
+  display: none;
+}
 
+.qrcode{
+  position: absolute;
+  right:60px;
+  top: 40px;
+  width: 120px;
+  display: none;
+}
+
+.qrcode img{
+  border:1px solid #CCC;
+  width: 120px;
+  border-radius: 10px;
+}
+
+.search {
+  border:1px solid rgba(0, 0, 0, 0.3);;
+  padding: 10px 20px;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  right:65px;
+  top: 10px;
+  display: none;
+}
+
+.search input{
+  height: 30px;
+  width: 240px;
+  background: rgba(0, 0, 0, 0.0);
+  border: 1px solid #CCC;
+  padding: 2px;
+  color:#FFF;
+}
 
 /*******animal*********/
 
 
 .service-item:hover{
-  transform: rotateY(180deg);
-  -webkit-transform: rotateY(180deg);	/* Safari 和 Chrome */
-  -moz-transform: rotateY(180deg);	/* Firefox */
+  transform: rotateY(360deg);
+  -webkit-transform: rotateY(360deg);	/* Safari 和 Chrome */
+  -moz-transform: rotateY(360deg);	/* Firefox */
 }
 
 
