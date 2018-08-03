@@ -209,7 +209,7 @@
     <div class="call-me">
         <div class="container">
         <h3>心动了吗？心动的话就立即联系我们吧！</h3>
-        <a href="#">联系我们</a>
+        <a href="/link">联系我们</a>
         </div>
     </div>
 
