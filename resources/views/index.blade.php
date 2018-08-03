@@ -10,10 +10,10 @@
                 <h2>广州油麦菜信息科技有限公司</h2>
                 <p>More than 10 years of technical precipitation, more than 3,000 well-known customers' choice, consistent service attitude, depth and breadth of industry experience</p>
                 <h3>有态度 · 有速度 · 有深度</h3>
-                <a href="#" class="slide-btn">
+                <a href="/service" class="slide-btn">
                 服务范围
                 </a>
-                <a href="#" class="slide-btn slide-btn-active">
+                <a href="/cases" class="slide-btn slide-btn-active">
                 案例展示
                 </a>
             </div>
@@ -24,10 +24,10 @@
                 <h2>广州油麦菜信息科技有限公司</h2>
                 <p>Touch the heart of the design and professional technology development for your enterprise to create unlimited business opportunities</p>
                 <h3>触动人心的设计和专业的技术开发，为您的企业创造无限商机</h3>
-                <a href="#" class="slide-btn">
+                <a href="/service" class="slide-btn">
                 服务范围
                 </a>
-                <a href="#" class="slide-btn slide-btn-active">
+                <a href="/cases" class="slide-btn slide-btn-active">
                 案例展示
                 </a>
             </div>
@@ -97,9 +97,9 @@
             <div class="section-content relative">
                 <div class="about-us-left absolute">
                     <div class="about-us-text">
-                    广州油麦菜信息科技有限公司是一家综合性的高新技术开发企业，
-                    成立于2018年，总部位于广东省广州市，是中国著名的微信第三方开发公司之一。
-                    现有自主开发产品，“油麦菜微信公众号管理平台”，是一家以高精技术开发为主要支点的科技公司。
+                    广州油麦菜信息科技有限公司是一家综合性的高新技术开发企业，成立于2018年，总部位于广东省广州市，
+            我们是年轻的创业团队,我们怀揣梦想，我们立志用技术服务大众。油麦菜是一家以高精技术开发为主要支点
+            的科技公司。致力于为广大企业提供基于微信端的开发、运营、推广、托管等一体化营销解决方案服务。
                     </div>
                     <a href="#" class="know-more">查看更多</a>
                 </div>

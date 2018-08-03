@@ -470,6 +470,7 @@
 }
 .about-intro-p h4{
   color:#302f2f !important;
+  margin-top: 30px;
 }
 
 .about-intro-p h4 span {
@@ -706,8 +707,7 @@
 }
 
 .case-container{
-  position: absolute;
-  top: 70px;
+  padding-top:50px;
 }
 
 .case-container ul {
@@ -719,6 +719,23 @@
   float: left;
   width: 400px;
   list-style: none;
+  padding:10px;
+}
+
+.case-img img{
+  width: 100%;
+}
+
+.case p{
+  height: 63px;
+  line-height: 21px;
+  font-size: 1em;
+  text-align: left !important;
+	overflow : hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
 }
 
 .case-img-container{
@@ -891,6 +908,7 @@
 }
 .news-content p{
   color:#969696;
+  width: 950px;
 }
 
 .newspage .page-container{
