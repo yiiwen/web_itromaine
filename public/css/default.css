@@ -1111,9 +1111,9 @@
 
 
 .service-item:hover{
-  transform: rotateY(360deg);
-  -webkit-transform: rotateY(360deg);	/* Safari 和 Chrome */
-  -moz-transform: rotateY(360deg);	/* Firefox */
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);	/* Safari 和 Chrome */
+  -moz-transform: rotateY(180deg);	/* Firefox */
 }
 
 

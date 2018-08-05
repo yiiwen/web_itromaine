@@ -43,3 +43,7 @@ Route::get('/newsitem/{id}',function(){
 Route::get('/link',function(){
     return view('link');
 });
+
+Route::get('/m/index',function(){
+    return view('mobile/index');
+});
