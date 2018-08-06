@@ -6,7 +6,7 @@ const winWidth = window.screen.width;
 if (winWidth <= 1024) {
     if (!pathName.startsWith("/m/"))
     {
-        window.location.href = "/m" + pathName;
+        window.location.href = "/m/index";
     }
 }
 //如果页面尺寸大于1024，那么跳转到PC端页面
@@ -14,6 +14,6 @@ if (winWidth > 1024)
 {
     if (pathName.startsWith("/m/"))
     {
-        window.location.href = pathName.replace("/m/","/");
+        window.location.href = "/index";
     }
 }

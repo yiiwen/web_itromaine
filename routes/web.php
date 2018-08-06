@@ -44,6 +44,15 @@ Route::get('/link',function(){
     return view('link');
 });
 
-Route::get('/m/index',function(){
-    return view('mobile/index');
+
+//手机版
+Route::prefix('m')->group(function(){
+    
+    Route::get('index',function(){
+        return view('mobile/index');
+    });
+
+    Route::get('teams',function(){
+        return view('mobile/team');
+    });
 });

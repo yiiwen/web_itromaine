@@ -14,7 +14,7 @@
             <h1 id="site-title">it<span>Romaine</span></h1>
             <nav id="site-nav">
                 <ul>
-                    <li><a href="javascript:void(0)">团队</a></li>
+                    <li><a href="/m/teams">团队</a></li>
                     <li><a href="javascript:void(0)">案例</a></li>
                     <li><a href="javascript:void(0)">收费</a></li>
                     <li><a href="javascript:void(0)">知识</a></li>
@@ -141,7 +141,8 @@
         </div>
 
         <footer>
-        Copyright © 2018-2038 itromaine.com   Tel:86-15818848247 粤ICP备18091280号
+            <p>Copyright © 2018-2038 itromaine.com   Tel:86-15818848247</p>
+            <p>粤ICP备18091280号</p>
         </footer>
     </div>
 </body>
