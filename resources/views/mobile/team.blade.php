@@ -15,7 +15,7 @@
             <nav id="site-nav">
                 <ul>
                     <li class="nav-activity"><a href="/m/teams">团队</a></li>
-                    <li><a href="javascript:void(0)">案例</a></li>
+                    <li><a href="/m/cases">案例</a></li>
                     <li><a href="javascript:void(0)">收费</a></li>
                     <li><a href="javascript:void(0)">知识</a></li>
                     <li><a href="javascript:void(0)">联系</a></li>

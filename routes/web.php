@@ -55,4 +55,12 @@ Route::prefix('m')->group(function(){
     Route::get('teams',function(){
         return view('mobile/team');
     });
+
+    Route::get('cases',function(){
+        return view('mobile/cases');
+    });
+
+    Route::get('price',function(){
+        return view('mobile/price');
+    });
 });

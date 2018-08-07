@@ -7,6 +7,16 @@
     src:url(/fonts/Fabulous.ttf);
 }
 
+@font-face {
+    font-family: chinaFont;
+    src: url(/fonts/font2.TTF);
+}
+
+@font-face {
+    font-family: chinaFont2;
+    src: url(/fonts/chinafont.TTF);
+}
+
 .container{
     width:98%;
     margin:0 auto;
@@ -19,7 +29,8 @@
 
 #pagePath{
     margin-top:40px;
-    color:#9a9a9a;
+    margin-left:5px;
+    color:#565656;
     font-size: 0.9em;
 }
 
@@ -77,7 +88,7 @@
 }
 
 #cases .thumbnail {
-    padding:5px;
+    padding:4px;
 }
 
 #cases ul li img{
@@ -182,7 +193,7 @@ footer p{
 }
 
 #teams .thumbnail {
-    padding:5px;
+    padding:4px;
 }
 
 #teams ul li img{
@@ -198,4 +209,53 @@ footer p{
     margin:2px 5px;
     font-size:1em;
     font-family: titleFont;
+}
+
+#load-more{
+    text-align:center;
+    margin-top:30px;
+    margin-bottom:60px;
+    font-family: chinaFont;
+}
+
+#load-more a {
+    text-align:center;
+    font-size: 1.2em;
+    letter-spacing:2px;
+    text-decoration:none;
+    color: #6b6a6a;
+    font-family: chinaFont2;
+}
+
+#price {
+    margin-bottom:60px;
+}
+
+#price ul {
+    margin:0;
+    padding:0;
+}
+
+#price ul li{
+    border:2px solid #000;
+    margin-bottom:20px;
+    padding:10px;
+}
+
+#price li .desp{
+    line-height: 1.5em;
+    font-size:0.8em;
+}
+
+#price li .services{
+    line-height: 1.6em;
+}
+
+#price .price{
+    text-align: right;
+}
+
+#price li .num{
+    font-size: 2.3em;
+    color: #000;
 }
