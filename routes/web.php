@@ -63,4 +63,8 @@ Route::prefix('m')->group(function(){
     Route::get('price',function(){
         return view('mobile/price');
     });
+
+    Route::get('share',function(){
+        return view('mobile/share');
+    });
 });

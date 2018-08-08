@@ -240,6 +240,7 @@ footer p{
     border:2px solid #000;
     margin-bottom:20px;
     padding:10px;
+    list-style: none;
 }
 
 #price li .desp{
@@ -258,4 +259,114 @@ footer p{
 #price li .num{
     font-size: 2.3em;
     color: #000;
+}
+
+
+ /*当屏幕尺寸小于600px时，应用下面的CSS样式*/
+@media screen and (max-width: 600px) {
+    #share ul{
+        margin:0;
+        padding:0;
+    }
+    
+    #share ul li {
+        list-style:none;
+        width:100%;
+        padding:0;
+        margin:0;
+        margin-bottom:40px;
+    }
+
+    #share ul li a{
+        text-decoration: none;
+        color:#3e3e3e;
+    }
+    
+    #share ul li img{
+        width:100%;
+    }
+
+    .author{
+        float: left;
+        margin:6px 0 0 0;
+        font-size:0.8em;
+        color:#717171;
+    }
+
+    .writing{
+        float: right;
+        margin:6px 0 0 0;
+        font-size:0.8em;
+        color:#717171;
+    }
+
+    #share .entry-title{
+        margin:15px 0 0 0;
+    }
+
+    #share .entry-content{
+        margin:15px 0 0 0;
+        line-height: 1.5em;
+    }
+}
+
+ /*当屏幕尺寸小于600px时，应用下面的CSS样式*/
+ @media screen and (min-width: 600px) {
+    #share ul{
+        margin:0;
+        padding:0;
+    }
+    
+    #share ul li {
+        list-style:none;
+        width:50%;
+        float: left;
+        padding:0;
+        margin:0;
+        margin-bottom:40px;
+    }
+
+    #share ul li a{
+        text-decoration: none;
+        color:#3e3e3e;
+        display: block;
+    }
+
+    #share ul li:nth-child(odd) a
+    {
+        padding-right:15px;
+    }
+
+    #share ul li:nth-child(even) a
+    {
+        padding-left:15px;
+    }
+
+    
+    #share ul li img{
+        width:100%;
+    }
+
+    .author{
+        float: left;
+        margin:6px 0 0 0;
+        font-size:0.8em;
+        color:#717171;
+    }
+
+    .writing{
+        float: right;
+        margin:6px 0 0 0;
+        font-size:0.8em;
+        color:#717171;
+    }
+
+    #share .entry-title{
+        margin:15px 0 0 0;
+    }
+
+    #share .entry-content{
+        margin:15px 0 0 0;
+        line-height: 1.5em;
+    }
 }
