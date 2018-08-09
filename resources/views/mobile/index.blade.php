@@ -18,7 +18,7 @@
                     <li><a href="/m/cases">案例</a></li>
                     <li><a href="/m/price">收费</a></li>
                     <li><a href="/m/share">知识</a></li>
-                    <li><a href="javascript:void(0)">联系</a></li>
+                    <li><a href="/m/contact">联系</a></li>
                 </ul>
             </nav>
         </header>

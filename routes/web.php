@@ -67,4 +67,8 @@ Route::prefix('m')->group(function(){
     Route::get('share',function(){
         return view('mobile/share');
     });
+
+    Route::get('contact',function(){
+        return view('mobile/contact');
+    });
 });

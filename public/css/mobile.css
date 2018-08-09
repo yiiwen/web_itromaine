@@ -310,6 +310,23 @@ footer p{
     }
 }
 
+.contact-content p{
+    line-height: 1.7em;
+}
+
+.contact-content a{
+    color:#000;
+    text-decoration: none;
+}
+
+blockquote em,blockquote p{
+    color:#4a4a4a;
+}
+
+blockquote p{
+    margin:4px 0;
+}
+
  /*当屏幕尺寸小于600px时，应用下面的CSS样式*/
  @media screen and (min-width: 600px) {
     #share ul{
