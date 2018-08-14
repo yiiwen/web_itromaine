@@ -72,3 +72,14 @@ Route::prefix('m')->group(function(){
         return view('mobile/contact');
     });
 });
+
+
+Route::prefix('admin')->middleware(['checkLogin'])->group(function(){
+    Route::get('login',function(){
+        return view('admin/login');
+    });
+
+    Route::get('index',function(){  
+        return view('admin/index');
+    });
+});
