@@ -82,4 +82,8 @@ Route::prefix('admin')->middleware(['checkLogin'])->group(function(){
     Route::get('index',function(){  
         return view('admin/index');
     });
+
+    Route::get('news',function(){  
+        return view('admin/news');
+    });
 });

@@ -1,3 +1,7 @@
+input{
+    background: none !important;
+}
+
 .login-page{
     width: 100%;
     height:100%;
@@ -17,7 +21,6 @@
     width: 100%;
     border-radius: 4px;
 }
-
 
 .backend {
     background-image: url(../images//backgroud.jpg);
@@ -78,6 +81,30 @@
     background-color:rgba(0, 0, 0, 0.1);
  }
 
- .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus{
-     background: none;
- }
+.news-action-btn .btn-warning {
+    background: none;
+}
+
+.news-action-btn .btn-warning:hover{
+    background-color: #f0ad4e;
+}
+
+
+.news-action-btn .btn-danger {
+    background: none;
+}
+
+.news-action-btn .btn-danger:hover
+{
+    background-color: #c9302c;
+}
+
+.pagination > li > a, .pagination > li > span
+{
+    background: none;
+}
+
+.container{
+    background: rgba(0,0,0,0.1);
+    color:#FFF !important;
+}
