@@ -87,7 +87,8 @@
 
     <div class="container">
         <br>
-        <p><button type="button" class="btn btn-success">添加新闻</button></p>
+        <p><button type="button" class="btn btn-success" data-toggle="modal"
+         data-target="#publishNew">添加新闻</button></p>
         
         <div class="row">
             <div class="col-xs-3">
@@ -154,10 +155,115 @@
                 </li>
             </ul>
         </nav>
+
+        <!-- Modal -->
+        <div class="modal fade" id="publishNew" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">发布文章</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="new-title" class="form-group">
+                        <label for="new-title">文章标题</label>
+                        <input type="text" id="new-title" class="form-control">
+                    </div>
+                    <div id="new-content" class="from-group">
+                        <label for="new-content">文章内容</label>
+                        <div id="new-edit"></div>
+                    </div>
+                    <br>
+                    <div class="from-group">
+                        <label>文章封面</label>
+                        <div class="article-image">
+                            <div class="first-image">
+                                <img src="/admin/images/pic.png" alt="..." class="img-thumbnail">
+                                <div id="uploadFirstImgBtn">
+                                    <button>上传图片</button>
+                                </div>
+                            </div>
+                            <div style="border:1px solid #CCC;border-radius:4px;width:560px;margin-left:210px;padding:10px;">
+                                <label for="">从文章中选取</label>
+                                <div>
+                                    <div class="candidate-image-div">
+                                        <div class="candidate-image">
+                                            <img src="/admin/images/pic.png" alt="..." class="img-thumbnail">
+                                            <img src="/admin/images/pic.png" alt="..." class="img-thumbnail">
+                                            <img src="/admin/images/pic.png" alt="..." class="img-thumbnail">
+                                            <img src="/admin/images/pic.png" alt="..." class="img-thumbnail">
+                                            <img src="/admin/images/pic.png" alt="..." class="img-thumbnail">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="clear:both;"></div>
+                        </div>
+                    </div>
+                    <br>
+                    <div id="new-title" class="form-group">
+                        <label for="new-title">推广短链 （<a href="">生成推广短链</a>）</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="sort url" disabled aria-describedby="basic-addon2">
+                            <span class="input-group-addon" id="basic-addon2">复制</span>
+                        </div>
+                    </div>
+                    <div id="new-sort" class="form-group">
+                        <label for="new-content">文章排序</label>
+                        <div style="clear:both;"></div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="radio" name="article-sort"> 自然排序
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="radio" name="article-sort"> 始终第一
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="radio" name="article-sort"> 始终最后
+                            </label>
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" id="close">取消</button>
+                    <button type="button" class="btn btn-primary" id="save">保存至草稿箱</button>
+                    <button type="button" class="btn btn-success" id="publish">发布</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
   </body>
   <script src="/admin/js/jquery-2.1.4.min.js"></script>
+  <script src="/admin/js/wangEditor.min.js"></script>
   <script src="/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="/js/app.js"></script>
+  <script type="text/javascript">
+    var E = window.wangEditor
+    var editor = new E('#new-edit');
+    editor.customConfig.uploadImgServer = '/admin/upload'; 
+    editor.create();
+
+    $(document).ready(function(){
+        $("publish").click(function(){
+
+        });
+
+        $("#save").click(function(){
+            
+        });
+
+        $("#close").click(function(){
+
+        });
+    })
+
+  </script>
 </html>

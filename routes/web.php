@@ -86,4 +86,8 @@ Route::prefix('admin')->middleware(['checkLogin'])->group(function(){
     Route::get('news',function(){  
         return view('admin/news');
     });
+
+    Route::post('upload',function(){
+        
+    });
 });
