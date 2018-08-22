@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="WEIKI 网络科技 WEIKI网络科技 网站建设">
     <meta name="keyword" content="WEIKI 网络科技 WEIKI网络科技 网站建设">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/admin/css/backend.css">
+    <link rel="stylesheet" href="/admin/css/bootstrap-datetimepicker.min.css">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/bravana144.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/bravana114.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/bravana72.png">
@@ -92,49 +94,148 @@
         
         <div class="row">
             <div class="col-xs-3">
+                <label for="">新闻标题</label>
                 <input type="text" class="form-control" placeholder="新闻标题">
+            </div>
+            <div class="col-xs-3">
+                <label for="">开始时间</label>
+                <input type="text" class="form-control" placeholder="开始时间" 
+                value="2012-05-15 21:05" id="starttime">
+            </div>
+            <div class="col-xs-3">
+                <label for="">结束时间</label>
+                <input type="text" class="form-control" placeholder="开始时间" 
+                value="2012-05-15 21:05" id="endtime">
+            </div>
+            <div class="col-xs-2">
+                    <button type="button" style="margin-top:25px;" class="btn btn-success">搜索</button>
             </div>
         </div>
         <br>
 
-        <table class="table table-bordered news-action-btn">
-            <tr>
-                <th>#</th>
-                <th>新闻标题</th>
-                <th>更新时间</th>
-                <th>发布时间</th>
-                <th>操作</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>这是新闻标题</td>
-                <td>2018-08-09 12:23:90</td>
-                <td>2018-08-09 12:23:90</td>
-                <td>
-                    <a class="btn btn-warning" href="#" role="button">编辑</a>
-                    <a class="btn btn-danger" href="#" role="button">删除</a>
-                </td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>这是新闻标题</td>
-                <td>2018-08-09 12:23:90</td>
-                <td>2018-08-09 12:23:90</td>
-                <td>
-                    <a class="btn btn-warning" href="#" role="button">编辑</a>
-                    <a class="btn btn-danger" href="#" role="button">删除</a>
-                </td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>这是新闻标题</td>
-                <td>2018-08-09 12:23:90</td>
-                <td>2018-08-09 12:23:90</td>
-                <td>
-                    <a class="btn btn-warning" href="#" role="button">编辑</a>
-                    <a class="btn btn-danger" href="#" role="button">删除</a>
-                </td>
-            </tr>
+        <table class="table table-bordered news-action-btn news-table">
+            <thead>
+                <tr>
+                    <th style="width:55px;">#</th>
+                    <th style="width:420px;">新闻标题</th>
+                    <th>短链</th>
+                    <th>更新时间</th>
+                    <th>发布时间</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>这是新闻标题</td>
+                    <td><a href="javascript:">http://itromaine.com/Xh32HnLm</a></td>
+                    <td>2018-08-09 12:23:90</td>
+                    <td>2018-08-09 12:23:90</td>
+                    <td>
+                        <a class="btn btn-warning" href="#" role="button">编辑</a>
+                        <a class="btn btn-danger" href="#" role="button">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>这是新闻标题</td>
+                    <td><a href="javascript:">http://itromaine.com/Xh32HnLm</a></td>
+                    <td>2018-08-09 12:23:90</td>
+                    <td>2018-08-09 12:23:90</td>
+                    <td>
+                        <a class="btn btn-warning" href="#" role="button">编辑</a>
+                        <a class="btn btn-danger" href="#" role="button">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>这是新闻标题</td>
+                    <td><a href="javascript:">http://itromaine.com/Xh32HnLm</a></td>
+                    <td>2018-08-09 12:23:90</td>
+                    <td>2018-08-09 12:23:90</td>
+                    <td>
+                        <a class="btn btn-warning" href="#" role="button">编辑</a>
+                        <a class="btn btn-danger" href="#" role="button">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>这是新闻标题</td>
+                    <td><a href="javascript:">http://itromaine.com/Xh32HnLm</a></td>
+                    <td>2018-08-09 12:23:90</td>
+                    <td>2018-08-09 12:23:90</td>
+                    <td>
+                        <a class="btn btn-warning" href="#" role="button">编辑</a>
+                        <a class="btn btn-danger" href="#" role="button">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>这是新闻标题</td>
+                    <td><a href="javascript:">http://itromaine.com/Xh32HnLm</a></td>
+                    <td>2018-08-09 12:23:90</td>
+                    <td>2018-08-09 12:23:90</td>
+                    <td>
+                        <a class="btn btn-warning" href="#" role="button">编辑</a>
+                        <a class="btn btn-danger" href="#" role="button">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>这是新闻标题</td>
+                    <td><a href="javascript:">http://itromaine.com/Xh32HnLm</a></td>
+                    <td>2018-08-09 12:23:90</td>
+                    <td>2018-08-09 12:23:90</td>
+                    <td>
+                        <a class="btn btn-warning" href="#" role="button">编辑</a>
+                        <a class="btn btn-danger" href="#" role="button">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>这是新闻标题</td>
+                    <td><a href="javascript:">http://itromaine.com/Xh32HnLm</a></td>
+                    <td>2018-08-09 12:23:90</td>
+                    <td>2018-08-09 12:23:90</td>
+                    <td>
+                        <a class="btn btn-warning" href="#" role="button">编辑</a>
+                        <a class="btn btn-danger" href="#" role="button">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>这是新闻标题</td>
+                    <td><a href="javascript:">http://itromaine.com/Xh32HnLm</a></td>
+                    <td>2018-08-09 12:23:90</td>
+                    <td>2018-08-09 12:23:90</td>
+                    <td>
+                        <a class="btn btn-warning" href="#" role="button">编辑</a>
+                        <a class="btn btn-danger" href="#" role="button">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>这是新闻标题</td>
+                    <td><a href="javascript:">http://itromaine.com/Xh32HnLm</a></td>
+                    <td>2018-08-09 12:23:90</td>
+                    <td>2018-08-09 12:23:90</td>
+                    <td>
+                        <a class="btn btn-warning" href="#" role="button">编辑</a>
+                        <a class="btn btn-danger" href="#" role="button">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>这是新闻标题</td>
+                    <td><a href="javascript:">http://itromaine.com/Xh32HnLm</a></td>
+                    <td>2018-08-09 12:23:90</td>
+                    <td>2018-08-09 12:23:90</td>
+                    <td>
+                        <a class="btn btn-warning" href="#" role="button">编辑</a>
+                        <a class="btn btn-danger" href="#" role="button">删除</a>
+                    </td>
+                </tr>
+            </tbody>
         </table>
         <nav aria-label="Page navigation">
             <ul class="pagination">
@@ -202,7 +303,7 @@
                     </div>
                     <br>
                     <div id="new-title" class="form-group">
-                        <label for="new-title">推广短链 （<a href="">生成推广短链</a>）</label>
+                        <label for="new-title">推广短链 （系统自动生成）</label>
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="sort url" disabled aria-describedby="basic-addon2">
                             <span class="input-group-addon" id="basic-addon2">复制</span>
@@ -244,11 +345,16 @@
   <script src="/admin/js/jquery-2.1.4.min.js"></script>
   <script src="/admin/js/wangEditor.min.js"></script>
   <script src="/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="/js/app.js"></script>
+  <script src="/admin/js/bootstrap-datetimepicker.js"></script>
+  <script src="/admin/js/bootstrap-datetimepicker.zh-CN.js"></script>
+  <!-- <script type="text/javascript" src="/js/app.js"></script> -->
   <script type="text/javascript">
     var E = window.wangEditor
     var editor = new E('#new-edit');
-    editor.customConfig.uploadImgServer = '/admin/upload'; 
+    editor.customConfig.uploadImgServer = '/admin/upload';
+    editor.customConfig.uploadImgHeaders  ={
+        'X-CSRF-TOKEN' : $('meta[name="csrf-token"]').attr('content')
+    }; 
     editor.create();
 
     $(document).ready(function(){
@@ -263,7 +369,24 @@
         $("#close").click(function(){
 
         });
+        
+
+        var now = new Date();
+        
+        var datetime = now.getFullYear() + "-" + now.getMonth() + "-" + now.getDate() + " "+now.getHours()
+        +":"+now.getMinutes() +":"+now.getSeconds();
+        $("#starttime").val(datetime);
+        $("#endtime").val(datetime);
+        $("#starttime").datetimepicker({
+            language:  'zh-CN'
+        });
+        $("#endtime").datetimepicker({
+            language:  'zh-CN'
+        });
+        
     })
+
+    
 
   </script>
 </html>
