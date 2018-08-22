@@ -87,16 +87,8 @@ Route::prefix('admin')->middleware(['checkLogin'])->group(function(){
         return view('admin/news');
     });
 
-    Route::post('upload',function(\Illuminate\Http\Request $request){
-        if ($request->hasFile('filename') && $request->file('filename')->isValid()) {
-            $photo = $request->file('filename');
-            $extension = $photo->extension();
-            $store_result = $photo->storeAs('filename', 'test.jpg');
-            $output = [
-                'extension' => $extension,
-                'store_result' => $store_result
-            ];
-            return $output;
-        }
+    Route::post('upload',function(Illuminate\Http\Request $request){
+        $class = new App\Library\Upload;
+        return $class->upload($request,'photo');
     });
 });

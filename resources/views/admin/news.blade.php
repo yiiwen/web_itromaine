@@ -289,11 +289,6 @@
                                 <div>
                                     <div class="candidate-image-div">
                                         <div class="candidate-image">
-                                            <img src="/admin/images/pic.png" alt="..." class="img-thumbnail">
-                                            <img src="/admin/images/pic.png" alt="..." class="img-thumbnail">
-                                            <img src="/admin/images/pic.png" alt="..." class="img-thumbnail">
-                                            <img src="/admin/images/pic.png" alt="..." class="img-thumbnail">
-                                            <img src="/admin/images/pic.png" alt="..." class="img-thumbnail">
                                         </div>
                                     </div>
                                 </div>
@@ -352,9 +347,17 @@
     var E = window.wangEditor
     var editor = new E('#new-edit');
     editor.customConfig.uploadImgServer = '/admin/upload';
+    editor.customConfig.uploadFileName  = 'photo';
     editor.customConfig.uploadImgHeaders  ={
         'X-CSRF-TOKEN' : $('meta[name="csrf-token"]').attr('content')
-    }; 
+    };
+    editor.customConfig.uploadImgHooks = {
+        success: function (xhr, editor, result) {
+            
+        },
+        fail: function (xhr, editor, result) {
+        },
+    } 
     editor.create();
 
     $(document).ready(function(){
