@@ -17,23 +17,6 @@ class Upload
         $this->fileType = $fileType;
     }
 
-    //图片裁切
-    public function draw($width,$height)
-    {
-
-    }
-
-    //图片缩放
-    public function zoom($width,$height,$isRatio = True)
-    {
-        if (!isRatio)  //非等比缩放
-        {
-
-        } else {     
-
-        }
-    }
-
     public function upload($request,$fileName)
     {
         if ($this->fileType == IMAGE_FILE)

@@ -132,8 +132,8 @@
                     <td>2018-08-09 12:23:90</td>
                     <td>2018-08-09 12:23:90</td>
                     <td>
-                        <a class="btn btn-warning" href="#" role="button">编辑</a>
-                        <a class="btn btn-danger" href="#" role="button">删除</a>
+                        <button class="btn btn-warning">编辑</button>
+                        <button class="btn btn-danger">删除</button>
                     </td>
                 </tr>
                 <tr>
@@ -143,8 +143,8 @@
                     <td>2018-08-09 12:23:90</td>
                     <td>2018-08-09 12:23:90</td>
                     <td>
-                        <a class="btn btn-warning" href="#" role="button">编辑</a>
-                        <a class="btn btn-danger" href="#" role="button">删除</a>
+                        <button class="btn btn-warning">编辑</button>
+                        <button class="btn btn-danger">删除</button>
                     </td>
                 </tr>
                 <tr>
@@ -154,8 +154,8 @@
                     <td>2018-08-09 12:23:90</td>
                     <td>2018-08-09 12:23:90</td>
                     <td>
-                        <a class="btn btn-warning" href="#" role="button">编辑</a>
-                        <a class="btn btn-danger" href="#" role="button">删除</a>
+                        <button class="btn btn-warning">编辑</button>
+                        <button class="btn btn-danger">删除</button>
                     </td>
                 </tr>
                 <tr>
@@ -165,8 +165,8 @@
                     <td>2018-08-09 12:23:90</td>
                     <td>2018-08-09 12:23:90</td>
                     <td>
-                        <a class="btn btn-warning" href="#" role="button">编辑</a>
-                        <a class="btn btn-danger" href="#" role="button">删除</a>
+                        <button class="btn btn-warning">编辑</button>
+                        <button class="btn btn-danger">删除</button>
                     </td>
                 </tr>
                 <tr>
@@ -176,8 +176,8 @@
                     <td>2018-08-09 12:23:90</td>
                     <td>2018-08-09 12:23:90</td>
                     <td>
-                        <a class="btn btn-warning" href="#" role="button">编辑</a>
-                        <a class="btn btn-danger" href="#" role="button">删除</a>
+                        <button class="btn btn-warning">编辑</button>
+                        <button class="btn btn-danger">删除</button>
                     </td>
                 </tr>
                 <tr>
@@ -187,8 +187,8 @@
                     <td>2018-08-09 12:23:90</td>
                     <td>2018-08-09 12:23:90</td>
                     <td>
-                        <a class="btn btn-warning" href="#" role="button">编辑</a>
-                        <a class="btn btn-danger" href="#" role="button">删除</a>
+                        <button class="btn btn-warning">编辑</button>
+                        <button class="btn btn-danger">删除</button>
                     </td>
                 </tr>
                 <tr>
@@ -198,8 +198,8 @@
                     <td>2018-08-09 12:23:90</td>
                     <td>2018-08-09 12:23:90</td>
                     <td>
-                        <a class="btn btn-warning" href="#" role="button">编辑</a>
-                        <a class="btn btn-danger" href="#" role="button">删除</a>
+                        <button class="btn btn-warning">编辑</button>
+                        <button class="btn btn-danger">删除</button>
                     </td>
                 </tr>
                 <tr>
@@ -209,8 +209,8 @@
                     <td>2018-08-09 12:23:90</td>
                     <td>2018-08-09 12:23:90</td>
                     <td>
-                        <a class="btn btn-warning" href="#" role="button">编辑</a>
-                        <a class="btn btn-danger" href="#" role="button">删除</a>
+                        <button class="btn btn-warning">编辑</button>
+                        <button class="btn btn-danger">删除</button>
                     </td>
                 </tr>
                 <tr>
@@ -220,8 +220,8 @@
                     <td>2018-08-09 12:23:90</td>
                     <td>2018-08-09 12:23:90</td>
                     <td>
-                        <a class="btn btn-warning" href="#" role="button">编辑</a>
-                        <a class="btn btn-danger" href="#" role="button">删除</a>
+                        <button class="btn btn-warning">编辑</button>
+                        <button class="btn btn-danger">删除</button>
                     </td>
                 </tr>
                 <tr>
@@ -231,8 +231,8 @@
                     <td>2018-08-09 12:23:90</td>
                     <td>2018-08-09 12:23:90</td>
                     <td>
-                        <a class="btn btn-warning" href="#" role="button">编辑</a>
-                        <a class="btn btn-danger" href="#" role="button">删除</a>
+                        <button class="btn btn-warning">编辑</button>
+                        <button class="btn btn-danger">删除</button>
                     </td>
                 </tr>
             </tbody>
@@ -279,7 +279,7 @@
                         <label>文章封面</label>
                         <div class="article-image">
                             <div class="first-image">
-                                <img src="/admin/images/pic.png" alt="..." class="img-thumbnail">
+                                <img src="/admin/images/pic.png" id="first-image" alt="..." class="img-thumbnail">
                                 <div id="uploadFirstImgBtn">
                                     <button>上传图片</button>
                                 </div>
@@ -288,7 +288,7 @@
                                 <label for="">从文章中选取</label>
                                 <div>
                                     <div class="candidate-image-div">
-                                        <div class="candidate-image">
+                                        <div class="candidate-image" id="candidate-image">
                                         </div>
                                     </div>
                                 </div>
@@ -346,6 +346,7 @@
   <script type="text/javascript">
     var E = window.wangEditor
     var editor = new E('#new-edit');
+    const candidateImage = new Array();
     editor.customConfig.uploadImgServer = '/admin/upload';
     editor.customConfig.uploadFileName  = 'photo';
     editor.customConfig.uploadImgHeaders  ={
@@ -353,7 +354,14 @@
     };
     editor.customConfig.uploadImgHooks = {
         success: function (xhr, editor, result) {
-            
+            image = result.data[0];
+            if (candidateImage.length<=0)
+            {
+                $("#first-image").attr("src",image);
+            }
+            candidateImage.push(image);
+            image = `<img src="${image}" class="img-thumbnail">`;
+            $("#candidate-image").append(image);
         },
         fail: function (xhr, editor, result) {
         },
