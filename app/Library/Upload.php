@@ -10,7 +10,7 @@ class Upload
 {
 
     private $fileType = IMAGE_FILE;
-    private $extension = ['png','jpg','gif'];
+    private $extension = ['png','jpg','gif','jpeg'];
 
     public function __construct($fileType = IMAGE_FILE)
     {
@@ -41,6 +41,8 @@ class Upload
             {
                 $path = $request->$fileName->store('images','public');
                 return '/storage/'.$path;
+            } else {
+                exit($request->$fileName->extension());
             }
         }
     }

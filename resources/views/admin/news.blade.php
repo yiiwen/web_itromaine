@@ -257,7 +257,7 @@
             </ul>
         </nav>
 
-        <!-- Modal -->
+        <!-- 添加Modal start -->
         <div class="modal fade" id="publishNew" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -279,9 +279,10 @@
                         <label>文章封面</label>
                         <div class="article-image">
                             <div class="first-image">
-                                <img src="/admin/images/pic.png" id="first-image" alt="..." class="img-thumbnail">
+                                <input type="file" style="display:none;" id="first-image-input" name="first-image" />
+                                <img src="/admin/images/pic.png" id="first-image" alt="..." class="img-thumbnail" />
                                 <div id="uploadFirstImgBtn">
-                                    <button>上传图片</button>
+                                    <button onclick="document.getElementById('first-image-input').click()">上传图片</button>
                                 </div>
                             </div>
                             <div style="border:1px solid #CCC;border-radius:4px;width:560px;margin-left:210px;padding:10px;">
@@ -333,6 +334,17 @@
                 </div>
             </div>
         </div>
+        <!-- 添加Modal end -->
+
+        <!-- 图片查看模态框start -->
+        <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" id="imageViewer" aria-labelledby="imageViewer">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    
+                </div>
+            </div>
+        </div>
+        <!-- 图片查看模态框end -->
 
     </div>
 
@@ -355,12 +367,8 @@
     editor.customConfig.uploadImgHooks = {
         success: function (xhr, editor, result) {
             image = result.data[0];
-            if (candidateImage.length<=0)
-            {
-                $("#first-image").attr("src",image);
-            }
             candidateImage.push(image);
-            image = `<img src="${image}" class="img-thumbnail">`;
+            image = `<div class="outer"><img src="${image}" class="img-thumbnail"></div>`;
             $("#candidate-image").append(image);
         },
         fail: function (xhr, editor, result) {
@@ -368,9 +376,60 @@
     } 
     editor.create();
 
-    $(document).ready(function(){
-        $("publish").click(function(){
+    $("#candidate-image").on("click","img",function(){
+        let html = `<img src='${this.src}' style='width:100%;'/>`;
+        $("#imageViewer").find(".modal-content").empty();
+        $("#imageViewer").find(".modal-content").append(html);
+        $("#imageViewer").modal('toggle');
+    });
 
+    $("#candidate-image").on("mouseenter",".outer",function(){
+        let html = `<div class="set-first-btn"><button class="btn btn-success btn-xs set-first">设为封面</button></div>`;
+        $(this).append(html);
+    });
+
+    $("#candidate-image").on("mouseleave",".outer",function(){
+        $(this).find(".set-first-btn").remove();
+    });
+
+
+    $("#candidate-image").on("click", ".set-first", function(){
+        let firstImageSrc = $(this).parents(".outer").find("img").attr("src");
+        $("#first-image").attr("src",firstImageSrc);
+    });
+
+    $("#first-image-input").change(function(e){
+        var file = e.target.files[0] || e.dataTransfer.files[0];
+        if (file) {
+            var reader = new FileReader();
+            reader.onload = function(){
+                $("#first-image").attr("src",this.result);
+            }
+            reader.readAsDataURL(file);
+            let formData = new FormData();
+            formData.append("photo",file);
+            $.ajax({
+                url : "/admin/upload",
+                type: "post",
+                headers:{"X-CSRF-TOKEN":$('meta[name="csrf-token"]').attr('content')},
+                data: formData,
+                processData: false,
+                contentType: false,
+                mimeType: "multipart/form-data",
+                success: function(data) {
+                    console.log(data);
+                },
+                error:function(data) {
+                }
+            });
+        }
+    });
+
+    let ''
+    
+    $(document).ready(function(){
+        $("#publish").click(function(){
+            
         });
 
         $("#save").click(function(){

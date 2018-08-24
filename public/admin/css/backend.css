@@ -129,6 +129,11 @@ a{
     position: relative;
 }
 
+#first-image{
+    width:200px;
+    height:192px;
+}
+
 .candidate-image-div{
     overflow-x: scroll;
     overflow-y: hidden;
@@ -143,10 +148,8 @@ a{
 }
 
 .candidate-image img{
-    float:left;
     display: block;
     width:130px;
-    margin-right:20px;
 }
 
 
@@ -181,4 +184,20 @@ a{
 .navbar-nav .active a{
     background: none !important;
     border-bottom: 3px solid #5cb85c;
+}
+
+
+.outer{
+    position:relative;
+    float:left;
+    width:130px;
+    height:127px;
+    margin-right:15px;
+}
+
+.set-first-btn{
+    position: absolute;
+    left:5px;
+    width:100px;
+    top:5px;
 }
