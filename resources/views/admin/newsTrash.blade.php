@@ -94,6 +94,9 @@
                 <a href="/admin/news/draftsList" style="color:#FFF !important;" class="btn btn-info"><i class="glyphicon glyphicon-pencil"></i> 草稿箱</a>
                 <a style="color:#FFF !important;" class="btn btn-info"><i class="glyphicon glyphicon-trash"></i> 回收站</a>
             </div>
+
+            <button type="button" class="btn btn-danger" id="clear" style="margin-left:20px;display:block;float:left;">
+            <i class="glyphicon glyphicon-flash"></i> 清空回收站</button>
             <div style="clear:both;"></div>
         <br>
         <br>
@@ -162,6 +165,21 @@
         </div>
     </div>
     <!-- 列表删除对话框end -->
+    <!-- 清空回收站start -->
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" id="clearModal" aria-labelledby="clearModal">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    清空回收站！
+                </div>
+                <div class="modal-body">
+                    <button type="button" style="margin-left:170px !important;" class="btn btn-danger btn-sm clear-confirm">确认</button>
+                    <button type="button" class="btn btn-default btn-sm clear-cannel">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 清空回收站end -->
   </body>
   <script src="/admin/js/jquery-2.1.4.min.js"></script>
   <script src="/admin/js/wangEditor.min.js"></script>
@@ -190,6 +208,28 @@
             });
             $(".recovery-cannel").click(function(){
                 $("#recoveryModal").modal("hide");
+            });
+        });
+
+        $("#clear").click(function(){
+            $("#clearModal").modal('show');
+            let newsId = $(this).attr("data-id");
+            $(".clear-confirm").click(function(){
+                $.ajax({
+                    url: "/admin/news/clear",
+                    dataType:'JSON',
+                    method:'GET',
+                    data:{
+                        id:newsId
+                    },
+                    success:function(data,status){
+                        window.location.reload();
+                    },
+                    error:function(){}
+                });
+            });
+            $(".clear-cannel").click(function(){
+                $("#clearModal").modal("hide");
             });
         });
     })

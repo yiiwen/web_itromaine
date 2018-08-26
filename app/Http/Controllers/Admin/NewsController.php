@@ -88,6 +88,13 @@ class NewsController extends Controller
         return ['errno'=>0,'id'=>$id];
     }
 
+    //清空回收站
+    public function clear(Request $request)
+    {
+        News::where('is_del','=',1)->delete();
+        return ['errno'=>0];
+    }
+
     //回收站
     public function trash(Request $request)
     {

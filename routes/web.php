@@ -96,4 +96,5 @@ Route::prefix('admin')->middleware(['checkLogin'])->group(function(){
     Route::get('news/draftsList','Admin\NewsController@draftsList');
     Route::get('news/trash','Admin\NewsController@trash');
     Route::get('news/recovery','Admin\NewsController@recovery');
+    Route::get('news/clear','Admin\NewsController@clear');
 });
