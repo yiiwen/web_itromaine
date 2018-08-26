@@ -73,7 +73,7 @@ Route::prefix('m')->group(function(){
     });
 });
 
-
+//后台
 Route::prefix('admin')->middleware(['checkLogin'])->group(function(){
     Route::get('login',function(){
         return view('admin/login');
@@ -83,12 +83,17 @@ Route::prefix('admin')->middleware(['checkLogin'])->group(function(){
         return view('admin/index');
     });
 
-    Route::get('news',function(){  
-        return view('admin/news');
-    });
-
     Route::post('upload',function(Illuminate\Http\Request $request){
         $class = new App\Library\Upload;
         return $class->upload($request,'photo');
     });
+
+    Route::get('news/index','Admin\NewsController@index');
+    Route::post('news/publish','Admin\NewsController@publish');
+    Route::post('news/drafts','Admin\NewsController@drafts');
+    Route::get('news/getOne','Admin\NewsController@getOne');
+    Route::get('news/delete','Admin\NewsController@delete');
+    Route::get('news/draftsList','Admin\NewsController@draftsList');
+    Route::get('news/trash','Admin\NewsController@trash');
+    Route::get('news/recovery','Admin\NewsController@recovery');
 });
