@@ -31,6 +31,7 @@ class Util
                 continue;
             }
         }
-        return env('APP_URL') .'/'. implode('',$chr);
+
+        return implode('',$chr);
     }
 }

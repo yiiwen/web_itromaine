@@ -88,6 +88,7 @@ Route::prefix('admin')->middleware(['checkLogin'])->group(function(){
         return $class->upload($request,'photo');
     });
 
+    //新闻模块
     Route::get('news/index','Admin\NewsController@index');
     Route::post('news/publish','Admin\NewsController@publish');
     Route::post('news/drafts','Admin\NewsController@drafts');
@@ -97,4 +98,8 @@ Route::prefix('admin')->middleware(['checkLogin'])->group(function(){
     Route::get('news/trash','Admin\NewsController@trash');
     Route::get('news/recovery','Admin\NewsController@recovery');
     Route::get('news/clear','Admin\NewsController@clear');
+    Route::get('news/dropItem','Admin\NewsController@dropItem');
+
+    
+
 });

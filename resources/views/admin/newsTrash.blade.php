@@ -142,7 +142,8 @@
                     <td>{{$news->updated_at}}</td>
                     <td>{{$news->created_at}}</td>
                     <td>
-                        <button class="btn btn-danger recovery" data-id="{{$news->id}}">恢复</button>
+                        <button class="btn btn-success recovery" data-id="{{$news->id}}">恢复</button>
+                        <button class="btn btn-danger delete" data-id="{{$news->id}}">删除</button>
                     </td>
                 </tr>
                 @endforeach
@@ -150,8 +151,8 @@
         </table>
         {{$newsList->links()}}
     </div>
-    <!-- 列表删除对话框start -->
-    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" id="recoveryModal" aria-labelledby="deleteModal">
+    <!-- 列表恢复对话框start -->
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" id="recoveryModal" aria-labelledby="recoveryModal">
         <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -164,7 +165,7 @@
             </div>
         </div>
     </div>
-    <!-- 列表删除对话框end -->
+    <!-- 列表恢复对话框end -->
     <!-- 清空回收站start -->
     <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" id="clearModal" aria-labelledby="clearModal">
         <div class="modal-dialog modal-sm" role="document">
@@ -180,6 +181,21 @@
         </div>
     </div>
     <!-- 清空回收站end -->
+    <!-- 彻底清除item start -->
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" id="deleteModal" aria-labelledby="deleteModal">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    确定删除？
+                </div>
+                <div class="modal-body">
+                    <button type="button" style="margin-left:170px !important;" class="btn btn-danger btn-sm delete-confirm">确认</button>
+                    <button type="button" class="btn btn-default btn-sm delete-cannel">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 彻底清除item end -->
   </body>
   <script src="/admin/js/jquery-2.1.4.min.js"></script>
   <script src="/admin/js/wangEditor.min.js"></script>
@@ -208,6 +224,28 @@
             });
             $(".recovery-cannel").click(function(){
                 $("#recoveryModal").modal("hide");
+            });
+        });
+
+        $(".delete").click(function(){
+            $("#deleteModal").modal('toggle');
+            let newsId = $(this).attr("data-id");
+            $(".delete-confirm").click(function(){
+                $.ajax({
+                    url: "/admin/news/dropItem",
+                    dataType:'JSON',
+                    method:'GET',
+                    data:{
+                        id:newsId
+                    },
+                    success:function(data,status){
+                        window.location.reload();
+                    },
+                    error:function(){}
+                });
+            });
+            $(".delete-cannel").click(function(){
+                $("#deleteModal").modal("hide");
             });
         });
 

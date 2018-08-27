@@ -106,6 +106,14 @@ class NewsController extends Controller
         'start_time'=>$request->start_time,'end_time'=>$request->end_time]]);
     }
 
+    //彻底删除某一项
+    public function dropItem(Request $request)
+    {
+        $news = News::find($request->id);
+        $news->delete();
+        return ['errno'=>0];
+    }
+
     private function update($newsTitle,$newsContent,$firstImage,$sort,$newsStatus,$id)
     {
         $news = News::find($id);
