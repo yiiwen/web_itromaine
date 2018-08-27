@@ -11,7 +11,7 @@ class NewsController extends Controller
 
     public function index(Request $request)
     {
-        $condition = $this->search($request);
+        $condition = $request->search;
         $condition[] = ['news_status','=','1'];
         $condition[] = ['is_del','=','0'];
         $newsList = News::where($condition)->select('id','news_title',
@@ -23,12 +23,23 @@ class NewsController extends Controller
     //草稿箱
     public function draftsList(Request $request)
     {
-        $condition = $this->search($request);
+        $condition = $request->search;
         $condition[] = ['news_status','=','0'];
         $condition[] = ['is_del','=','0'];
         $newsList = News::where($condition)->select('id','news_title',
         'news_content','created_at','short_url','updated_at')->paginate(10);
         return view('admin/news',['newsList'=>$newsList,'keywords'=>['news_title'=>$request->news_title,
+        'start_time'=>$request->start_time,'end_time'=>$request->end_time]]);
+    }
+
+    //回收站
+    public function trash(Request $request)
+    {
+        $condition = $request->search;
+        $condition[] = ['is_del','=','1'];
+        $newsList = News::where($condition)->select('id','news_title',
+        'news_content','created_at','short_url','updated_at')->paginate(10);
+        return view('admin/newsTrash',['newsList'=>$newsList,'keywords'=>['news_title'=>$request->news_title,
         'start_time'=>$request->start_time,'end_time'=>$request->end_time]]);
     }
 
@@ -84,34 +95,22 @@ class NewsController extends Controller
         $id = $request->id;
         $news = News::find($id);
         $news->is_del = 0;
-        $news->save();
-        return ['errno'=>0,'id'=>$id];
+        return $news->save() ? ['errno'=>0,'id'=>$id] : ['errno'=>5000];
     }
 
     //清空回收站
     public function clear(Request $request)
     {
-        News::where('is_del','=',1)->delete();
-        return ['errno'=>0];
-    }
-
-    //回收站
-    public function trash(Request $request)
-    {
-        $condition = $this->search($request);
-        $condition[] = ['is_del','=','1'];
-        $newsList = News::where($condition)->select('id','news_title',
-        'news_content','created_at','short_url','updated_at')->paginate(10);
-        return view('admin/newsTrash',['newsList'=>$newsList,'keywords'=>['news_title'=>$request->news_title,
-        'start_time'=>$request->start_time,'end_time'=>$request->end_time]]);
+        $result = News::where('is_del','=',1)->delete();
+        return $result ? ['errno'=>0] : ['errno'=>5000];
     }
 
     //彻底删除某一项
     public function dropItem(Request $request)
     {
         $news = News::find($request->id);
-        $news->delete();
-        return ['errno'=>0];
+        $result = $news->delete();
+        return $result ? ['errno'=>0] : ['errno'=>5000];
     }
 
     private function update($newsTitle,$newsContent,$firstImage,$sort,$newsStatus,$id)
@@ -122,32 +121,6 @@ class NewsController extends Controller
         $news->first_image  = $firstImage;
         $news->news_status = $newsStatus;
         $news->sort = $sort;
-        $news->save(); 
-    }
-
-    private function search(Request $request)
-    {
-        $newsTitle = $request->news_title ?: null;
-        $startTime = $request->start_time ?: null;
-        $endTime   = $request->end_time ?: null;
-        $condition = [];
-        if ($newsTitle)
-        {
-            $condition[] = ['news_title','like','%'.$newsTitle .'%'];
-        }
-        if ($startTime && $endTime)
-        {
-            $condition[] = ['created_at','>',$startTime];
-            $condition[] = ['created_at','<',$endTime];
-        } 
-        else if($startTime)
-        {
-            $condition[] = ['created_at','>',$startTime];
-        }
-        else if ($endTime)
-        {
-            $condition[] = ['created_at','<',$startTime];
-        }
-        return $condition;
+        $news->save();
     }
 }

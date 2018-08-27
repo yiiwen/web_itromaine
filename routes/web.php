@@ -89,13 +89,15 @@ Route::prefix('admin')->middleware(['checkLogin'])->group(function(){
     });
 
     //新闻模块
-    Route::get('news/index','Admin\NewsController@index');
+    Route::middleware("search")->group(function(){
+        Route::get('news/index','Admin\NewsController@index');
+        Route::get('news/draftsList','Admin\NewsController@draftsList');
+        Route::get('news/trash','Admin\NewsController@trash');
+    });
     Route::post('news/publish','Admin\NewsController@publish');
     Route::post('news/drafts','Admin\NewsController@drafts');
     Route::get('news/getOne','Admin\NewsController@getOne');
     Route::get('news/delete','Admin\NewsController@delete');
-    Route::get('news/draftsList','Admin\NewsController@draftsList');
-    Route::get('news/trash','Admin\NewsController@trash');
     Route::get('news/recovery','Admin\NewsController@recovery');
     Route::get('news/clear','Admin\NewsController@clear');
     Route::get('news/dropItem','Admin\NewsController@dropItem');

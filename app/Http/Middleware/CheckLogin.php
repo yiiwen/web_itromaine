@@ -15,6 +15,7 @@ class CheckLogin
      */
     public function handle($request, Closure $next)
     {
+        //todo 做登录验证
         return $next($request);
     }
 }
