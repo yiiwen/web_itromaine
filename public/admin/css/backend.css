@@ -118,7 +118,7 @@ a{
     color:#000;
 }
 
-#publishNew .modal-dialog
+#publishNew .modal-dialog,#publishCase .modal-dialog
 {
     width:800px !important;
 }

@@ -9,10 +9,9 @@ class Search
 
     private $config = [
         'admin/news/index' => \App\Library\Search\NewsSearch::class,
-        'admin/news/trash' => \App\Library\Search\NewsSearch::class,
         'admin/news/draftsList' => \App\Library\Search\NewsSearch::class,
+        'admin/news/trash' => \App\Library\Search\NewsSearch::class,
     ];
-
     /**
      * Handle an incoming request.
      *
@@ -23,7 +22,7 @@ class Search
     public function handle($request, Closure $next)
     {
         $path = $request->path();
-        $search =  new $this->config[$path];
+        $search = new $this->config[$path];
         $search->handle($request);
         return $next($request);
     }

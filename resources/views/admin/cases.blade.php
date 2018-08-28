@@ -1,9 +1,9 @@
 @extends("admin.layout")
     @php $active = '/admin/cases/index' @endphp
-    
+
     @section("title","广州油麦菜信息科技有限公司-CMS")
 
-    @section("content")    
+    @section("content")
         <div class="container">
             <br>
                 <button type="button" class="btn btn-success" id="addNew" style="margin-right:20px;display:block;float:left;" data-toggle="modal" data-target="#publishCase">
@@ -80,31 +80,22 @@
                             <input type="hidden" id="news-id">
                         </div>
                         <div id="new-title" class="form-group">
-                            <label for="new-title">文章标题</label>
+                            <label for="new-title">案例标题</label>
                             <input type="text" id="news-title" data-toggle="tooltip" title="请输入文章标题" class="form-control">
                         </div>
                         <div id="news-content" class="from-group">
-                            <label for="news-content">文章内容</label>
+                            <label for="news-content">案例内容</label>
                             <div id="new-edit" data-toggle="tooltip" title="请输入文章内容"></div>
                         </div>
                         <br>
                         <div class="from-group">
-                            <label>文章封面</label>
+                            <label>案例封面</label>
                             <div class="article-image">
                                 <div class="first-image">
                                     <input type="file" style="display:none;" id="first-image-input" name="first-image" />
                                     <img src="/admin/images/pic.png" id="first-image" alt="..." class="img-thumbnail" />
                                     <div id="uploadFirstImgBtn">
                                         <button onclick="document.getElementById('first-image-input').click()">上传图片</button>
-                                    </div>
-                                </div>
-                                <div style="border:1px solid #CCC;border-radius:4px;width:560px;margin-left:210px;padding:10px;">
-                                    <label for="">从文章中选取</label>
-                                    <div>
-                                        <div class="candidate-image-div">
-                                            <div class="candidate-image" id="candidate-image">
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                                 <div style="clear:both;"></div>
@@ -181,5 +172,23 @@
     @endsection
 
     @section("script")
-        <script type="text/javascript" src="/js/app.js"></script>
+        <script src="/admin/js/wangEditor.min.js"></script>
+        <script type="text/javascript">
+            var E = window.wangEditor
+            var editor = new E('#new-edit');
+            let firstImg =  '';
+            const candidateImage = new Array();
+            editor.customConfig.uploadImgServer = '/admin/upload';
+            editor.customConfig.uploadFileName  = 'photo';
+            editor.customConfig.uploadImgHeaders  ={
+                'X-CSRF-TOKEN' : $('meta[name="csrf-token"]').attr('content')
+            };
+            editor.customConfig.uploadImgHooks = {
+                success: function (xhr, editor, result) {
+                },
+                fail: function (xhr, editor, result) {
+                },
+            }
+            editor.create();
+        </script>
     @endsection("script")

@@ -1,12 +1,13 @@
 @extends('admin.layout')
+@php $active = '/admin/news/index' @endphp
 @section('title','广州油麦菜信息科技有限公司-CMS')
     @section('content')
     <div class="container">
         <br>
             <div class="btn-group" role="group" style="float:left;">
-                <a href="/admin/news/index" style="color:#FFF !important;" class="btn btn-info"><i class="glyphicon glyphicon-th-list"></i> 新闻列表</a>
-                <a href="/admin/news/draftsList" style="color:#FFF !important;" class="btn btn-info"><i class="glyphicon glyphicon-pencil"></i> 草稿箱</a>
-                <a style="color:#FFF !important;" class="btn btn-info"><i class="glyphicon glyphicon-trash"></i> 回收站</a>
+                <a href="/admin/news/index" style="color:#FFF !important;" class="btn btn-primary"><i class="glyphicon glyphicon-th-list"></i> 新闻列表</a>
+                <a href="/admin/news/draftsList" style="color:#FFF !important;" class="btn btn-primary"><i class="glyphicon glyphicon-pencil"></i> 草稿箱</a>
+                <a style="color:#FFF !important;" class="btn btn-primary"><i class="glyphicon glyphicon-trash"></i> 回收站</a>
             </div>
 
             <button type="button" class="btn btn-danger" id="clear" style="margin-left:20px;display:block;float:left;">
