@@ -73,16 +73,18 @@ Route::prefix('m')->group(function(){
     });
 });
 
+
 //后台
+
+//后台登陆
+Route::get('admin/login','Admin\LoginController@login');
+Route::post('admin/loginHandle','Admin\LoginController@loginHandle');
+
 Route::prefix('admin')->middleware(['checkLogin'])->group(function(){
-    Route::get('login',function(){
-        return view('admin/login');
-    });
 
-    Route::get('index',function(){  
-        return view('admin/index');
-    });
+    Route::get('index','Admin\IndexController@index');
 
+    //文件上传
     Route::post('upload',function(Illuminate\Http\Request $request){
         $class = new App\Library\Upload;
         return $class->upload($request,'photo');
@@ -102,6 +104,7 @@ Route::prefix('admin')->middleware(['checkLogin'])->group(function(){
     Route::get('news/clear','Admin\NewsController@clear');
     Route::get('news/dropItem','Admin\NewsController@dropItem');
 
-    
+    //案例模块
+    Route::get('cases/index','Admin\CasesController@index');
 
 });

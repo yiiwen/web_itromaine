@@ -3,23 +3,16 @@
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">itRomaine</a>
+                <a class="navbar-brand" href="#">itRomaine</a>
             </div>
-
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="#">网站概况 <span class="sr-only">(current)</span></a></li>
-                <li class="active"><a href="#">新闻管理</a></li>
-                <li><a href="#">案例管理</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">权限管理 <span class="caret"></span></a>
+                <li @if($active == '/admin/index') class="active" @endif><a href="/admin/index">网站概况 <span class="sr-only">(current)</span></a></li>
+                <li @if($active == '/admin/news/index') class="active" @endif><a href="/admin/news/index">新闻管理</a></li>
+                <li @if($active == '/admin/cases/index') class="active" @endif><a href="/admin/cases/index">案例管理</a></li>
+                <li @if($active == '/admin/roles/index') class="active dropdown" @else class="dropdown" @endif>
+                    <a href="/admin/roles/index" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">权限管理 <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#">Action</a></li>
                         <li><a href="#">Another action</a></li>
@@ -30,8 +23,8 @@
                         <li><a href="#">One more separated link</a></li>
                     </ul>
                 </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">常用功能 <span class="caret"></span></a>
+                <li @if($active == '/admin/options') class="active dropdown" @else class="dropdown" @endif>
+                    <a href="/admin/options" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">常用功能 <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#">Action</a></li>
                         <li><a href="#">Another action</a></li>

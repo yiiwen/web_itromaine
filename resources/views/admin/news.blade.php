@@ -1,10 +1,11 @@
 @extends('admin.layout')
+    @php $active = '/admin/news/index' @endphp
     @section('title','广州油麦菜信息科技有限公司-新闻管理')
     @section("content")
     <div class="container">
         <br>
             <button type="button" class="btn btn-success" id="addNew" style="margin-right:20px;display:block;float:left;" data-toggle="modal" data-target="#publishNew">
-            <i class="glyphicon glyphicon-plus"></i> 添加新闻</button>
+            <i class="glyphicon glyphicon-plus"></i> 发布新闻</button>
             <div class="btn-group" role="group" style="float:left;">
                 <a href="/admin/news/index" style="color:#FFF !important;" class="btn btn-primary"><i class="glyphicon glyphicon-th-list"></i> 新闻列表</a>
                 <a href="/admin/news/draftsList" style="color:#FFF !important;" class="btn btn-primary"><i class="glyphicon glyphicon-pencil"></i> 草稿箱</a>

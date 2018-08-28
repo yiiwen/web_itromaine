@@ -20,14 +20,15 @@
       <img src="/admin/images/logo.png" class="logo">
       <div class="row">
         <div class="login-form col-md-4 col-md-offset-4">
-          <form action="/handle.php" id="login-form" method="post" class="form-horizontal">
+          <form action="/admin/loginHandle" id="login-form" method="post" class="form-horizontal">
+            @csrf
             <div class="form-group"><div class="col-sm-10 col-sm-offset-1">
-              <input id="username" type="text" placeholder="用户名" class="form-control">
+              <input id="username" name="username" type="text" placeholder="用户名" class="form-control">
             </div>
           </div>
           <div class="form-group">
               <div class="col-sm-10 col-sm-offset-1">
-                <input id="password" type="password" placeholder="密码" class="form-control">
+                <input id="password" name="password" type="password" placeholder="密码" class="form-control">
               </div>
             </div>
             <div class="form-group">
@@ -50,13 +51,13 @@
             <h4 class="modal-title">请填写正确的用户信息</h4>
           </div>
           <div class="modal-body">
-            <p id="alert-content"></p>
+              <p id="alert-content"></p>
           </div>
         </div>
       </div>
     </div>
   </body>
-  <script src="/js/jquery-2.1.4.min.js"></script>
+  <script src="/admin/js/jquery-2.1.4.min.js"></script>
   <script src="/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="/admin/js/app.js"></script>
 </html>

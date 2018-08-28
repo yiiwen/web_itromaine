@@ -15,7 +15,12 @@ class CheckLogin
      */
     public function handle($request, Closure $next)
     {
-        //todo 做登录验证
+        $loginInfo = $request->session()->get("loginInfo");
+        if (!$loginInfo || $loginInfo['loginTime'] > time() + 10 * 60)
+        {
+            $loginInfo['loginTime'] = time();
+            return redirect("/admin/login");
+        }
         return $next($request);
     }
 }
