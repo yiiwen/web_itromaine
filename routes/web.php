@@ -44,6 +44,32 @@ Route::get('/link',function(){
     return view('link');
 });
 
+Route::get('/cases/1',function(){
+    return view('cases1');
+});
+
+Route::get('/cases/2',function(){
+    return view('cases2');
+});
+
+Route::get('/cases/3',function(){
+    return view('cases3');
+});
+
+Route::get('/cases/4',function(){
+    return view('cases4');
+});
+
+Route::get('/cases/5',function(){
+    return view('cases5');
+});
+
+Route::get('/cases/6',function(){
+    return view('cases6');
+});
+
+
+
 
 //手机版
 Route::prefix('m')->group(function(){

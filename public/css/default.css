@@ -264,6 +264,11 @@
   padding:5px;
 }
 
+.case-item a{
+  text-decoration: none;
+  color: #000;
+}
+
 .case-item img{
   width: 100%;
   display: block;

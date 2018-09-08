@@ -18,7 +18,9 @@
           <li>
             <div class="case">
               <div class="case-img">
-                <img src="images/cases/newsico_20170905170429868.jpg" alt="">
+                <a href="/cases/1" target="_blank">
+                  <img src="images/cases/newsico_20170905170429868.jpg" alt="">
+                </a>
               </div>
               <div class="">
                 <h4>CC女神</h4>
@@ -29,7 +31,9 @@
           <li>
             <div class="case">
               <div class="case-img">
-                <img src="images/cases/newsico_20170905170933273.jpg" alt="">
+                <a href="/cases/2" target="_blank">
+                  <img src="images/cases/newsico_20170905170933273.jpg" alt="">
+                </a>
               </div>
               <div class="">
                 <h4>华为心声社区</h4>
@@ -40,7 +44,9 @@
           <li>
             <div class="case">
               <div class="case-img">
-                <img src="images/cases/newsico_20170905170953943.jpg" alt="">
+                <a href="/cases/3" target="_blank">
+                  <img src="images/cases/newsico_20170905170953943.jpg" alt="">
+                </a>
               </div>
               <div class="">
                 <h4>蜈支洲岛</h4>
@@ -51,7 +57,9 @@
           <li>
             <div class="case">
               <div class="case-img">
-                <img src="images/cases/newsico_20170905171132083.jpg" alt="">
+                <a href="/cases/4" target="_blank">
+                  <img src="images/cases/newsico_20170905171132083.jpg" alt="">
+                </a>
               </div>
               <div class="">
                 <h4>大家创库</h4>
@@ -62,7 +70,9 @@
           <li>
             <div class="case">
               <div class="case-img">
-                <img src="images/cases/newsico_20170905171220334.jpg" alt="">
+                <a href="/cases/5" target="_blank">
+                  <img src="images/cases/newsico_20170905171220334.jpg" alt="">
+                </a>
               </div>
               <div class="">
                 <h4>瑞大生珠宝</h4>
@@ -73,7 +83,9 @@
           <li>
             <div class="case">
               <div class="case-img">
-                <img src="images/cases/newsico_20170905171425383.jpg" alt="">
+                <a href="/cases/6" target="_blank">
+                  <img src="images/cases/newsico_20170905171425383.jpg" alt="">
+                </a>
               </div>
               <div class="">
                 <h4>Deep3d</h4>
