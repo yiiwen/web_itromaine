@@ -29,7 +29,7 @@
                     <input type="text" name="end_time" value="{{$keywords['end_time']}}" class="form-control" placeholder="结束时间"  id="endtime">
                 </div>
                 <div class="col-xs-2">
-                        <button type="submit" style="margin-top:25px;" class="btn btn-success">搜索</button>
+                    <button type="submit" style="margin-top:25px;" class="btn btn-success">搜索</button>
                 </div>
             </form>
         </div>
@@ -51,7 +51,7 @@
                 @foreach ($newsList as $news)
                 <tr>
                     <td>{{$news->id}}</td>
-                    <td>{{$news->news_title}}</td>
+                    <td class="news_title">{{$news->news_title}}</td>
                     <td><a href="{{$news->short_url}}" target="_blank">{{$news->short_url}}</a></td>
                     <td>{{$news->updated_at}}</td>
                     <td>{{$news->created_at}}</td>

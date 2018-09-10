@@ -36,9 +36,7 @@ Route::get('/news',function(){
     return view('news');
 });
 
-Route::get('/newsitem/{id}',function(){
-    return view('newsItem');
-});
+Route::get('/newsitem/{id}','Web\NewsController@newsItem');
 
 Route::get('/link',function(){
     return view('link');
