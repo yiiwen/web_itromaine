@@ -284,18 +284,18 @@
                 <div class="news-list">
                     <div class="new-date">
                         <div class="new-date-day">
-                        22
+                        {{date("d",time($item->created_at))}}
                         </div>
                         <div class="new-date-year">
-                        2018-02
+                        {{date("Y-m",time($item->created_at))}}
                         </div>
                     </div>
                     <div class="new-item">
                         <div class="new-title">
-                        <h4><a href="#">{{$item->news_title}}</a></h4>
+                        <h4><a href="/newsitem/{{$item->id}}" target="_blank">{{$item->news_title}}</a></h4>
                         </div>
                         <div class="new-content">
-                        <p>论坛推广是网站外推广的不错的途径。因为一般论坛权重很高，尤其对新网站是个不错的推广方式。网站外论坛推广注意事项你又知道多少呢?因为论坛可以供网页讨论，盲目的摆广告很可能给自身的网站带来不好的影响。</p>
+                        <p>{{$item->abstract}}</p>
                         </div>
                     </div>
                     <div style="clear:both;"></div>
