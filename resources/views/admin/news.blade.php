@@ -51,7 +51,7 @@
                 @foreach ($newsList as $news)
                 <tr>
                     <td>{{$news->id}}</td>
-                    <td class="news_title">{{$news->news_title}}</td>
+                    <td><div class="news_title">{{$news->news_title}}</div></td>
                     <td><a href="{{$news->short_url}}" target="_blank">{{$news->short_url}}</a></td>
                     <td>{{$news->updated_at}}</td>
                     <td>{{$news->created_at}}</td>

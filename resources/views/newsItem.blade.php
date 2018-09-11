@@ -24,5 +24,5 @@
     </div>
     <br>
     <br>
-    </div>
+</div>
 @include('footer')

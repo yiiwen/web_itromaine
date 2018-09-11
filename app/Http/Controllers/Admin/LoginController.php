@@ -20,8 +20,15 @@ class LoginController extends Controller
         if ($request->cookie('itromaineCode'))
         {
             $result = Admin::checkLogin($request->username,$request->password);
-            $request->session()->put('loginInfo',['username'=>$result->username,'loginTime'=>time()]);
-            return redirect("/admin/index");
+            if ($result)
+            {
+                $request->session()->put('loginInfo',['username'=>$result->username,'loginTime'=>time()]);
+                return redirect("/admin/index");
+            }
+            else
+            {
+                return redirect("/admin/login");
+            }
         }
     }
 
