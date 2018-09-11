@@ -11,6 +11,8 @@ class NewsController extends Controller
     public function newsItem(Request $request,int $id)
     {
         $news = News::find($id);
-        return view('newsItem',['newsItem'=>$news]);
+        $prev = News::where("id","<",$id)->select("id","news_title")->orderBy("id","asc")->first();
+        $next = News::where("id",">",$id)->select("id","news_title")->orderBy("id","asc")->first();
+        return view('newsItem',['newsItem'=>$news,"prev"=>$prev,"next"=>$next]);
     }
 }

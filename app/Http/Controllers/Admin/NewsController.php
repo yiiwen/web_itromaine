@@ -49,11 +49,11 @@ class NewsController extends Controller
         if (!$id)
         {
             $news = new News();
-            $id = $news->saveNews($request->news_title,$request->news_content,
+            $id = $news->saveNews($request->news_title,$request->abstract,$request->news_content,
             $request->first_image,$request->sort,1);
             return ['errno'=>0,'id'=>$id];
         }
-        $this->update($request->news_title,$request->news_content,
+        $this->update($request->news_title,$request->abstract,$request->news_content,
         $request->first_image,$request->sort,1,$id);
         return ['errno'=>0,'id'=>$id];
     }
@@ -113,10 +113,11 @@ class NewsController extends Controller
         return $result ? ['errno'=>0] : ['errno'=>5000];
     }
 
-    private function update($newsTitle,$newsContent,$firstImage,$sort,$newsStatus,$id)
+    private function update($newsTitle,$newsAbstract,$newsContent,$firstImage,$sort,$newsStatus,$id)
     {
         $news = News::find($id);
         $news->news_title   = $newsTitle;
+        $news->abstract = $newsAbstract;
         $news->news_content = $newsContent;
         $news->first_image  = $firstImage;
         $news->news_status = $newsStatus;

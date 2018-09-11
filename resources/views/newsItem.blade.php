@@ -13,8 +13,13 @@
             </div>
         </div>
         <div class="news-bottom-nav">
-        <p>上一篇:&nbsp;<a href="#">无</a></p>
-        <p>下一篇:&nbsp;<a href="#">网络时代新行当：白天......</a></p>
+        @if ($prev)
+        <p>上一篇:&nbsp;<a href="/newsitem/{{$prev->id}}">{{$prev->news_title}}</a></p>
+        @endif
+
+        @if ($next)
+        <p>下一篇:&nbsp;<a href="/newsitem/{{$next->id}}">{{$news->news_title}}</a></p>
+        @endif
         </div>
     </div>
     <br>

@@ -81,6 +81,10 @@
                         <label for="new-title">文章标题</label>
                         <input type="text" id="news-title" data-toggle="tooltip" title="请输入文章标题" class="form-control">
                     </div>
+                    <div id="news-abstract" class="form-group">
+                        <label for="news-abstract-input">文字摘要</label>
+                        <textarea name="abstract" id="news-abstract-input" class="form-control" rows="3" style="resize:none;"></textarea>
+                    </div>
                     <div id="news-content" class="from-group">
                         <label for="news-content">文章内容</label>
                         <div id="new-edit" data-toggle="tooltip" title="请输入文章内容"></div>
@@ -257,6 +261,7 @@
           {
               const submitData = new FormData();
               let newsTitle = $("#news-title").val().trim();
+              let newsAbstract = $("#news-abstract-input").val().trim();
               let newsContent = editor.txt.html().trim();
               let newsId = $("#news-id").val().trim();
               if (newsTitle.length <= 0) {
@@ -276,6 +281,8 @@
               });
               submitData.append('news_id',newsId);
               submitData.append('news_title',newsTitle);
+              submitData.append('abstract',newsAbstract);
+              submitData.append('abstract',newsAbstract);
               submitData.append('news_content',newsContent);
               submitData.append('first_image',firstImg);
               return submitData;
