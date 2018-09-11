@@ -337,6 +337,7 @@
               $("#close").click(function(){
                   //清空所有控件
                   $("#news-title").val('');
+                  $("#news-abstract-input").val('');
                   editor.txt.html('');
                   firstImg = '';
                   $("#candidate-image").empty();
@@ -356,6 +357,7 @@
                       success:function(data,status){
                           $("#news-title").val(data.news_title);
                           $("#news-id").val(data.id);
+                          $("#news-abstract-input").val(data.abstract);
                           editor.txt.html(data.news_content);
                           $("#first-image").attr("src",data.first_image);
                           firstImg = data.first_image;
