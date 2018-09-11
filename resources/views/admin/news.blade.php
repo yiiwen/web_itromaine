@@ -292,6 +292,7 @@
               $("#addNew").click(function(){
                   //清空所有控件
                   $("#news-title").val('');
+                  $("#news-abstract-input").val('');
                   editor.txt.html('');
                   firstImg = '';
                   $("#candidate-image").empty();
