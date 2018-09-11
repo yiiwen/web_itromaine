@@ -10,10 +10,11 @@ class News extends Model
 {
     protected $table = 'news';
 
-    public function saveNews($title,$content,$firstImage,$sort,$newsStatus)
+    public function saveNews($title,$abstract,$content,$firstImage,$sort,$newsStatus)
     {
         $shortUrl = Util::createShortUrl();
         $this->news_title = $title;
+        $this->abstract = $abstract;
         $this->news_content = $content;
         $this->author_id = 1;
         $this->author_name = '油麦菜';
