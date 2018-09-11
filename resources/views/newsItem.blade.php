@@ -18,7 +18,7 @@
         @endif
 
         @if ($next)
-        <p>下一篇:&nbsp;<a href="/newsitem/{{$next->id}}">{{$news->news_title}}</a></p>
+        <p>下一篇:&nbsp;<a href="/newsitem/{{$next->id}}">{{$next->news_title}}</a></p>
         @endif
         </div>
     </div>
