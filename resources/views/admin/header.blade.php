@@ -8,7 +8,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li @if($active == '/admin/index') class="active" @endif><a href="/admin/index">网站概况 <span class="sr-only">(current)</span></a></li>
+                <li @if($active == '/admin/index') class="active" @endif><a href="/admin/index">网站概况及设置 <span class="sr-only">(current)</span></a></li>
                 <li @if($active == '/admin/news/index') class="active" @endif><a href="/admin/news/index">新闻管理</a></li>
                 <li @if($active == '/admin/cases/index') class="active" @endif><a href="/admin/cases/index">案例管理</a></li>
                 <li @if($active == '/admin/roles/index') class="active dropdown" @else class="dropdown" @endif>
