@@ -8,6 +8,13 @@ use App\Model\News;
 
 class NewsController extends Controller
 {
+    public function index(Request $request)
+    {
+        $listNews = News::orderBy("id","desc")->
+        select("id",'news_title','abstract','created_at')->paginate(10);
+        return view('news',['listNews'=>$listNews]);
+    }
+
     public function newsItem(Request $request,int $id)
     {
         $news = News::find($id);

@@ -284,10 +284,10 @@
                 <div class="news-list">
                     <div class="new-date">
                         <div class="new-date-day">
-                        {{date("d",time($item->created_at))}}
+                        {{date("d",strtotime($item->created_at))}}
                         </div>
                         <div class="new-date-year">
-                        {{date("Y-m",time($item->created_at))}}
+                        {{date("Y-m",strtotime($item->created_at))}}
                         </div>
                     </div>
                     <div class="new-item">

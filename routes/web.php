@@ -27,10 +27,7 @@ Route::get('/cases',function(){
     return view('cases');
 });
 
-Route::get('/news',function(){
-    return view('news');
-});
-
+Route::get('/news','Web\NewsController@index');
 Route::get('/newsitem/{id}','Web\NewsController@newsItem');
 
 Route::get('/link',function(){
