@@ -25,7 +25,7 @@
                       </div>
                       <div class="news-content">
                         <div class="news-title">
-                          <h3><a href="#">{{$news->news_title}}</a></h3>
+                          <h3><a href="/newsitem/{{$news->id}}" target="_blank">{{$news->news_title}}</a></h3>
                         </div>
                         <div class="news-descript">
                           <p>{{$news->abstract}}</p>
