@@ -208,3 +208,36 @@ a{
     -webkit-line-clamp: 1;
     overflow: hidden;
 }
+
+
+
+/***********后台index配置start***********/
+section {
+    margin-top:10px;
+    margin-bottom:30px;
+}
+
+section h4{
+    margin-bottom:20px;
+}
+
+.banner img{
+    width: 100%;
+}
+
+.banner-action-btn {
+    margin-top:5px;
+}
+
+.banner-action-btn ul{
+    margin:0;
+    padding:0;
+}
+
+.banner-action-btn li{
+    float: left;
+    list-style: none;
+    margin-left:5px;
+    margin-right:14px;
+}
+/***********后台index配置end*************/
