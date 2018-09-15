@@ -112,6 +112,10 @@ Route::prefix('admin')->middleware(['checkLogin'])->group(function(){
         Route::get('news/draftsList','Admin\NewsController@draftsList');
         Route::get('news/trash','Admin\NewsController@trash');
     });
+
+    //系统设置
+    Route::post('index/banner','Admin\IndexController@setBannser');
+
     Route::post('news/publish','Admin\NewsController@publish');
     Route::post('news/drafts','Admin\NewsController@drafts');
     Route::get('news/getOne','Admin\NewsController@getOne');

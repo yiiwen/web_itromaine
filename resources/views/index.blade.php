@@ -4,34 +4,23 @@
     <div class="banner">
         <div class="swiper-container">
         <div class="swiper-wrapper">
+            @foreach ($bannerList as $banner)
             <div class="swiper-slide">
-            <img src="images/banner/1_ceqn.jpg" alt="">
-            <div class="slide-content">
-                <h2>广州油麦菜信息科技有限公司</h2>
-                <p>More than 10 years of technical precipitation, more than 3,000 well-known customers' choice, consistent service attitude, depth and breadth of industry experience</p>
-                <h3>有态度 · 有速度 · 有深度</h3>
-                <a href="/service" class="slide-btn">
-                服务范围
-                </a>
-                <a href="/cases" class="slide-btn slide-btn-active">
-                案例展示
-                </a>
+                <img src="{{$banner->path}}" alt="{{$banner->alt_info}}">
+                <div class="slide-content">
+                    <h2>广州油麦菜信息科技有限公司</h2>
+                    <p>More than 10 years of technical precipitation, more than 3,000 well-known customers' choice, consistent service attitude, depth and breadth of industry experience</p>
+                    <h3>有态度 · 有速度 · 有深度</h3>
+                    <a href="/service" class="slide-btn">
+                    服务范围
+                    </a>
+                    <a href="/cases" class="slide-btn slide-btn-active">
+                    案例展示
+                    </a>
+                </div>
             </div>
-            </div>
-            <div class="swiper-slide">
-            <img src="images/banner/2.jpg" alt="">
-            <div class="slide-content">
-                <h2>广州油麦菜信息科技有限公司</h2>
-                <p>Touch the heart of the design and professional technology development for your enterprise to create unlimited business opportunities</p>
-                <h3>触动人心的设计和专业的技术开发，为您的企业创造无限商机</h3>
-                <a href="/service" class="slide-btn">
-                服务范围
-                </a>
-                <a href="/cases" class="slide-btn slide-btn-active">
-                案例展示
-                </a>
-            </div>
-            </div>
+            @endforeach
+
         </div>
         <div class="swiper-pagination"></div>
         <div class="swiper-button-prev"></div>
