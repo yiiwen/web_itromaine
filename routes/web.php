@@ -98,7 +98,8 @@ Route::post('admin/loginHandle','Admin\LoginController@loginHandle');
 
 Route::prefix('admin')->middleware(['checkLogin'])->group(function(){
 
-    Route::get('index','Admin\IndexController@index');
+    Route::get('index','Admin\IndexController@index');  //网站首页配置
+    Route::post('config','Admin\IndexController@config');//配置网站选项
 
     //文件上传
     Route::post('upload',function(Illuminate\Http\Request $request){

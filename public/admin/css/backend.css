@@ -213,12 +213,12 @@ a{
 
 /***********后台index配置start***********/
 section {
-    margin-top:10px;
-    margin-bottom:30px;
+    margin-bottom:70px;
 }
 
 section h4{
     margin-bottom:20px;
+    margin-top:20px;
 }
 
 .banner img{

@@ -1,10 +1,11 @@
 <?php
-
 namespace App\Http\Controllers\Admin;
 
+use App\Library\Message;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\Banner;
+use App\Model\Site;
 
 
 class IndexController extends Controller
@@ -14,6 +15,8 @@ class IndexController extends Controller
         $data = [];
         //加载轮播图设置
         $data['bannserList'] = Banner::orderBy("sort","asc")->get();
+        //加载网站配置
+        $data['siteOptions'] = Site::find(1);
         return view('admin/index',$data);
     }
 
@@ -43,5 +46,16 @@ class IndexController extends Controller
                 $count++;
         }
         return ['total'=>$total,'success'=>$count,'fail'=>$total-$count];
+    }
+
+    //配置网站选项
+    public function config(Request $request)
+    {
+        $option = $request->option;
+        $value = $request->value;
+        $siteConfig = Site::find(1);
+        $siteConfig->$option = trim($value);
+        $result = $siteConfig->save();
+        return $result ? Message::success() : Message::error();
     }
 }

@@ -23,9 +23,11 @@
             "database/factories"
         ],
         "psr-4": {
-            "App\\": "app/",
-            "App\\Library": "app/Library"
-        }
+            "App\\": "app/"
+        },
+        "files": [
+            "app/Helpers/function.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {

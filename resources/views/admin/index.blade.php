@@ -5,7 +5,7 @@
 
     @section("content")
     <div class="container">
-        <section class="banner">
+        <section class="banner sec">
             <h4>首页Banner: 
                 <div class="btn-group" style="margin-left:20px;" role="group" aria-label="...">
                     <button type="button" id="add-banner" class="btn btn-default btn-xs"><i class="glyphicon glyphicon-cloud-upload"></i>&nbsp;新增轮播图</button>
@@ -35,23 +35,29 @@
                 @endforeach
             </div>
         </section>
-        <section class="banner">
+        <section>
             <h4>网站SEO:</h4>
             <div class="form-group">
                 <label for="site_domain">网站域名</label>
-                <input type="text" class="form-control" id="site_domain" placeholder="网站域名">
+                <input type="text" class="form-control site-options" data-param="domain" id="site_domain"
+                 value="{{$siteOptions->domain}}" placeholder="网站域名">
             </div>
             <div class="form-group">
                 <label for="site_title">网站标题</label>
-                <input type="text" class="form-control" id="site_title" placeholder="网站标题">
+                <input type="text" class="form-control site-options" data-param="keywords" id="site_title"
+                 value="{{$siteOptions->title}}" placeholder="网站标题">
             </div>
             <div class="form-group">
                 <label for="site_keys">网站关键词</label>
-                <input type="text" class="form-control" id="site_keys" placeholder="网站关键词">
+                <input type="text" class="form-control site-options" data-param="title" id="site_keys"
+                 value="{{$siteOptions->keywords}}" placeholder="网站关键词">
             </div>
             <div class="form-group">
                 <label for="description">网站简洁</label>
-                <input type="text" class="form-control" id="description" placeholder="网站简洁">
+                <textarea name="" rows="4" class="form-control site-options" data-param="description">
+                    {{$siteOptions->description}}
+                </textarea>
+
             </div>
         </section>
     </div>

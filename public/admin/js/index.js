@@ -195,3 +195,27 @@ $("#add-banner").click(function(){
         });
     });
 });
+
+
+//配置网站选项
+$(".site-options").blur(function(){
+    let option = $(this).attr("data-param");
+    let value = $(this).val().trim(); //获取值并且过滤空格
+    $.ajax({
+        url:"/admin/config",
+        method:"POST",
+        dataType:"JSON",
+        data:{
+            option: option,
+            value : value
+        },
+        headers:{"X-CSRF-TOKEN":$('meta[name="csrf-token"]').attr('content')},
+        success:function(data,status) {
+            if (data.code == 200)
+                alert("配置成功");
+            else
+                alert("配置失败");
+        },
+        error:function(){}
+    });
+});
