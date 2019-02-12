@@ -7,7 +7,7 @@
             @foreach ($bannerList as $banner)
             <div class="swiper-slide">
                 <img src="{{$banner->path}}" alt="{{$banner->alt_info}}">
-                <div class="slide-content">
+                <!-- <div class="slide-content">
                     <h2>广州油麦菜信息科技有限公司</h2>
                     <p>More than 10 years of technical precipitation, more than 3,000 well-known customers' choice, consistent service attitude, depth and breadth of industry experience</p>
                     <h3>有态度 · 有速度 · 有深度</h3>
@@ -17,7 +17,7 @@
                     <a href="/cases" class="slide-btn slide-btn-active">
                     案例展示
                     </a>
-                </div>
+                </div> -->
             </div>
             @endforeach
 
