@@ -253,6 +253,11 @@
   text-decoration: none;
 }
 
+.know-more:focus {
+  color: #FFF;
+  text-decoration: none;
+}
+
 .know-more:hover{
   text-decoration: none;
   color: #FFF;
