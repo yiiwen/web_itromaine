@@ -37,28 +37,28 @@
                 <div class="service-item  absolute" style="left:10px;">
                     <img src="images/ws.png" alt="">
                     <div class="service-item-title">
-                    网站建设
+                    个性网站建设
                     </div>
                     <div class="service-item-text">
-                    高端网站建设，10年网站开发经验，满足您对高质量的要求
+                    针对品牌提供定制化网站建设解决方案
                     </div>
                 </div>
                 <div class="service-item absolute" style="left:310px;">
                     <img src="images/phone.png" style="width:96px;" alt="">
                     <div class="service-item-title">
-                    手机端开发
+                    程序开发
                     </div>
                     <div class="service-item-text">
-                    手机端网站开发、微信端开发，适配各终端，企业形象完美展示
+                    以安全快的代码展示实力
                     </div>
                 </div>
                 <div class="service-item absolute" style="left:610px;">
                     <img src="images/kaifa.png" alt="">
                     <div class="service-item-title">
-                    软件开发
+                    小程序开发
                     </div>
                     <div class="service-item-text">
-                    软件定制开发，开发，测试，部署，管理和维护技术服务能力
+                    为您定制专属与您的小程序
                     </div>
                 </div>
                 <div class="service-item absolute" style="left:910px;">
@@ -67,7 +67,7 @@
                     互联网需求服务
                     </div>
                     <div class="service-item-text">
-                    满足各互联网创新项目需求，实现您的各种想法
+                    满足各互联网创新项目需求
                     </div>
                 </div>
             </div>

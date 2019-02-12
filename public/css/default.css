@@ -36,6 +36,13 @@
   width: 220px;
 }
 
+.top-container{
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  transition: background-color 0.5s;
+}
+
 .nav-container{
   float: right;
   height: 100%;
@@ -55,14 +62,18 @@
 }
 
 .nav-container li a{
-  display: block;
-  color: #807777;
+  color: #FFF;
   text-decoration: none;
 }
 
-.nav-container li a:hover{
+.nav-container .block{
+  display: block;
+}
+
+
+.nav-container .block:hover{
   background-color: #1ccfc9;
-  color:#fff;
+  color:#fff !important;
 }
 
 .swiper-slide {

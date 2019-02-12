@@ -8,6 +8,7 @@
         <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
         <title>广州油麦菜信息科技有限公司</title>
         <script src="/js/browser.js"></script>
+        <script src="/js/default.js"></script>
 	    <meta name="description" content="{{site_config('description')}}" />
 	    <meta name="keywords" content="{{site_config('keywords')}}" />
         <!-- Bootstrap -->
