@@ -1,7 +1,10 @@
 @include('header')
 <div class="content">
   @include('nav')
-  <div class="about-top-image"></div>
+  <div class="case-top-image">
+    <h1>为客户全方位考虑品牌设计优化用户体验</h1>
+    <p>Consider in all directions</p>
+  </div>
   <!-- 中部导航栏 -->
   <div class="mid-content casespage">
       <div class="mid-nav">

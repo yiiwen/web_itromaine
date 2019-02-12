@@ -2,7 +2,10 @@
 <div class="content">
         @include('nav')
 
-        <div class="about-top-image"></div>
+        <div class="news-top-image">
+          <h1>“十年磨一剑”专注提升品牌价值</h1>
+          <p>Brand value</p>
+        </div>
 
         <!-- 中部导航栏 -->
         <div class="mid-content newspage">

@@ -7,7 +7,9 @@
 <div class="content">
         @include('nav')
 
-        <div class="about-top-image"></div>
+        <div class="link-top-image">
+          <h1>赶快与我们取得联系吧</h1>
+        </div>
 
         <!-- 中部导航栏 -->
         <div class="mid-content callmepage">

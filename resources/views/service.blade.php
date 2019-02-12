@@ -1,7 +1,7 @@
 @include('header')
 <div class="content">
         @include('nav')
-        <div class="about-top-image"></div>
+        <div class="service-top-image"></div>
     	  <!--第一行-->
     	  <div class="service-row service-row-odd">
     			  <div class="service-content">

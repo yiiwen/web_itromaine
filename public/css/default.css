@@ -451,9 +451,22 @@
 
 .about-top-image{
   width: 100%;
-  height: 400px;
-  background: url(../images/2.jpg);
-  background-position:0 -210px;
+  height: 500px;
+  background: url(../images/about_banner.jpg);
+}
+
+.about-top-image h1{
+  margin:0;
+  height: 229px;
+  line-height: 350px;
+  text-align: center;
+  color: #FFF;
+}
+
+.about-top-image p{
+  margin:0;
+  text-align: center;
+  color: #FFF;
 }
 
 .about-intro-title{
@@ -584,6 +597,20 @@
   line-height:2em;
 }
 
+.link-top-image{
+  width: 100%;
+  height: 500px;
+  background: url(../images/2.jpg);
+}
+
+.link-top-image h1{
+  margin:0;
+  height: 229px;
+  line-height: 350px;
+  text-align: center;
+  color: #FFF;
+}
+
 .about-link-me {
   width: 100%;
   margin-top:60px;
@@ -609,6 +636,13 @@
 
 
 /* serivces page css */
+
+.service-top-image{
+  width: 100%;
+  height: 500px;
+  background: url(../images/201701162110262539.jpg);
+}
+
 .service-row {
   width: 100%;
 }
@@ -678,6 +712,27 @@
 }
 
 /* cases page */
+
+.case-top-image{
+  width: 100%;
+  height: 500px;
+  background: url(../images/case_banner.jpg);
+}
+
+.case-top-image h1{
+  margin:0;
+  height: 229px;
+  line-height: 350px;
+  text-align: center;
+  color: #FFF;
+}
+
+.case-top-image p{
+  margin:0;
+  text-align: center;
+  color: #FFF;
+}
+
 .mid-content{
   width:1200px;
   margin:0 auto;
@@ -857,6 +912,27 @@
 }
 
 /* news */
+
+.news-top-image{
+  width: 100%;
+  height: 500px;
+  background: url(../images/about_banner.jpg);
+}
+
+.news-top-image h1{
+  margin:0;
+  height: 229px;
+  line-height: 350px;
+  text-align: center;
+  color: #FFF;
+}
+
+.news-top-image p{
+  margin:0;
+  text-align: center;
+  color: #FFF;
+}
+
 .newspage{
   height: 1200px;
 }

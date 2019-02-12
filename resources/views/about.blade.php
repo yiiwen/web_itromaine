@@ -2,7 +2,10 @@
 <div class="content">
         @include('nav')
 
-      <div class="about-top-image"></div>
+      <div class="about-top-image">
+        <h1>以客户需求为基础量身定制高端品牌网站</h1>
+        <p>Custormer requirement & Custrm made</p>
+      </div>
       <div class="about-intro container">
         <div class="about-intro-title">
             <img src="images/jy.png" alt="">
