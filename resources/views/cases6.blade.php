@@ -29,7 +29,7 @@
   }
 </style>
 <div class="content">
-  @include('nav')
+  @include('nav2')
   <!-- 中部导航栏 -->
   <div class="casespage">
         <div class="caseTop">

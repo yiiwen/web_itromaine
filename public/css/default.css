@@ -38,6 +38,7 @@
 
 .top-container{
   position: fixed;
+  top: 0;
   z-index: 1000;
   width: 100%;
   transition: background-color 0.5s,box-shadow 0.5s;
@@ -68,6 +69,7 @@
 
 .nav-container .block{
   display: block;
+  color:rgb(128, 119, 119);
 }
 
 
