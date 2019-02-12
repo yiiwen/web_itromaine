@@ -23,8 +23,8 @@
 
         </div>
         <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
         </div>
     </div>
 
@@ -86,11 +86,11 @@
             <div class="section-content relative">
                 <div class="about-us-left absolute">
                     <div class="about-us-text">
-                    广州油麦菜信息科技有限公司是一家综合性的高新技术开发企业，成立于2018年，总部位于广东省广州市，
-            我们是年轻的创业团队,我们怀揣梦想，我们立志用技术服务大众。油麦菜是一家以高精技术开发为主要支点
-            的科技公司。致力于为广大企业提供基于微信端的开发、运营、推广、托管等一体化营销解决方案服务。
+                        我们是一家专注用户体验与互联网品牌建设的高端设计机构，
+                        我们在互联网行业兼具宽阔而前瞻的视野，苛求设计中的每一个环节，每一个细节。为客户提供策略性的思考，
+                        辅助客户在互联网产品开发中实现精准定位。我们的宗旨是竭尽所能为客户提供高品质的解决方案，用设计提升价值。
                     </div>
-                    <a href="#" class="know-more">查看更多</a>
+                    <a href="/about" class="know-more" target="_blank">查看更多</a>
                 </div>
                 <div class="about-us-right absolute">
                     <img src="images/computer.png" alt="">
@@ -178,7 +178,7 @@
                             <img src="images/cases/newsico_20170905171220334.jpg" alt="">
                         </div>
                         <div class="case-img-hidden">
-                            <img src="images/cases/newsico_20170905171220334.jpg" alt="">
+                            <img src="images/cases/ico_20170824142759353.png" alt="">
                         </div>
                     </div>
                     <div class="case-text">
