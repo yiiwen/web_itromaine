@@ -53,7 +53,7 @@
                  value="{{$siteOptions->keywords}}" placeholder="网站关键词">
             </div>
             <div class="form-group">
-                <label for="description">网站简洁</label>
+                <label for="description">网站简介</label>
                 <textarea name="" rows="4" class="form-control site-options" data-param="description">{{$siteOptions->description}}</textarea>
             </div>
         </section>
