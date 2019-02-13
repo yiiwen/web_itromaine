@@ -62,6 +62,29 @@ Route::get('/sitemap',function(){
     return view('sitemap');
 });
 
+Route::prefix('site')->group(function(){
+    //企业网站
+    Route::get('company',function(){
+        return view('webcompany');
+    });
+    //品牌网站
+    Route::get('brand',function(){
+        return view('webbrand');
+    });
+    //营销网站
+    Route::get('sale',function(){
+        return view('websale');
+    });
+
+    Route::get('ecommerce',function(){
+        return view('ecommerc');
+    });
+
+    Route::get('responsive',function(){
+        return view('webresponsive');
+    });
+});
+
 
 
 
