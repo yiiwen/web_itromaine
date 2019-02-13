@@ -298,10 +298,19 @@
         <div class="container">
             <ul>
                 <li>
-                    <img src="images/icons/20170829172842506.jpg" alt="">
+                    <img src="images/icons/20170829172854549.jpg" alt="">
                 </li>
                 <li>
-                    <img src="images/icons/20170829172854549.jpg" alt="">
+                    <img src="images/icons/20170829173137928.jpg" alt="">
+                </li>
+                <li>
+                    <img src="images/icons/20170829173137928.jpg" alt="">
+                </li>
+                <li>
+                    <img src="images/icons/20170829173130082.jpg" alt="">
+                </li>
+                <li>
+                    <img src="images/icons/20170829172842506.jpg" alt="">
                 </li>
                 <li>
                     <img src="images/icons/20170829172912037.jpg" alt="">
@@ -316,12 +325,6 @@
                     <img src="images/icons/20170829173121767.jpg" alt="">
                 </li>
                 <li>
-                    <img src="images/icons/20170829173130082.jpg" alt="">
-                </li>
-                <li>
-                    <img src="images/icons/20170829173137928.jpg" alt="">
-                </li>
-                <li>
                     <img src="images/icons/20170829173145104.jpg" alt="">
                 </li>
                 <li>
@@ -329,9 +332,6 @@
                 </li>
                 <li>
                     <img src="images/icons/20170829173211547.jpg" alt="">
-                </li>
-                <li>
-                    <img src="images/icons/20170829173137928.jpg" alt="">
                 </li>
                 <li>
                     <img src="images/icons/20170829173220392.jpg" alt="">

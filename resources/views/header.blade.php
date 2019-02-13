@@ -11,6 +11,8 @@
         <script src="/js/default.js"></script>
 	    <meta name="description" content="{{site_config('description')}}" />
 	    <meta name="keywords" content="{{site_config('keywords')}}" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="bookmark" href="/favicon.ico" />
         <!-- Bootstrap -->
         <link href="/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="/css/default.css">
