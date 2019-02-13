@@ -5,8 +5,7 @@
     <h1>为客户全方位考虑品牌设计优化用户体验</h1>
     <p>Consider in all directions</p>
   </div>
-  <!-- 中部导航栏 -->
-  <div class="mid-content casespage">
+  <!-- 中部导航栏 -->  <div class="mid-content casespage">
       <!-- <div class="mid-nav">
         <ul>
           <li><a href="#">企业网站</a></li>
