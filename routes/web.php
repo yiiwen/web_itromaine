@@ -58,6 +58,10 @@ Route::get('/cases/6',function(){
     return view('cases6');
 });
 
+Route::get('/sitemap',function(){
+    return view('sitemap');
+});
+
 
 
 

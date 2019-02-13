@@ -29,7 +29,7 @@
                                 <dd><a href="">关于我们</a></dd>
                                 <dd><a href="">公司动态</a></dd>
                                 <dd><a href="">留言板</a></dd>
-                                <dd><a href="">网站地图</a></dd>
+                                <dd><a href="/sitemap">网站地图</a></dd>
                             </dl>
                         </div>
                         <div class="col-md-2">

@@ -7,7 +7,7 @@
   </div>
   <!-- 中部导航栏 -->
   <div class="mid-content casespage">
-      <div class="mid-nav">
+      <!-- <div class="mid-nav">
         <ul>
           <li><a href="#">企业网站</a></li>
           <li><a href="#">商城网站</a></li>
@@ -15,7 +15,7 @@
           <li><a href="#">微信网站</a></li>
           <li><a href="#">app开发</a></li>
         </ul>
-      </div>
+      </div> -->
       <div class="case-container">
         <ul>
           <li>
