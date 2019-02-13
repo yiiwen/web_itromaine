@@ -211,9 +211,7 @@ $(".site-options").blur(function(){
         },
         headers:{"X-CSRF-TOKEN":$('meta[name="csrf-token"]').attr('content')},
         success:function(data,status) {
-            if (data.code == 200)
-                alert("配置成功");
-            else
+            if (data.code != 200)
                 alert("配置失败");
         },
         error:function(){}

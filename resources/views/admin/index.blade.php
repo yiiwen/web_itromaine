@@ -44,12 +44,12 @@
             </div>
             <div class="form-group">
                 <label for="site_title">网站标题</label>
-                <input type="text" class="form-control site-options" data-param="keywords" id="site_title"
+                <input type="text" class="form-control site-options" data-param="title" id="site_title"
                  value="{{$siteOptions->title}}" placeholder="网站标题">
             </div>
             <div class="form-group">
                 <label for="site_keys">网站关键词</label>
-                <input type="text" class="form-control site-options" data-param="title" id="site_keys"
+                <input type="text" class="form-control site-options" data-param="keywords" id="site_keys"
                  value="{{$siteOptions->keywords}}" placeholder="网站关键词">
             </div>
             <div class="form-group">
@@ -57,7 +57,6 @@
                 <textarea name="" rows="4" class="form-control site-options" data-param="description">
                     {{$siteOptions->description}}
                 </textarea>
-
             </div>
         </section>
     </div>
