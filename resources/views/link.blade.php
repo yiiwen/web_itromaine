@@ -8,7 +8,15 @@
         @include('nav')
 
         <div class="link-top-image">
-          <h1>赶快与我们取得联系吧</h1>
+          <h1>赶快与我们取得联系吧!!!</h1>
+          <p style="text-align:center;">
+            <img src="images/qrcode.jpg" alt="" style="width:130px;">&nbsp;&nbsp;&nbsp;
+            <img src="images/8e1e1bbe59654b9277878241923c33f.jpg" style="width:130px;" alt="">
+            &nbsp;&nbsp;&nbsp;
+            <img src="images/d3c890f3d2fb7e91e32abfe8b81660e.jpg" style="width:130px;" alt="">
+          </p>
+          
+          
         </div>
 
         <!-- 中部导航栏 -->
