@@ -88,6 +88,171 @@
             </div>
           </div>
         </div>
+
+        <div class="enterprise-solution">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <h2 class="service-title">我们的解决方案</h2>
+              </div>
+            </div>
+            <div class="col-md-12 solution-list">
+              <div class="col-md-5">
+                  <div class="row">
+                    <div class="col-md-12 list-1">
+                      <h3>网站定位分析</h3>
+                      <p>根据企业实际业务发展需求，从市场行业出发，分析企业网站建设的要求，策划具体建设方案，精准定位企业网站设计。</p>
+                    </div>
+                    <div class="col-md-12 list-2">
+                      <h3>网站交互体验</h3>
+                      <p>针对网站的各版块及功能进行交互体验优化，以达到最佳的用户体验效果，提升用户停留时间，减少用户流失。</p>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-md-2">
+                <div class="row">
+                  <div class="col-md-12 middle">
+                    <h3>
+                      <i></i>
+                      我们怎么做
+                    </h3>
+                    <p>solution</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="row">
+                  <div class="col-md-12 list-3">
+                    <h3>网站功能规划</h3>
+                    <p>以企业网站定位为导向，分析企业所需要的各种功能，进行网站功能规划，例如产品展示方式、客户留言下单功能等。</p>
+                  </div>
+                  <div class="col-md-12 list-4">
+                    <h3>网站结构优化</h3>
+                    <p>优化网站整体布局、各栏目版块、网站内容展现形式以及相关功能的操作步骤，对搜索引擎更友好。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-advantage">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <h2 class="service-title">我们的优势</h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="container advantage-list">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="list-image">
+                  <img src="/images/site/advantage-1.jpg" alt="">
+                </div>
+                <div class="list-title">
+                  <h3>
+                    <i></i>
+                    专注的设计
+                  </h3>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="list-image">
+                  <img src="/images/site/advantage-2.jpg" alt="">
+                </div>
+                <div class="list-title">
+                  <h3>
+                    <i></i>
+                    严谨的开发
+                  </h3>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="list-image">
+                  <img src="/images/site/advantage-3.jpg" alt="">
+                </div>
+                <div class="list-title">
+                  <h3>
+                    <i></i>
+                    丰富的经验
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="process">
+          <div class="container">
+            <div class='row'>
+              <div class="col-md-12">
+                <h2 class="service-title">我们的流程</h2>
+              </div>
+            </div>
+          </div>
+          <ul class="process-list">
+            <li class="list-1">
+                <p>
+                    <img class="process-img1" src="/images/site/process-1.png" alt="企业网站建设流程">
+                    <img class="process-img2" src="/images/site/process-1-on.png" alt="企业网站建设流程">
+                </p>
+                <h3>需求讨论与分析</h3>
+            </li>
+            <li class="list-2">
+                <p>
+                    <img class="process-img1" src="/images/site/process-2.png" alt="企业网站建设流程">
+                    <img class="process-img2" src="/images/site/process-2-on.png" alt="企业网站建设流程">
+                </p>
+                <h3>做方案及报价</h3>
+            </li>
+            <li class="list-3">
+                <p>
+                    <img class="process-img1" src="/images/site/process-3.png" alt="企业网站建设流程">
+                    <img class="process-img2" src="/images/site/process-3-on.png" alt="企业网站建设流程">
+                </p>
+                <h3>做合同及付首款</h3>
+            </li>
+            <li class="list-4">
+                <p>
+                    <img class="process-img1" src="/images/site/process-4.png" alt="企业网站建设流程">
+                    <img class="process-img2" src="/images/site/process-4-on.png" alt="企业网站建设流程">
+                </p>
+                <h3>设计</h3>
+            </li>
+            <li class="list-5">
+                <p>
+                    <img class="process-img1" src="/images/site/process-5.png" alt="企业网站建设流程">
+                    <img class="process-img2" src="/images/site/process-5-on.png" alt="企业网站建设流程">
+                </p>
+                <h3>开发</h3>
+            </li>
+            <li class="list-6">
+                <p>
+                    <img class="process-img1" src="/images/site/process-6.png" alt="企业网站建设流程">
+                    <img class="process-img2" src="/images/site/process-6-on.png" alt="企业网站建设流程">
+                </p>
+                <h3>测试反馈</h3>
+            </li>
+            <li class="list-7">
+                <p>
+                    <img class="process-img1" src="/images/site/process-7.png" alt="企业网站建设流程">
+                    <img class="process-img2" src="/images/site/process-7-on.png" alt="企业网站建设流程">
+                </p>
+                <h3>付尾款</h3>
+            </li>
+            <li class="list-8" style="background:none;">
+                <p >
+                    <img class="process-img1" src="/images/site/process-8.png" alt="企业网站建设流程">
+                    <img class="process-img2" src="/images/site/process-8-on.png" alt="企业网站建设流程">
+                </p>
+                <h3>交付上线</h3>
+            </li>
+            <div style="clear:both;"></div>
+          </ul>
+        </div>
 </div>
+<div style="clear:both;"></div>
 
 @include('footer')

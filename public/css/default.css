@@ -1501,3 +1501,239 @@ body{
   bottom: 0%;
   right: 10%;
 }
+
+
+.solution-list .col-md-5 {
+  padding:0 30px;
+  
+}
+
+.solution-list .col-md-12 {
+  height: 320px;
+  padding: 5%;
+  background-color: #f5f5f5;
+  background-repeat: no-repeat;
+  background-position: 88% bottom;
+  background-size: auto 30%;
+  margin-bottom:20px;
+  transition: box-shadow 0.2s;
+}
+
+.solution-list .middle{
+  height: 660px;
+  float: initial;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: #fff url(../images/site/bg_01@3x.png) no-repeat center center;
+  background-size: cover;
+}
+
+.solution-list h3{
+  padding-left: 55px;
+  height: 45px;
+  font-weight: bold!important;
+  color: #333;
+  line-height: 45px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: auto 100%;
+}
+
+.solution-list p{
+  line-height: 26px;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #333;
+}
+
+.solution-list .list-1 {
+  background-image: url(../images/site/01@3x.png);
+}
+.solution-list .list-1:hover{
+  box-shadow: #999 5px 5px 5px;
+}
+.solution-list .list-2 {
+  background-image: url(../images/site/03@3x.png);
+}
+.solution-list .list-2:hover{
+  box-shadow: #999 5px 5px 5px;
+}
+.solution-list .list-3 {
+  background-image: url(../images/site/02@3x.png);
+}
+.solution-list .list-3:hover{
+  box-shadow: #999 5px 5px 5px;
+}
+.solution-list .list-4 {
+  background-image: url(../images/site/04@3x.png);
+}
+.solution-list .list-4:hover{
+  box-shadow: #999 5px 5px 5px;
+}
+
+.solution-list .list-1 h3{
+  background-image: url(../images/site/icon_10@3x.png);
+}
+
+.solution-list .list-2 h3{
+  background-image: url(../images/site/icon_10@3x.png);
+}
+
+.solution-list .list-3 h3{
+  background-image: url(../images/site/icon_10@3x.png);
+}
+
+.solution-list .list-4 h3{
+  background-image: url(../images/site/icon_10@3x.png);
+}
+
+.solution-list .middle:hover{
+  box-shadow: #999 5px 5px 5px;
+}
+
+
+.solution-list .middle h3{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  padding: 20px 0 70px 0;
+  width: 100%;
+  height: 120px;
+  line-height: 30px;
+  font-size: 28px;
+  font-weight: 900!important;
+  color: #fff;
+  text-align: center;
+}
+
+.solution-list .middle h3 i{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: block;
+  width: 25px;
+  height: 4px;
+  overflow: hidden;
+  background-color: #e4007f;
+}
+
+.solution-list .middle p{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  padding: 20px 0 0 0;
+  width: 100%;
+  height: 50px;
+  line-height: 30px;
+  font-size: 28px;
+  font-weight: 100;
+  color: #fff;
+  text-align: center;
+}
+
+.service-advantage{
+  background: #f6f6f6;
+  padding-bottom: 40px;
+}
+
+.advantage-list .col-md-4{
+  padding:0 !important;
+}
+
+
+
+.advantage-list .list-image img{
+  width:100%;
+}
+
+.advantage-list .list-title {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding: 10px 5%;
+  border-right: 1px solid #e5e5e5;
+  background-color: #fff;
+  font-weight: 200 !important;
+}
+
+.advantage-list .list-title h3{
+  position: relative;
+  float: left;
+  padding: 0 0 15px 0;
+  width: 100%;
+  height: 40px;
+  line-height: 30px;
+  font-size: 20px;
+  font-weight: 900!important;
+  color: #333;
+  text-align: center;
+}
+
+.advantage-list .list-title h3 i{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: block;
+  width: 25px;
+  height: 4px;
+  overflow: hidden;
+  background-color: #e4007f;
+}
+
+.process-list {
+  margin: 0 auto;
+  width: 1200px;
+  text-align: center;
+  list-style: none;
+}
+
+.process-list li{
+  float: left !important;
+  width: 140px;
+  height: 140px;
+  margin-bottom: 30px;
+  margin-left: -2px;
+  cursor: pointer;
+  padding-right: 44px;
+  background: url(../images/site/process-line.png) no-repeat right 48px;
+  background-size: 46px 5px;
+}
+
+.process-list li img{
+  width: 100%;
+}
+
+.process-list li p {
+  position: relative;
+  float: left;
+  width: 96px;
+  height: 96px;
+  margin-bottom: 20px;
+  border: 1px solid #b3b3b3;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: all .5s ease-in-out;
+}
+
+.process-list li h3 {
+  float: left;
+  clear: both;
+  width: 120px;
+  height: 24px;
+  line-height: 24px;
+  margin-left: -12px;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+}
