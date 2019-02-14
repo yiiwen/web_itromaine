@@ -9,11 +9,11 @@
         <div class="site-container">
           <div class="site-nav">
             <ul>
-              <li class="current"><a href="#">企业网站建设</a></li>
-              <li><a href="#">品牌网站建设</a></li>
-              <li><a href="#">营销网站建设</a></li>
-              <li><a href="#">电子商务网站</a></li>
-              <li><a href="#">响应式网站</a></li>
+              <li><a href="javascript:">企业网站建设</a></li>
+              <li><a href="javascript:">品牌网站建设</a></li>
+              <li><a href="javascript:">营销网站建设</a></li>
+              <li><a href="javascript:">电子商务网站</a></li>
+              <li><a href="javascript:">响应式网站</a></li>
             </ul>
           </div>
         </div>
