@@ -134,16 +134,15 @@ Route::prefix('admin')->middleware(['checkLogin'])->group(function(){
         return $class->upload($request,'photo');
     });
 
+    //系统设置
+    Route::post('index/banner','Admin\IndexController@setBannser');
+
     //新闻模块
     Route::middleware("search")->group(function(){
         Route::get('news/index','Admin\NewsController@index');
         Route::get('news/draftsList','Admin\NewsController@draftsList');
         Route::get('news/trash','Admin\NewsController@trash');
     });
-
-    //系统设置
-    Route::post('index/banner','Admin\IndexController@setBannser');
-
     Route::post('news/publish','Admin\NewsController@publish');
     Route::post('news/drafts','Admin\NewsController@drafts');
     Route::get('news/getOne','Admin\NewsController@getOne');
@@ -153,6 +152,9 @@ Route::prefix('admin')->middleware(['checkLogin'])->group(function(){
     Route::get('news/dropItem','Admin\NewsController@dropItem');
 
     //案例模块
-    Route::get('cases/index','Admin\CasesController@index');
+    Route::middleware("search")->group(function() {
+        Route::get('cases/index', 'Admin\CasesController@index');
+    });
+    Route::post('cases/publish','Admin\CasesController@publish');
 
 });

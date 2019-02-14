@@ -11,6 +11,7 @@ class Search
         'admin/news/index' => \App\Library\Search\NewsSearch::class,
         'admin/news/draftsList' => \App\Library\Search\NewsSearch::class,
         'admin/news/trash' => \App\Library\Search\NewsSearch::class,
+        'admin/cases/index' => \App\Library\Search\CasesSearch::class,
     ];
     /**
      * Handle an incoming request.

@@ -17,10 +17,10 @@
             <br>
             <br>
             <div class="row">
-                <form action="/admin/news/index" method="get">
+                <form action="/admin/cases/index" method="get">
                     <div class="col-xs-3">
                         <label for="">案例标题</label>
-                        <input type="text" name="news_title" value="{{$keywords['cases_title']}}" class="form-control" placeholder="案例标题">
+                        <input type="text" name="cases_title" value="{{$keywords['cases_title']}}" class="form-control" placeholder="案例标题">
                     </div>
                     <div class="col-xs-3">
                         <label for="">开始时间</label>
@@ -44,17 +44,19 @@
                         <th style="width:55px;">#</th>
                         <th style="width:420px;">新闻标题</th>
                         <th>短链</th>
+                        <th>排序</th>
                         <th>更新时间</th>
                         <th>发布时间</th>
                         <th>操作</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($caseList as $news)
+                    @foreach ($list as $news)
                     <tr>
                         <td>{{$news->id}}</td>
-                        <td>{{$news->news_title}}</td>
+                        <td>{{$news->cases_title}}</td>
                         <td><a href="{{$news->short_url}}" target="_blank">{{$news->short_url}}</a></td>
+                        <td>{{$news->sort}}</td>
                         <td>{{$news->updated_at}}</td>
                         <td>{{$news->created_at}}</td>
                         <td>
@@ -65,7 +67,7 @@
                     @endforeach
                 </tbody>
             </table>
-            {{$caseList->links()}}
+            {{$list->links()}}
 
             <!-- 添加Modal start -->
             <div class="modal fade" id="publishCase" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -73,19 +75,19 @@
                     <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">发布文章</h4>
+                        <h4 class="modal-title" id="myModalLabel">发布案例</h4>
                     </div>
                     <div class="modal-body">
-                        <div id="new-id" class="form-group">
-                            <input type="hidden" id="news-id">
+                        <div id="id" class="form-group">
+                            <input type="hidden" id="cases-id">
                         </div>
-                        <div id="new-title" class="form-group">
-                            <label for="new-title">案例标题</label>
-                            <input type="text" id="news-title" data-toggle="tooltip" title="请输入文章标题" class="form-control">
+                        <div id="title" class="form-group">
+                            <label for="cases-title">案例标题</label>
+                            <input type="text" id="cases-title" data-toggle="tooltip" title="请输入文章标题" class="form-control">
                         </div>
-                        <div id="news-content" class="from-group">
-                            <label for="news-content">案例内容</label>
-                            <div id="new-edit" data-toggle="tooltip" title="请输入文章内容"></div>
+                        <div id="cases-content" class="from-group">
+                            <label for="contBox">案例内容</label>
+                            <div id="contBox" data-toggle="tooltip" title="请输入文章内容"></div>
                         </div>
                         <br>
                         <div class="from-group">
@@ -98,12 +100,21 @@
                                         <button onclick="document.getElementById('first-image-input').click()">上传图片</button>
                                     </div>
                                 </div>
+                                <div style="border:1px solid #CCC;border-radius:4px;width:560px;margin-left:210px;padding:10px;">
+                                    <label for="">从文章中选取</label>
+                                    <div>
+                                        <div class="candidate-image-div">
+                                            <div class="candidate-image" id="candidate-image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div style="clear:both;"></div>
                             </div>
                         </div>
                         <br>
-                        <div id="new-title" class="form-group">
-                            <label for="new-title">推广短链 （系统自动生成）</label>
+                        <div id="cases-title" class="form-group">
+                            <label for="cases-title">推广短链 （系统自动生成）</label>
                             <div class="input-group">
                                 <input type="text" class="form-control" placeholder="推广短链" id="shortUrl" disabled
                                 aria-describedby="basic-addon2">
@@ -174,8 +185,9 @@
     @section("script")
         <script src="/admin/js/wangEditor.min.js"></script>
         <script type="text/javascript">
+            // 内容框
             var E = window.wangEditor
-            var editor = new E('#new-edit');
+            var editor = new E('#contBox');
             let firstImg =  '';
             const candidateImage = new Array();
             editor.customConfig.uploadImgServer = '/admin/upload';
@@ -185,10 +197,116 @@
             };
             editor.customConfig.uploadImgHooks = {
                 success: function (xhr, editor, result) {
+                    image = result.data[0];
+                    candidateImage.push(image);
+                    image = `<div class="outer"><img src="${image}" class="img-thumbnail"></div>`;
+                    $("#candidate-image").append(image);
                 },
                 fail: function (xhr, editor, result) {
                 },
             }
             editor.create();
+
+            $("#candidate-image").on("click","img",function(){
+                let html = `<img src='${this.src}' style='width:100%;'/>`;
+                $("#imageViewer").find(".modal-content").empty();
+                $("#imageViewer").find(".modal-content").append(html);
+                $("#imageViewer").modal('toggle');
+            });
+
+            $("#candidate-image").on("mouseenter",".outer",function(){
+                let html = `<div class="set-first-btn"><button class="btn btn-success btn-xs set-first">设为封面</button></div>`;
+                $(this).append(html);
+            });
+
+            $("#candidate-image").on("mouseleave",".outer",function(){
+                $(this).find(".set-first-btn").remove();
+            });
+
+
+            $("#candidate-image").on("click", ".set-first", function(){
+                let firstImageSrc = $(this).parents(".outer").find("img").attr("src");
+                firstImg = firstImageSrc;
+                $("#first-image").attr("src",firstImageSrc);
+            });
+
+            $("#first-image-input").change(function(e){
+                var file = e.target.files[0] || e.dataTransfer.files[0];
+                if (file) {
+                    var reader = new FileReader();
+                    reader.onload = function(){
+                        $("#first-image").attr("src",this.result);
+                    }
+                    reader.readAsDataURL(file);
+                    let formData = new FormData();
+                    formData.append("photo",file);
+                    $.ajax({
+                        url : "/admin/upload",
+                        type: "post",
+                        headers:{"X-CSRF-TOKEN":$('meta[name="csrf-token"]').attr('content')},
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        dataType: 'JSON',
+                        mimeType: "multipart/form-data",
+                        success: function(data) {
+                            firstImg = data.data[0];
+                        },
+                        error:function(data) {
+                        }
+                    });
+                }
+            });
+
+            // 获取数据
+            function send()
+            {
+                const submitData = new FormData();
+                let id = $("#cases-id").val().trim(); // id
+                // 标题
+                let cases_title = $("#cases-title");
+                let title = cases_title.val().trim();
+                let content = editor.txt.html().trim(); // 内容
+
+                if (title.length <= 0) {
+                    cases_title.focus();
+                    cases_title.tooltip('show');
+                    return false;
+                }
+                if (content.length <=0) {
+                    return false;
+                }
+                if (!firstImg) {
+                    alert("未设置文章封面！！！");
+                    return false;
+                }
+                $("input[name='article-sort']").each(function(){
+                    if ($(this).prop('checked')) submitData.append('sort',$(this).val());
+                });
+                submitData.append('id',id);
+                submitData.append('title',title);
+                submitData.append('content',content);
+                submitData.append('first_image',firstImg);
+                console.log(firstImg);
+                return submitData;
+            }
+
+            //发布案例
+            $("#publish").click(function(){
+                var data = send();
+                $.ajax({
+                    url : '/admin/cases/publish',
+                    data: data,
+                    headers:{"X-CSRF-TOKEN":$('meta[name="csrf-token"]').attr('content')},
+                    processData: false,
+                    contentType: false,
+                    method: 'POST',
+                    dataType: 'JSON',
+                    success:function(data,status) {
+                        $("#close").click();
+                    },
+                    error: function(data) {}
+                })
+            });
         </script>
     @endsection("script")
