@@ -15,12 +15,61 @@
             &nbsp;&nbsp;&nbsp;
             <img src="images/d3c890f3d2fb7e91e32abfe8b81660e.jpg" style="width:130px;" alt="">
           </p>
-          
-          
         </div>
 
-        <!-- 中部导航栏 -->
+        
+
         <div class="mid-content callmepage">
+
+          <div class="need">
+            <h3>快速提交您的需求</h3>
+
+            <form action="" method="post">
+              <p>
+                <input type="text" placeholder="公司名称" />
+                <input type="text" placeholder="邮箱" />
+                <input type="text" placeholder="您的名称" />
+                <input type="text" placeholder="电话" />
+              </p>
+              <br>
+              <h4>您需要的服务</h4>
+                <p>
+                  <span><input type="checkbox" name="service" id="">&nbsp;网站建设与改版</span>
+                  <span><input type="checkbox" name="service" id="">&nbsp;移动应用设计与开发</span>
+                </p>
+                <p>
+                  <span><input type="checkbox" name="service" id="">&nbsp;软件/系统设计与开发</span>
+                  <span><input type="checkbox" name="service" id="">&nbsp;其他</span>
+                </p>
+                <br>
+              <h4>您最关注的地方</h4>
+                <p>
+                  <span><input type="checkbox" name="follow" id="">&nbsp;功能要求比较高</span>
+                  <span><input type="checkbox" name="follow" id="">&nbsp;需要与移动端适配</span>
+                </p>
+                <p>
+                  <span><input type="checkbox" name="follow" id="">&nbsp;设计创意要求比较高</span>
+                  <span><input type="checkbox" name="follow" id="">&nbsp;搜索引擎优化</span>
+                </p>
+                <br>
+                <h4>预算</h4>
+                <p>
+                  <span><input type="radio" name="budget" id="">&nbsp;2万以内</span>
+                  <span><input type="radio" name="budget" id="">&nbsp;2-4万</span>
+                  <span><input type="radio" name="budget" id="">&nbsp;4-8万</span>
+                  <span><input type="radio" name="budget" id="">&nbsp;8万以上</span>
+                </p>
+                <p>
+                  <textarea name="" id="" cols="80" rows="6" style="resize:none;outline:none;"></textarea>
+                </p>
+                <p>
+                  <input type="submit" value="发送您的需求">
+                  或将需求文档发送邮箱：youmaicai@163.com
+                </p>
+            </form>
+
+          </div>
+
           <div class="call-me-content">
             <div class="call-me-top">
                 <div class="call-me-top-left">
