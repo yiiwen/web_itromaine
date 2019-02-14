@@ -26,7 +26,7 @@
                         <div class="col-md-2">
                             <dl>
                                 <dt>关于</dt>
-                                <dd><a href="">关于我们</a></dd>
+                                <dd><a href="/about">关于我们</a></dd>
                                 <dd><a href="">公司动态</a></dd>
                                 <dd><a href="">留言板</a></dd>
                                 <dd><a href="/sitemap">网站地图</a></dd>
@@ -40,7 +40,6 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-10">
-                            
                             <p>联系电话：15818848247&nbsp;&nbsp;&nbsp;&nbsp;13668984401&nbsp;&nbsp;&nbsp;&nbsp;联系邮箱：youmaicai@163.com</p>
                             <p>联系地址：广东省广州市南沙区丰泽东路106号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;备案号：粤ICP备18091280号</p>
                             <p>Copyright © 2018-2030,www.itromaine.com,All rights reserved  版权所有 © 广州油麦菜信息科技有限公司</p>
