@@ -102,9 +102,42 @@
     float: left;
 }
 
-#cases .thumbnail {
-    padding:0px 7px;
+.caseul {
+  padding:0;
+  margin:0;
+}
+
+.caseul h1{
+  font-size:1.8em;
+  margin-bottom:5px;
+}
+
+.caseul h3{
+  font-size:1.5em;
+  margin-top:5px;
+}
+
+.caseul li{
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+.caseul li a{
+  font-size: 1.1em;
+  color: #333;
+
+}
+
+#cases li:nth-child(odd) .thumbnail {
+    padding:0 !important;
+    padding-right:7px !important;
     border:none;
+}
+
+#cases li:nth-child(even) .thumbnail {
+  padding:0 !important;
+  padding-left:7px !important;
+  border:none;
 }
 
 #cases ul li img{
@@ -231,6 +264,7 @@ footer p span{
 }
 
 #teams .thumbnail {
+<<<<<<< HEAD
     padding:0px;
     border:none;
 }
@@ -241,6 +275,10 @@ footer p span{
 
 #teams li:nth-child(even) .thumbnail {
   padding-left: 8px;
+=======
+    padding:4px;
+    border:none;
+>>>>>>> weiki
 }
 
 #teams ul li img{

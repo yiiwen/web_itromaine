@@ -1,34 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="/js/browser.js"></script>
-    <link rel="stylesheet" href="/css/mobile.css">
-    <title>广州油麦菜信息科技有限公司</title>
-</head>
-<body>
+@include('/mobile/header')
+@include('/mobile/nav')
+
     <div class="container">
-        <header id="header">
-            <h1 id="site-title">
-                <a href="/m/index" style="color:#000;text-decoration:none;">
-                    it<span>Romaine</span>
-                </a>
-            </h1>
-            <nav id="site-nav">
-                <ul>
-                    <li><a href="/m/teams">团队</a></li>
-                    <li class="nav-activity"><a href="/m/cases">案例</a></li>
-                    <li><a href="/m/price">收费</a></li>
-                    <li><a href="/m/share">知识</a></li>
-                    <li><a href="/m/contact">联系</a></li>
-                </ul>
-            </nav>
-        </header>
-        <div class="both"></div>
 
         <div id="pagePath">首页 > 服务案例</div>
+
+        <ul class="caseul">
+            <h1>优秀网站解决方案与案例欣赏</h1>
+            <h3>值得期待的网站设计服务</h3>
+            <br>
+                        <li>
+              <a href="https://www.sumaart.com/works/designer-web" class=""> 建筑/空间/平面设计企业网站设计 </a>
+            </li>
+                        <li>
+              <a href="https://www.sumaart.com/works/mall" class=""> B2C商城购物平台网站开发 </a>
+            </li>
+                        <li>
+              <a href="https://www.sumaart.com/works/company-brand" class=""> 中小企业&amp;集团公司网站建设 </a>
+            </li>
+                        <li>
+              <a href="https://www.sumaart.com/works/fashion-brand" class=""> 时尚品牌网站设计 </a>
+            </li>
+                        <li>
+              <a href="https://www.sumaart.com/works/electronic-technology" class=""> 电子科技企业网站设计 </a>
+            </li>
+        </ul>
 
         <div id="cases" style="margin-top:20px;">
             <ul>
@@ -120,14 +116,7 @@
             <div class="both"></div>
             <p id="load-more">
                 <a href="javascript:void(0)">加载更多...</a>
-            </p>  
+            </p>
         </div>
-        
-
-        <footer>
-            <p>Copyright © 2018-2038 itromaine.com   Tel:86-15818848247</p>
-            <p>粤ICP备18091280号</p>
-        </footer>
     </div>
-</body>
-</html>
+@include('/mobile/footer')
