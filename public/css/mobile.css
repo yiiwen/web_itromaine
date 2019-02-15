@@ -231,7 +231,16 @@ footer p span{
 }
 
 #teams .thumbnail {
-    padding:4px;
+    padding:0px;
+    border:none;
+}
+
+#teams li:nth-child(odd) .thumbnail {
+  padding-right: 8px;
+}
+
+#teams li:nth-child(even) .thumbnail {
+  padding-left: 8px;
 }
 
 #teams ul li img{

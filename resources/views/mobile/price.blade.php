@@ -177,4 +177,5 @@
             </ul>
             <div class="both"></div>
         </div>
-        @include('/mobile/footer')
+      </div>
+@include('/mobile/footer')
