@@ -9,6 +9,9 @@
         <title>{{site_config('title')}}</title>
         <script src="/js/browser.js"></script>
         <script src="/js/default.js"></script>
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+
 	    <meta name="description" content="{{site_config('description')}}" />
 	    <meta name="keywords" content="{{site_config('keywords')}}" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />

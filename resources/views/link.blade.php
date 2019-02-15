@@ -24,48 +24,50 @@
           <div class="need">
             <h3>快速提交您的需求</h3>
 
-            <form action="" method="post">
+            <form action="/demand/save" method="post" onsubmit=@php if(isset($_GET['message'])) {echo "'return false'";} else {echo "'return sendDemand()'";} @endphp>
+              @csrf
               <p>
-                <input type="text" placeholder="公司名称" />
-                <input type="text" placeholder="邮箱" />
-                <input type="text" placeholder="您的名称" />
-                <input type="text" placeholder="电话" />
+                <input type="text" placeholder="公司名称" name="companyName" id="companyName" />
+                <input type="text" placeholder="您的名称" name="name" id="name" />
+                <input type="text" placeholder="电话" name="phone" id="phone" />
+                <input type="text" placeholder="邮箱" name="email" id="email"/>
               </p>
               <br>
               <h4>您需要的服务</h4>
                 <p>
-                  <span><input type="checkbox" name="service" id="">&nbsp;网站建设与改版</span>
-                  <span><input type="checkbox" name="service" id="">&nbsp;移动应用设计与开发</span>
+                  <span><input type="checkbox" name="service[]" value="1" id="">&nbsp;网站建设与改版</span>
+                  <span><input type="checkbox" name="service[]" value="2" id="">&nbsp;移动应用设计与开发</span>
                 </p>
                 <p>
-                  <span><input type="checkbox" name="service" id="">&nbsp;软件/系统设计与开发</span>
-                  <span><input type="checkbox" name="service" id="">&nbsp;其他</span>
+                  <span><input type="checkbox" name="service[]" value="3" id="">&nbsp;软件/系统设计与开发</span>
+                  <span><input type="checkbox" name="service[]" value="4" id="">&nbsp;其他</span>
                 </p>
                 <br>
               <h4>您最关注的地方</h4>
                 <p>
-                  <span><input type="checkbox" name="follow" id="">&nbsp;功能要求比较高</span>
-                  <span><input type="checkbox" name="follow" id="">&nbsp;需要与移动端适配</span>
+                  <span><input type="checkbox" name="follow[]" value="1" id="">&nbsp;功能要求比较高</span>
+                  <span><input type="checkbox" name="follow[]" value="2" id="">&nbsp;需要与移动端适配</span>
                 </p>
                 <p>
-                  <span><input type="checkbox" name="follow" id="">&nbsp;设计创意要求比较高</span>
-                  <span><input type="checkbox" name="follow" id="">&nbsp;搜索引擎优化</span>
+                  <span><input type="checkbox" name="follow[]" value="3" id="">&nbsp;设计创意要求比较高</span>
+                  <span><input type="checkbox" name="follow[]" value="4" id="">&nbsp;搜索引擎优化</span>
                 </p>
                 <br>
                 <h4>预算</h4>
                 <p>
-                  <span><input type="radio" name="budget" id="">&nbsp;2万以内</span>
-                  <span><input type="radio" name="budget" id="">&nbsp;2-4万</span>
-                  <span><input type="radio" name="budget" id="">&nbsp;4-8万</span>
-                  <span><input type="radio" name="budget" id="">&nbsp;8万以上</span>
+                  <span><input type="radio" name="budget" id="" value="1">&nbsp;2万以内</span>
+                  <span><input type="radio" name="budget" id="" value="2">&nbsp;2-4万</span>
+                  <span><input type="radio" name="budget" id="" value="3">&nbsp;4-8万</span>
+                  <span><input type="radio" name="budget" id="" value="4">&nbsp;8万以上</span>
                 </p>
                 <br>
+                <h4>您的需求描述</h4>
                 <p>
-                  <textarea name="" id="" cols="80" rows="6" style="resize:none;outline:none;"></textarea>
+                  <textarea name="" id="" cols="80" rows="6" name="description" style="resize:none;outline:none;padding:5px;"></textarea>
                 </p>
                 <p>
                   <input type="submit" value="发送您的需求">
-                  或将需求文档发送邮箱：youmaicai@163.com
+                  或将需求文档发送邮箱：<a href="mailto:youmaicai@163.com" style="text-decoration:none;">youmaicai@163.com</a>
                 </p>
             </form>
 
@@ -95,7 +97,30 @@
           </div>
         </div>
       </div>
+
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">操作提示</h4>
+            </div>
+            <div class="modal-body">
+              {{$message}}
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default btn-green" data-dismiss="modal">关闭</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <script type="text/javascript">
+
+
+      @if ($message)
+        $('#myModal').modal('toggle');
+      @endif
       //创建和初始化地图函数：
       function initMap(){
           createMap();//创建地图
@@ -144,6 +169,33 @@
     }
 
 
-      initMap();//创建和初始化地图
+    initMap();//创建和初始化地图
+
+    // 发送表单
+    function sendDemand() {
+      const companyName =  document.getElementById("companyName").value;
+      const name = document.getElementById("name").value;
+      const phone = document.getElementById("phone").value;
+      if (!companyName) {
+        document.getElementById("companyName").style.border = "1px solid red";
+        return false;
+      }
+      if (!name) {
+        document.getElementById("name").style.border = "1px solid red";
+        return false;
+      }
+      if (!phone) {
+        document.getElementById("phone").style.border = "1px solid red";
+        return false;
+      }
+      let pattern1 = /^1[0-9]{10}$/;
+      let pattern2 = /^0[0-9]{2,3}(-)?[0-9]{7,8}/;
+      if (!pattern1.test(phone) && !pattern2.test(phone)) {
+        document.getElementById("phone").style.border = "1px solid red";
+        return false;
+      }
+
+    }
+
   </script>
 @include('footer')

@@ -43,7 +43,7 @@
     <div id="login-form-alert" tabindex="-1" role="dialog" class="modal fade">
       <div role="document" class="modal-dialog modal-sm">
         <div class="modal-content">
-          <div style="background:#ff7171;color:#FFF;border-top-left-radius:4px;border-top-right-radius:4px" 
+          <div style="background:#ff7171;color:#FFF;border-top-left-radius:4px;border-top-right-radius:4px"
           class="modal-header">
             <button type="button" data-dismiss="modal" aria-label="Close" class="close">
               <span aria-hidden="true">&times;</span>

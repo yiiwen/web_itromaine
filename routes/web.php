@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,8 +30,9 @@ Route::get('/cases',function(){
 Route::get('/news','Web\NewsController@index');
 Route::get('/newsitem/{id}','Web\NewsController@newsItem');
 
-Route::get('/link',function(){
-    return view('link');
+Route::get('/link',function(Request $request){
+    $message = $request->has('message') ? urldecode($request->message) : "";
+    return view('link',['message'=>$message]);
 });
 
 Route::get('/cases/1',function(){
@@ -85,12 +86,14 @@ Route::prefix('site')->group(function(){
     });
 });
 
+Route::post('/demand/save','Web\DemandController@addOne');
+
 
 
 
 //手机版
 Route::prefix('m')->group(function(){
-    
+
     Route::get('index',function(){
         return view('mobile/index');
     });
