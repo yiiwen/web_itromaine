@@ -18,8 +18,9 @@
 }
 
 .container{
-    width:98%;
+    width:100%;
     margin:0 auto;
+    margin-top:23px;
 }
 
 .nav-activity a{
@@ -70,6 +71,7 @@
 #site-nav ul li a{
     color: #484848;
     text-decoration: none;
+    font-weight:bold;
 }
 
 #intro{
@@ -80,6 +82,13 @@
 #intro p{
     line-height: 1.6em;
     text-align: left;
+    font-size:1.2em;
+    color:#333;
+}
+
+#intro p a {
+  color:#fab23a;
+  text-decoration: underline;
 }
 
 #cases ul{
@@ -94,15 +103,24 @@
 }
 
 #cases .thumbnail {
-    padding:4px;
+    padding:0px 7px;
+    border:none;
 }
 
 #cases ul li img{
     width: 100%;
 }
 
+#gridded{
+  margin-top:40px;
+}
+
 #gridded h2,#gridded .address{
     text-align: center;
+}
+
+#gridded .address {
+  font-size: 1.4em;
 }
 
 #caseMeBtn{
@@ -110,14 +128,16 @@
     margin:0 auto;
     text-align: center;
     margin-top:40px;
-    border:3px solid #000;
+    border:3px solid #fab23a;
     padding:10px 6px;
 }
 
 #caseMeBtn a{
     display: block;
     text-decoration: none;
-    color: #000;
+    color: #cccccc;
+    font-size:1.5em;
+    font-weight:bold;
 }
 
 #news{
@@ -132,8 +152,7 @@
 #news-content ul li{
     list-style: none;
     margin:10px 0;
-    padding: 4px 0;
-    border-bottom: 1px solid #e4e4e4;
+    padding: 0px 0;
 }
 
 #news-content ul li a{
@@ -153,8 +172,7 @@
 #service-content ul li{
     list-style: none;
     margin:10px 0;
-    padding: 4px 0;
-    border-bottom: 1px solid #e4e4e4;
+    padding: 0px 0;
 }
 
 #service-content ul li a{
@@ -187,6 +205,13 @@ footer p{
     padding:0;
     font-size:0.9em;
     color:#5a5a5a;
+    line-height: 2em;
+}
+
+footer p span{
+  font-style: italic;
+  font-size: 1.1em;
+  color: #333;
 }
 
 #teams {
@@ -281,7 +306,7 @@ footer p{
         margin:0;
         padding:0;
     }
-    
+
     #share ul li {
         list-style:none;
         width:100%;
@@ -294,7 +319,7 @@ footer p{
         text-decoration: none;
         color:#3e3e3e;
     }
-    
+
     #share ul li img{
         width:100%;
     }
@@ -352,7 +377,7 @@ blockquote p{
         margin:0;
         padding:0;
     }
-    
+
     #share ul li {
         list-style:none;
         width:50%;
@@ -378,7 +403,7 @@ blockquote p{
         padding-left:15px;
     }
 
-    
+
     #share ul li img{
         width:100%;
     }

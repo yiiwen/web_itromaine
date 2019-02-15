@@ -1,6 +1,6 @@
 <header id="header">
     <h1 id="site-title">
-        <a href="/m/index" style="color:#000;text-decoration:none;">
+        <a href="/m/index" style="color:#000;text-decoration:none;font-weight:bold;">
             it<span>Romaine</span>
         </a>
     </h1>

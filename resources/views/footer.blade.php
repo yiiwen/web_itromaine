@@ -18,17 +18,17 @@
                             <dl>
                                 <dt>案例展示</dt>
                                 <dd><a href="">广州电视台</a></dd>
-                                <dd><a href="">心声社区</a></dd>
-                                <dd><a href="">cc女神</a></dd>
-                                <dd><a href="">更多展示</a></dd>
+                                <dd><a href="/cases/2">心声社区</a></dd>
+                                <dd><a href="cases/1">cc女神</a></dd>
+                                <dd><a href="/cases">更多展示</a></dd>
                             </dl>
                         </div>
                         <div class="col-md-2">
                             <dl>
                                 <dt>关于</dt>
                                 <dd><a href="/about">关于我们</a></dd>
-                                <dd><a href="">公司动态</a></dd>
-                                <dd><a href="">留言板</a></dd>
+                                <dd><a href="/news">公司动态</a></dd>
+                                <dd><a href="/link">留言板</a></dd>
                                 <dd><a href="/sitemap">网站地图</a></dd>
                             </dl>
                         </div>
