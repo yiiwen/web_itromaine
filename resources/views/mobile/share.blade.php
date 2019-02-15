@@ -1,33 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="/js/browser.js"></script>
-    <link rel="stylesheet" href="/css/mobile.css">
-    <title>广州油麦菜信息科技有限公司</title>
-</head>
-<body>
+@include('/mobile/header')
+@include('/mobile/nav')
     <div class="container">
-        <header id="header">
-            <h1 id="site-title">
-                <a href="/m/index" style="color:#000;text-decoration:none;">
-                    it<span>Romaine</span>
-                </a>
-            </h1>
-            <nav id="site-nav">
-                <ul>
-                    <li><a href="/m/teams">团队</a></li>
-                    <li><a href="/m/cases">案例</a></li>
-                    <li><a href="/m/price">收费</a></li>
-                    <li class="nav-activity"><a href="/m/share">知识</a></li>
-                    <li><a href="/m/contact">联系</a></li>
-                </ul>
-            </nav>
-        </header>
-        <div class="both"></div>
-
         <div id="pagePath">首页 > 建站知识</div>
         <div id="intro">
             <h1>“小干货”分享网站建设知识，推动网站应用价值</h1>
@@ -39,20 +12,20 @@
         <div id="share" style="margin-top:20px;">
             <ul>
                 <li>
-                    <a href="">
+                    <a href="m/share1">
                         <div class="thumbnail">
                             <img src="https://www.sumaart.com/media/cn/201808/1533607749864793675.jpg" alt="">
-                        </div>
-                        <div class="author-info">
-                            <p class="author">By:itromaine</p>
-                            <p class="writing">2018-08-07 10:09:09</p>
-                            <div class="both"></div>
                         </div>
                         <h3 class="entry-title">如何为IPHONE X设计</h3>
                         <p class="entry-content">
                             为iPhone X设计将会带来一些新的挑战，但同时也会带来一些新的设计机会。在本文中将分享一些建议，
                             帮助您设计在iPhone X上看起来和感觉都很棒的应用程序和游戏。
                         </p>
+                        <div class="author-info">
+                            <p class="author">By:itromaine</p>
+                            <p class="writing">2018-08-07 10:09:09</p>
+                            <div class="both"></div>
+                        </div>
                     </a>
                 </li>
                 <li>
@@ -180,12 +153,4 @@
                 <a href="javascript:void(0)">加载更多...</a>
             </p>  
         </div>
-        
-
-        <footer>
-            <p>Copyright © 2018-2038 itromaine.com   Tel:86-15818848247</p>
-            <p>粤ICP备18091280号</p>
-        </footer>
-    </div>
-</body>
-</html>
+        @include('/mobile/footer')

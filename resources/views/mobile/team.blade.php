@@ -1,33 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="/js/browser.js"></script>
-    <link rel="stylesheet" href="/css/mobile.css">
-    <title>广州油麦菜信息科技有限公司</title>
-</head>
-<body>
+@include('/mobile/header')
+@include('/mobile/nav')
     <div class="container">
-        <header id="header">
-            <h1 id="site-title">
-                <a href="/m/index" style="color:#000;text-decoration:none;">
-                    it<span>Romaine</span>
-                </a>
-            </h1>
-            <nav id="site-nav">
-                <ul>
-                    <li class="nav-activity"><a href="/m/teams">团队</a></li>
-                    <li><a href="/m/cases">案例</a></li>
-                    <li><a href="/m/price">收费</a></li>
-                    <li><a href="/m/share">知识</a></li>
-                    <li><a href="/m/contact">联系</a></li>
-                </ul>
-            </nav>
-        </header>
-        <div class="both"></div>
-
         <div id="pagePath">首页 > 团队</div>
 
         <div id="intro">
@@ -113,12 +86,4 @@
             </ul>
             <div class="both"></div>
         </div>
-        
-
-        <footer>
-            <p>Copyright © 2018-2038 itromaine.com   Tel:86-15818848247</p>
-            <p>粤ICP备18091280号</p>
-        </footer>
-    </div>
-</body>
-</html>
+@include('/mobile/footer')

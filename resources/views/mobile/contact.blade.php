@@ -1,33 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="/js/browser.js"></script>
-    <link rel="stylesheet" href="/css/mobile.css">
-    <title>广州油麦菜信息科技有限公司</title>
-</head>
-<body>
+@include('/mobile/header')
+@include('/mobile/nav')
     <div class="container">
-        <header id="header">
-            <h1 id="site-title">
-                <a href="/m/index" style="color:#000;text-decoration:none;">
-                    it<span>Romaine</span>
-                </a>
-            </h1>
-            <nav id="site-nav">
-                <ul>
-                    <li><a href="/m/teams">团队</a></li>
-                    <li><a href="/m/cases">案例</a></li>
-                    <li><a href="/m/price">收费</a></li>
-                    <li><a href="/m/share">知识</a></li>
-                    <li class="nav-activity"><a href="/m/contact">联系</a></li>
-                </ul>
-            </nav>
-        </header>
-        <div class="both"></div>
-
         <div id="pagePath">首页 > 联系方式</div>
 
         <div id="intro" style="margin-bottom:10px;">
@@ -63,8 +36,6 @@
                 <p>3、本公司未授权任何代理或联盟单位，请勿上当受骗。 </p>   
             </blockquote>
         </div>
-        
-        
 
         <footer>
             <p>Copyright © 2018-2038 itromaine.com   Tel:86-15818848247</p>

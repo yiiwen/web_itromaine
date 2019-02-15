@@ -106,12 +106,40 @@ Route::prefix('m')->group(function(){
         return view('mobile/cases');
     });
 
+    Route::get('/cases/1',function(){
+        return view('mobile/cases1');
+    });
+
+    Route::get('/cases/2',function(){
+        return view('mobile/cases2');
+    });
+
+    Route::get('/cases/3',function(){
+        return view('mobile/cases3');
+    });
+
+    Route::get('/cases/4',function(){
+        return view('mobile/cases4');
+    });
+
+    Route::get('/cases/5',function(){
+        return view('mobile/cases5');
+    });
+
+    Route::get('/cases/6',function(){
+        return view('mobile/cases6');
+    });
+
     Route::get('price',function(){
         return view('mobile/price');
     });
 
     Route::get('share',function(){
         return view('mobile/share');
+    });
+
+    Route::get('/share/1',function(){
+        return view('mobile/share1');
     });
 
     Route::get('contact',function(){
