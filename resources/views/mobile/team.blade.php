@@ -86,4 +86,5 @@
             </ul>
             <div class="both"></div>
         </div>
+    </div>
 @include('/mobile/footer')
