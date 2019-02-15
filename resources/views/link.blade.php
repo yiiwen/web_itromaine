@@ -67,7 +67,7 @@
                 </p>
                 <p>
                   <input type="submit" value="发送您的需求">
-                  或将需求文档发送邮箱：<a href="mailto:youmaicai@163.com" style="text-decoration:none;">youmaicai@163.com</a>
+                  或将需求文档发送邮箱：<a href="mailto:youmaicai168@163.com" style="text-decoration:none;">youmaicai168@163.com</a>
                 </p>
             </form>
 
