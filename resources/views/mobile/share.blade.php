@@ -16,16 +16,17 @@
                         <div class="thumbnail">
                             <img src="https://www.sumaart.com/media/cn/201808/1533607749864793675.jpg" alt="">
                         </div>
-                        <h3 class="entry-title">如何为IPHONE X设计</h3>
-                        <p class="entry-content">
-                            为iPhone X设计将会带来一些新的挑战，但同时也会带来一些新的设计机会。在本文中将分享一些建议，
-                            帮助您设计在iPhone X上看起来和感觉都很棒的应用程序和游戏。
-                        </p>
                         <div class="author-info">
                             <p class="author">By:itromaine</p>
                             <p class="writing">2018-08-07 10:09:09</p>
                             <div class="both"></div>
                         </div>
+                        <h3 class="entry-title">如何为IPHONE X设计</h3>
+                        <p class="entry-content">
+                            为iPhone X设计将会带来一些新的挑战，但同时也会带来一些新的设计机会。在本文中将分享一些建议，
+                            帮助您设计在iPhone X上看起来和感觉都很棒的应用程序和游戏。
+                        </p>
+
                     </a>
                 </li>
                 <li>
@@ -153,4 +154,5 @@
                 <a href="javascript:void(0)">加载更多...</a>
             </p>  
         </div>
+    </div>
         @include('/mobile/footer')
