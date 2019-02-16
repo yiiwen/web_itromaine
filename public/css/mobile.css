@@ -264,7 +264,6 @@ footer p span{
 }
 
 #teams .thumbnail {
-<<<<<<< HEAD
     padding:0px;
     border:none;
 }
@@ -275,10 +274,6 @@ footer p span{
 
 #teams li:nth-child(even) .thumbnail {
   padding-left: 8px;
-=======
-    padding:4px;
-    border:none;
->>>>>>> weiki
 }
 
 #teams ul li img{
