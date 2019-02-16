@@ -268,12 +268,10 @@ footer p span{
     border:none;
 }
 
-#teams li:nth-child(odd) .thumbnail {
-  padding-right: 8px;
-}
-
 #teams li:nth-child(even) .thumbnail {
-  padding-left: 8px;
+    padding-left: 8px;
+    padding:4px;
+    border:none;
 }
 
 #teams ul li img{
@@ -408,9 +406,15 @@ blockquote p{
 }
 
 #intro h1{
-    margin-top:50px;
+    margin-top:0.2em;
     font-size:2em;
-    margin-bottom:1em;
+    margin-bottom:0.3em;
+}
+
+#share .thumbnail{
+    margin: 0;
+    font-size: .8em;
+    color: #666;
 }
 
  /*当屏幕尺寸小于600px时，应用下面的CSS样式*/
