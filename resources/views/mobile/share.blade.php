@@ -12,7 +12,7 @@
         <div id="share" style="margin-top:20px;">
             <ul>
                 <li>
-                    <a href="m/share1">
+                    <a href="share/1">
                         <div class="thumbnail">
                             <img src="https://www.sumaart.com/media/cn/201808/1533607749864793675.jpg" alt="">
                         </div>
@@ -21,10 +21,9 @@
                             <p class="writing">2018-08-07 10:09:09</p>
                             <div class="both"></div>
                         </div>
-                        <h3 class="entry-title">如何为IPHONE X设计</h3>
+                        <h3 class="entry-title">网站建设中的动效设计体验要点有哪些?</h3>
                         <p class="entry-content">
-                            为iPhone X设计将会带来一些新的挑战，但同时也会带来一些新的设计机会。在本文中将分享一些建议，
-                            帮助您设计在iPhone X上看起来和感觉都很棒的应用程序和游戏。
+                            现在很多企业开始倾向于选择个性化的网站，他们都想设计一个有自己鲜明特色的、独一无二的网站，这对于打造自己品牌也是有一定的影响力的。个性化现在已经成为网站建设的主流，个性化能够实现的全方位售后服务、案例解析、用户交流等都是利于网站长远发展的利器。随着国际大品牌苹果和谷歌的引领，最近越来越多的国内公司开始关注动效设计了，越来越多的团队已经意识到动效在产品用户体验中的重要性了，更多的设计师们也开始投身动效设计领域。
                         </p>
 
                     </a>
