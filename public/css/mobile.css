@@ -271,7 +271,7 @@ footer p span{
 }
 
 #teams li:nth-child(even) .thumbnail {
-    padding-left: 8px;
+  padding-left: 8px;
     padding:4px;
     border:none;
 }
@@ -381,7 +381,7 @@ footer p span{
     }
 
     #share .entry-title{
-        margin:15px 0 0 0;
+        margin:6px 0 0 0;
     }
 
     #share .entry-content{
@@ -394,7 +394,7 @@ footer p span{
     line-height: 1.7em;
 }
 
-.contact-content a{
+ .contact-content a{
     color:#000;
     text-decoration: none;
 }
@@ -413,11 +413,72 @@ blockquote p{
     margin-bottom:0.3em;
 }
 
+#share P{
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
 #share .thumbnail{
     margin: 0;
     font-size: .8em;
     color: #666;
 }
+
+.author-info h3{
+    margin: 0;
+}
+
+.sharepage p{
+    color:#7b7b7b;
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+.sharepage strong{
+    color:#000000;
+}
+.sharepage p img{
+    width:100%;
+}
+.shareTop{
+    width: 100%;
+    margin:20px auto;
+}
+.shareTop h2,.caseTop p{
+    text-align:left;
+}
+.shareTop h2{
+    margin-bottom: 4px;
+    font-size:2em;
+    line-height: 1.35;
+}
+
+.shareTop p{
+    font-size:1em;
+    line-height:2em;
+    color:#7b7b7b;
+}
+
+.shareAuthor{
+    font-size: .5em;
+    display: block;
+    line-height: 1.6em;
+    color:#7b7b7b;
+}
+
+.shareTime{
+    font-size: .5em;
+    display: block;
+    line-height: 1.6em;
+    color:#7b7b7b;
+}
+
+
 
  /*当屏幕尺寸小于600px时，应用下面的CSS样式*/
  @media screen and (min-width: 600px) {
@@ -432,7 +493,7 @@ blockquote p{
         float: left;
         padding:0;
         margin:0;
-        margin-bottom:40px;
+        margin-bottom:50px;
     }
 
     #share ul li a{
