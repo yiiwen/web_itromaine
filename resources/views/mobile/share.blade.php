@@ -151,7 +151,7 @@
             <div class="both"></div>
             <p id="load-more">
                 <a href="javascript:void(0)">加载更多...</a>
-            </p>  
+            </p>
         </div>
     </div>
         @include('/mobile/footer')
