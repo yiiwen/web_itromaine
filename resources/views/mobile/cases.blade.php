@@ -8,7 +8,7 @@
         <ul class="caseul">
             <h1>优秀网站解决方案与案例欣赏</h1>
             <h3>值得期待的网站设计服务</h3>
-            <br>
+            <!-- <br>
                         <li>
               <a href="https://www.sumaart.com/works/designer-web" class=""> 建筑/空间/平面设计企业网站设计 </a>
             </li>
@@ -23,10 +23,10 @@
             </li>
                         <li>
               <a href="https://www.sumaart.com/works/electronic-technology" class=""> 电子科技企业网站设计 </a>
-            </li>
+            </li> -->
         </ul>
 
-        <div id="cases" style="margin-top:20px;">
+        <div id="cases" style="margin-top:50px;">
             <ul>
                 <li>
                     <a href="">
