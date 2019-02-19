@@ -382,6 +382,7 @@ footer p span{
 
     #share .entry-title{
         margin:6px 0 0 0;
+        line-height: 1.4em;
     }
 
     #share .entry-content{
@@ -395,8 +396,8 @@ footer p span{
 }
 
  .contact-content a{
-    color:#000;
-    text-decoration: none;
+   color: #fab23a;
+   text-decoration: underline;
 }
 
 blockquote em,blockquote p{
@@ -411,6 +412,7 @@ blockquote p{
     margin-top:0.2em;
     font-size:2em;
     margin-bottom:0.3em;
+    line-height: 1.4em;
 }
 
 #share P{
@@ -419,12 +421,15 @@ blockquote p{
     -webkit-margin-after: 1em;
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
+    color:#7d7d7d;
 }
 
 #share .thumbnail{
     margin: 0;
     font-size: .8em;
     color: #666;
+    border:none;
+    padding:0'
 }
 
 .author-info h3{
