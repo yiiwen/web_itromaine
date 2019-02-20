@@ -138,8 +138,25 @@ Route::prefix('m')->group(function(){
         return view('mobile/share');
     });
 
-    Route::get('/share/1',function(){
-        return view('mobile/share1');
+    Route::get('/share/{id}',function($id){
+        if ($id == 1) {
+          return view('mobile/share1');
+        }
+        if ($id == 2) {
+          return view('mobile/share2');
+        }
+        if ($id == 3) {
+          return view('mobile/share3');
+        }
+        if ($id == 4) {
+          return view('mobile/share4');
+        }
+        if ($id == 5) {
+          return view('mobile/share5');
+        }
+        if ($id == 6) {
+          return view('mobile/share6');
+        }
     });
 
     Route::get('contact',function(){

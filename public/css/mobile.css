@@ -76,8 +76,8 @@
 }
 
 #intro{
-    margin-top:20px;
-    margin-bottom:70px;
+    margin-top:30px;
+    margin-bottom:80px;
 }
 
 #intro p{
@@ -543,5 +543,9 @@ blockquote p{
     #share .entry-content{
         margin:15px 0 0 0;
         line-height: 1.5em;
+    }
+
+    .shareContent p img{
+      width:100%;
     }
 }
