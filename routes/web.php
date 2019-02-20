@@ -59,6 +59,22 @@ Route::get('/cases/6',function(){
     return view('cases6');
 });
 
+Route::get('/cases/7',function(){
+    return view('cases7');
+});
+
+Route::get('/cases/8',function(){
+    return view('cases8');
+});
+
+Route::get('/cases/9',function(){
+    return view('cases9');
+});
+
+Route::get('/cases/10',function(){
+    return view('cases10');
+});
+
 Route::get('/sitemap',function(){
     return view('sitemap');
 });
@@ -128,6 +144,18 @@ Route::prefix('m')->group(function(){
 
     Route::get('/cases/6',function(){
         return view('mobile/cases6');
+    });
+
+    Route::get('/cases/7',function(){
+        return view('mobile/cases7');
+    });
+
+    Route::get('/cases/8',function(){
+        return view('mobile/cases8');
+    });
+
+    Route::get('/cases/9',function(){
+        return view('mobile/cases9');
     });
 
     Route::get('price',function(){

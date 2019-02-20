@@ -95,6 +95,45 @@
               </div>
             </div>
           </li>
+          <li>
+            <div class="case">
+              <div class="case-img">
+                <a href="/cases/7" target="_blank">
+                  <img src="images/cases/xilegu.png" alt="">
+                </a>
+              </div>
+              <div class="">
+                <h4>熹乐谷</h4>
+                <p>勤天熹乐谷位于中国·广东·清远·佛冈·汤塘，由勤天集团开发，集度假酒店、温泉及水上乐园、亲子乡野旅游、民俗文化体验村、婚庆及会议、养生旅居养老、休闲度假地产等七大业态于一体的南中国温泉度假综合体。</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="case">
+              <div class="case-img">
+                <a href="/cases/8" target="_blank">
+                  <img src="images/cases/camel.png" alt="">
+                </a>
+              </div>
+              <div class="">
+                <h4>Camel骆驼</h4>
+                <p>美国骆驼（Camel骆驼）品牌创于1913年，骆驼（中国）户外用品有限公司是美国骆驼(AMERICAN CAMEL INTERNATIONAL INVEST ENTERPRISE LTD)在亚太地区全权运营机构（亚太地区总部），负责美国骆驼（CAMEL骆驼）在亚太地区的品牌运作业务。</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="case">
+              <div class="case-img">
+                <a href="/cases/9" target="_blank">
+                  <img src="images/cases/yundong.png" alt="">
+                </a>
+              </div>
+              <div class="">
+                <h4>骆驼运动</h4>
+                <p>美国骆驼（Camel骆驼）品牌创于1913年，骆驼（中国）户外用品有限公司是美国骆驼(AMERICAN CAMEL INTERNATIONAL INVEST ENTERPRISE LTD)在亚太地区全权运营机构（亚太地区总部），负责美国骆驼（CAMEL骆驼）在亚太地区的品牌运作业务。</p>
+              </div>
+            </div>
+          </li>
           <div style="clear:both;"></div>
         </ul>
       </div>
