@@ -121,7 +121,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="share/7">
                         <div class="thumbnail">
                             <img src="/images/share/1548272674417059475.jpg" alt="">
                         </div>
@@ -140,7 +140,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="share/8">
                         <div class="thumbnail">
                             <img src="/images/share/1548208957055129904.jpg" alt="">
                         </div>
