@@ -185,6 +185,12 @@ Route::prefix('m')->group(function(){
         if ($id == 6) {
           return view('mobile/share6');
         }
+        if ($id == 7) {
+          return view('mobile/share7');
+        }
+        if ($id == 8) {
+          return view('mobile/share8');
+        }
     });
 
     Route::get('contact',function(){
