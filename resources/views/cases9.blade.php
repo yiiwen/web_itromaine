@@ -38,16 +38,16 @@
             美国骆驼（Camel骆驼）品牌创于1913年，骆驼（中国）户外用品有限公司是美国骆驼(AMERICAN CAMEL INTERNATIONAL INVEST ENTERPRISE LTD)在亚太地区全权运营机构（亚太地区总部），负责美国骆驼（CAMEL骆驼）在亚太地区的品牌运作业务。
           </p>
         </div>
-        <P><img src="/storage/images/camel_exercises/骆驼运动裁剪版本_01.jpg" class="" alt=""></P>
-        <P><img src="/storage/images/camel_exercises/骆驼运动裁剪版本_02.jpg" class="" alt=""></P>
-        <P><img src="/storage/images/camel_exercises/骆驼运动裁剪版本_03.jpg" class="" alt=""></P>
-        <P><img src="/storage/images/camel_exercises/骆驼运动裁剪版本_04.jpg" class="" alt=""></P>
-        <P><img src="/storage/images/camel_exercises/骆驼运动裁剪版本_05.jpg" class="" alt=""></P>
-        <P><img src="/storage/images/camel_exercises/骆驼运动裁剪版本_06.jpg" class="" alt=""></P>
-        <P><img src="/storage/images/camel_exercises/骆驼运动裁剪版本_07.jpg" class="" alt=""></P>
-        <P><img src="/storage/images/camel_exercises/骆驼运动裁剪版本_08.jpg" class="" alt=""></P>
-        <P><img src="/storage/images/camel_exercises/骆驼运动裁剪版本_09.jpg" class="" alt=""></P>
-        <P><img src="/storage/images/camel_exercises/骆驼运动裁剪版本_10.jpg" class="" alt=""></P>
+        <P><img src="/storage/images/camel_exercises/01.jpg" class="" alt=""></P>
+        <P><img src="/storage/images/camel_exercises/02.jpg" class="" alt=""></P>
+        <P><img src="/storage/images/camel_exercises/03.jpg" class="" alt=""></P>
+        <P><img src="/storage/images/camel_exercises/04.jpg" class="" alt=""></P>
+        <P><img src="/storage/images/camel_exercises/05.jpg" class="" alt=""></P>
+        <P><img src="/storage/images/camel_exercises/06.jpg" class="" alt=""></P>
+        <P><img src="/storage/images/camel_exercises/07.jpg" class="" alt=""></P>
+        <P><img src="/storage/images/camel_exercises/08.jpg" class="" alt=""></P>
+        <P><img src="/storage/images/camel_exercises/09.jpg" class="" alt=""></P>
+        <P><img src="/storage/images/camel_exercises/10.jpg" class="" alt=""></P>
   </div>
 
 </div>

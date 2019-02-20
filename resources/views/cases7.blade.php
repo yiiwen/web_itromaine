@@ -38,16 +38,16 @@
               勤天熹乐谷位于中国·广东·清远·佛冈·汤塘，由勤天集团开发，集度假酒店、温泉及水上乐园、亲子乡野旅游、民俗文化体验村、婚庆及会议、养生旅居养老、休闲度假地产等七大业态于一体的南中国温泉度假综合体。
           </p>
         </div>
-        <P><img src="/storage/images/xilegu/熹乐谷度假温泉酒店长图_01.jpg" class="" alt=""></P>
-        <P><img src="/storage/images/xilegu/熹乐谷度假温泉酒店长图_02.jpg" class="" alt=""></P>
-        <P><img src="/storage/images/xilegu/熹乐谷度假温泉酒店长图_03.jpg" class="" alt=""></P>
-        <P><img src="/storage/images/xilegu/熹乐谷度假温泉酒店长图_04.jpg" class="" alt=""></P>
-        <P><img src="/storage/images/xilegu/熹乐谷度假温泉酒店长图_05.jpg" class="" alt=""></P>
-        <P><img src="/storage/images/xilegu/熹乐谷度假温泉酒店长图_06.jpg" class="" alt=""></P>
-        <P><img src="/storage/images/xilegu/熹乐谷度假温泉酒店长图_07.jpg" class="" alt=""></P>
-        <P><img src="/storage/images/xilegu/熹乐谷度假温泉酒店长图_08.jpg" class="" alt=""></P>
-        <P><img src="/storage/images/xilegu/熹乐谷度假温泉酒店长图_09.jpg" class="" alt=""></P>
-        <P><img src="/storage/images/xilegu/熹乐谷度假温泉酒店长图_10.jpg" class="" alt=""></P>
+        <P><img src="/storage/images/xilegu/01.jpg" class="" alt=""></P>
+        <P><img src="/storage/images/xilegu/02.jpg" class="" alt=""></P>
+        <P><img src="/storage/images/xilegu/03.jpg" class="" alt=""></P>
+        <P><img src="/storage/images/xilegu/04.jpg" class="" alt=""></P>
+        <P><img src="/storage/images/xilegu/05.jpg" class="" alt=""></P>
+        <P><img src="/storage/images/xilegu/06.jpg" class="" alt=""></P>
+        <P><img src="/storage/images/xilegu/07.jpg" class="" alt=""></P>
+        <P><img src="/storage/images/xilegu/08.jpg" class="" alt=""></P>
+        <P><img src="/storage/images/xilegu/09.jpg" class="" alt=""></P>
+        <P><img src="/storage/images/xilegu/10.jpg" class="" alt=""></P>
   </div>
 
 </div>
