@@ -146,6 +146,18 @@ Route::prefix('m')->group(function(){
         return view('mobile/cases6');
     });
 
+    Route::get('/cases/7',function(){
+        return view('mobile/cases7');
+    });
+
+    Route::get('/cases/8',function(){
+        return view('mobile/cases8');
+    });
+
+    Route::get('/cases/9',function(){
+        return view('mobile/cases9');
+    });
+
     Route::get('price',function(){
         return view('mobile/price');
     });

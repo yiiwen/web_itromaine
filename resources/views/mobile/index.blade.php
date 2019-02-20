@@ -56,16 +56,16 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="cases/7">
                         <div class="thumbnail">
-                            <img src="https://www.sumaart.com/media/cn/201804/1523336360952433102.jpg" alt="">
+                            <img src="/images/cases/xilegu.png" alt="">
                         </div>
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="cases/8">
                         <div class="thumbnail">
-                            <img src="https://www.sumaart.com/media/cn/201804/1523335991109237210.jpg" alt="">
+                            <img src="/images/cases/camel.png" alt="">
                         </div>
                     </a>
                 </li>
