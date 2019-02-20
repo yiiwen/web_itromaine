@@ -103,6 +103,33 @@
     float: left;
 }
 
+.casespage p{
+  margin:0;
+}
+.casespage p img{
+  width:100%;
+  display: block;
+}
+.caseTop{
+  width: 100%;
+  margin:30px auto;
+}
+.caseTop h2,.caseTop p{
+  text-align:center;
+}
+.caseTop h2{
+  margin-top:50px;
+  font-size:2em;
+  margin-bottom:1em;
+}
+
+.caseTop p{
+  font-size:1em;
+  line-height:2em;
+  color:#7b7b7b;
+  padding:5px;
+}
+
 .caseul {
   padding:0;
   margin:0;

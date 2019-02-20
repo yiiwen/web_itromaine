@@ -86,11 +86,11 @@
              <br>
             <div id="news-content">
                 <ul>
-                    <li><a href="">移动优先的网页设计技巧</a></li>
-                    <li><a href="">网页设计中的7大个用户体验要素</a></li>
-                    <li><a href="">如何创建移动应用程序界面设计</a></li>
-                    <li><a href="">如何做好一个优秀的网站布局设计</a></li>
-                    <li><a href="">网页中滚动流浏览的经典设计</a></li>
+                    <li><a href="share/1">5种方式来解决您的下一个网站设计</a></li>
+                    <li><a href="share/2">2019年2月，网站设计的最新趋势</a></li>
+                    <li><a href="share/3">4个消费电子产品的品牌网站设计分享</a></li>
+                    <li><a href="share/4">一组PHOTOSHOP的替代品</a></li>
+                    <li><a href="share/5">设计用于语音搜索的移动网站</a></li>
                 </ul>
             </div>
         </div>
