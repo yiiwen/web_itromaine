@@ -172,18 +172,18 @@
                 </a>
             </div>
             <div class="case-item" style="left:400px;">
-                <a href="/cases/5" target="_blank"> 
+                <a href="/cases/10" target="_blank">
                     <div class="case-img-container">
                         <div class="case-img-show">
-                            <img src="images/cases/newsico_20170905171220334.jpg" alt="">
+                            <img src="images/cases/huacheng.png" alt="">
                         </div>
                         <div class="case-img-hidden">
-                            <img src="images/cases/ico_20170824142759353.png" alt="">
+                            <img src="images/cases/ico_huacheng.png" alt="">
                         </div>
                     </div>
                     <div class="case-text">
-                        <h4>瑞大生珠宝</h4>
-                        <p>深圳网站建设案例-香港瑞大生珠宝源于优雅浪漫的东方时尚之都香港，是一家大型的综合性珠宝企业， 公司集珠宝生产加工、批发、零售、品牌连锁加盟于一体，在业界享有极高声誉。</p>
+                        <h4>花城+</h4>
+                        <p>广州市广播电视台（Guangzhou Broadcasting Network），（又称：广州台，GZBN），是广州市委、市政府为配合文化事业单位改革和广电总局对电台、电视台合并的要求而建成的。</p>
                     </div>
                 </a>
             </div>
