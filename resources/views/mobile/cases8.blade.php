@@ -32,7 +32,7 @@
         <div class="caseTop">
           <h2>品牌介绍</h2>
           <p>
-              美国骆驼（Camel骆驼）品牌创于1913年，骆驼（中国）户外用品有限公司是美国骆驼(AMERICAN CAMEL INTERNATIONAL INVEST ENTERPRISE LTD)在亚太地区全权运营机构（亚太地区总部），负责美国骆驼（CAMEL骆驼）在亚太地区的品牌运作业务
+              骆驼官方商城是广东骆驼服饰有限公司旗下一个重要营销渠道，广东骆驼服饰有限公司顺应行业发展趋势，充分发挥微信小程序的轻巧便利，结合广东骆驼服饰有限公司在电商行业的优势，为企业创造出了不菲的价值。
           </p>
         </div>
         <P><img src="/storage/images/camel/01.jpg" class="" alt=""></P>

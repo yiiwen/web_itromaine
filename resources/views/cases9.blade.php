@@ -35,7 +35,7 @@
         <div class="caseTop">
           <h2>品牌介绍</h2>
           <p>
-            美国骆驼（Camel骆驼）品牌创于1913年，骆驼（中国）户外用品有限公司是美国骆驼(AMERICAN CAMEL INTERNATIONAL INVEST ENTERPRISE LTD)在亚太地区全权运营机构（亚太地区总部），负责美国骆驼（CAMEL骆驼）在亚太地区的品牌运作业务。
+              骆驼运动小程序项目是广东骆驼服饰有限公司企业旗下的一个内容类小程序。宣导体育，运动，健康的生活理念。项目上线便保持着用户高日活量。充分体现了项目的价值意义和无限的潜力。是一款有温度的互联网产品。
           </p>
         </div>
         <P><img src="/storage/images/camel_exercises/01.jpg" class="" alt=""></P>
