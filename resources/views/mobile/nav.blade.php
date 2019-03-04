@@ -8,7 +8,7 @@
         <ul>
             <li><a href="/m/teams">团队</a></li>
             <li><a href="/m/cases">案例</a></li>
-            <!-- <li><a href="/m/price">收费</a></li> -->
+            <li><a href="/m/service">服务</a></li>
             <li><a href="/m/share">知识</a></li>
             <li><a href="/m/contact">联系</a></li>
             <div style="clear:both"></div>

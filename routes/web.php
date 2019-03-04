@@ -162,6 +162,10 @@ Route::prefix('m')->group(function(){
         return view('mobile/price');
     });
 
+    Route::get('service',function(){
+        return view('mobile/service');
+    });
+
     Route::get('share',function(){
         return view('mobile/share');
     });
