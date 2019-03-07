@@ -15,6 +15,27 @@
         <div id="cases">
             <ul>
                 <li>
+                    <a href="cases/8">
+                        <div class="thumbnail">
+                            <img src="/images/cases/camel.png" alt="">
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="cases/9">
+                        <div class="thumbnail">
+                            <img src="/images/cases/yundong.png" alt="">
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="cases/7">
+                        <div class="thumbnail">
+                            <img src="/images/cases/xilegu.png" alt="">
+                        </div>
+                    </a>
+                </li>
+                <li>
                     <a href="cases/1">
                         <div class="thumbnail">
                             <img src="/images/cases/newsico_20170905170429868.jpg" alt="">
@@ -49,7 +70,7 @@
                         </div>
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="cases/6">
                         <div class="thumbnail">
                             <img src="/images/cases/newsico_20170905171425383.jpg" alt="">
@@ -62,24 +83,17 @@
                             <img src="/images/cases/xilegu.png" alt="">
                         </div>
                     </a>
-                </li>
-                <li>
-                    <a href="cases/8">
-                        <div class="thumbnail">
-                            <img src="/images/cases/camel.png" alt="">
-                        </div>
-                    </a>
-                </li>
+                </li> -->
             </ul>
         </div>
         <div class="both"></div>
         <div id="gridded">
             <h2>服务全国优秀企业</h2>
-            <div class="address">深圳 广州 佛山 杭州 宁波 合肥 香港</div>
+            <div class="address">广州 深圳 佛山 杭州 宁波 合肥 香港</div>
         </div>
 
         <div id="caseMeBtn">
-            <a href="">免费获取策划与报价</a>
+            <a href="/m/service">免费获取策划与报价</a>
         </div>
 
         <div id="news">

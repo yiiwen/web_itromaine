@@ -29,6 +29,27 @@
         <div id="cases" style="margin-top:50px;">
             <ul>
                 <li>
+                    <a href="cases/7">
+                        <div class="thumbnail">
+                            <img src="/images/cases/xilegu.png" alt="">
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="cases/8">
+                        <div class="thumbnail">
+                            <img src="/images/cases/camel.png" alt="">
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="cases/9">
+                        <div class="thumbnail">
+                            <img src="/images/cases/yundong.png" alt="">
+                        </div>
+                    </a>
+                </li>
+                <li>
                     <a href="cases/1">
                         <div class="thumbnail">
                             <img src="/images/cases/newsico_20170905170429868.jpg" alt="">
@@ -67,27 +88,6 @@
                     <a href="cases/6">
                         <div class="thumbnail">
                             <img src="/images/cases/newsico_20170905171425383.jpg" alt="">
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="cases/7">
-                        <div class="thumbnail">
-                            <img src="/images/cases/xilegu.png" alt="">
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="cases/8">
-                        <div class="thumbnail">
-                            <img src="/images/cases/camel.png" alt="">
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="cases/9">
-                        <div class="thumbnail">
-                            <img src="/images/cases/yundong.png" alt="">
                         </div>
                     </a>
                 </li>
