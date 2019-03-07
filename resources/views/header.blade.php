@@ -21,6 +21,16 @@
         <link rel="stylesheet" href="/css/default.css">
         <link rel="stylesheet" href="/css/swiper.min.css">
         <link rel="stylesheet" href="/css/animate.min.css">
+        <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?4fbc34fec0d5a619708fc0cb6391d655";
+              var s = document.getElementsByTagName("script")[0];
+              s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+
         <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
         <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
         <!--[if lt IE 9]>
