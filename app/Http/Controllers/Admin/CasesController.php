@@ -12,6 +12,7 @@ class CasesController extends Controller
     public function index(Request $request)
     {
         $condition = $request->search;
+        $condition[] = ['cases_status','1'];
         $condition[] = ['is_del', '=', '0'];
         $list = Cases::where($condition)->select(
             "id",

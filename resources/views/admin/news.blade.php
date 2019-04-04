@@ -348,11 +348,14 @@
                     let reg = /<img[A-Za-z0-9\*\s"'=]*src="[\S]+"/g
                     let srcReg = /src="[\S]+"/g;
                     let matchResult = data.news_content.match(reg)
-                    for (let i=0; i<matchResult.length; i++) {
-                        let src = matchResult[i].match(srcReg)
-                        let img = src[0].substring(5,src[0].length-1)
-                        let image = `<div class="outer"><img src="${img}" class="img-thumbnail"></div>`
-                        $("#candidate-image").append(image)
+                    if (matchResult != null) {
+                        for (let i=0; i<matchResult.length; i++) {
+                            let src = matchResult[i].match(srcReg)
+                            let img = src[0].substring(5,src[0].length-1)
+                            let image = `<div class="outer"><img src="${img}" class="img-thumbnail"></div>`
+                            $("#candidate-image").empty();
+                            $("#candidate-image").append(image)
+                        }
                     }
                     $("#first-image").attr("src", data.first_image)
                     firstImg = data.first_image

@@ -302,6 +302,18 @@
                 $("#cases-title").val(data.cases_title)
                 $("#cases-id").val(data.id)
                 editor.txt.html(data.cases_content)
+                let reg = /<img[A-Za-z0-9\*\s"'=]*src="[\S]+"/g
+                let srcReg = /src="[\S]+"/g;
+                let matchResult = data.cases_content.match(reg)
+                if (matchResult != null) {
+                    for (let i=0; i<matchResult.length; i++) {
+                        let src = matchResult[i].match(srcReg)
+                        let img = src[0].substring(5,src[0].length-1)
+                        let image = `<div class="outer"><img src="${img}" class="img-thumbnail"></div>`
+                        $("#candidate-image").empty();
+                        $("#candidate-image").append(image)
+                    }
+                }
                 $("#first-image").attr("src", data.first_image)
                 firstImg = data.first_image
                 $("#publishCase").modal('show')
