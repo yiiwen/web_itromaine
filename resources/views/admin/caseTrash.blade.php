@@ -1,18 +1,18 @@
 @extends('admin.layout')
-@php $active = '/admin/news/index' @endphp
+@php $active = '/admin/cases/trash' @endphp
 @section('title','广州油麦菜信息科技有限公司-CMS')
     @section('content')
     <div class="container">
         <br>
-            @includeIf('admin.components.newMenu')
+            @includeIf('admin.components.casesMenu')
             <button type="button" class="btn btn-danger" id="clear" style="margin-left:20px;display:block;float:left;">
             <i class="glyphicon glyphicon-flash"></i> 清空回收站</button>
             <div style="clear:both;"></div>
         <br>
         <br>
         <div class="row">
-            <form action="/admin/news/trash" method="get">
-                @includeIf('admin.components.searchForm')
+            <form action="/admin/cases/trash" method="get">
+                @include('admin.components.caseSearchForm')
             </form>
         </div>
         <br>
@@ -30,22 +30,22 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($newsList as $news)
+                @foreach ($casesList as $case)
                 <tr>
-                    <td>{{$news->id}}</td>
-                    <td>{{$news->news_title}}</td>
-                    <td><a href="{{$news->short_url}}" target="_blank">{{$news->short_url}}</a></td>
-                    <td>{{$news->updated_at}}</td>
-                    <td>{{$news->created_at}}</td>
+                    <td>{{$case->id}}</td>
+                    <td>{{$case->cases_title}}</td>
+                    <td><a href="{{$case->short_url}}" target="_blank">{{$case->short_url}}</a></td>
+                    <td>{{$case->updated_at}}</td>
+                    <td>{{$case->created_at}}</td>
                     <td>
-                        <button class="btn btn-success recovery" data-id="{{$news->id}}">恢复</button>
-                        <button class="btn btn-danger delete" data-id="{{$news->id}}">删除</button>
+                        <button class="btn btn-success recovery" data-id="{{$case->id}}">恢复</button>
+                        <button class="btn btn-danger delete" data-id="{{$case->id}}">删除</button>
                     </td>
                 </tr>
                 @endforeach
             </tbody>
         </table>
-        {{$newsList->links()}}
+        {{$casesList->links()}}
     </div>
     <!-- 列表恢复对话框start -->
     <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" id="recoveryModal" aria-labelledby="recoveryModal">
@@ -108,14 +108,14 @@
     $(document).ready(function(){
         $(".recovery").click(function(){
             $("#recoveryModal").modal('toggle');
-            let newsId = $(this).attr("data-id");
+            let casesId = $(this).attr("data-id");
             $(".recovery-confirm").click(function(){
                 $.ajax({
-                    url: "/admin/news/recovery",
+                    url: "/admin/cases/recovery",
                     dataType:'JSON',
                     method:'GET',
                     data:{
-                        id:newsId
+                        id:casesId
                     },
                     success:function(data,status){
                         window.location.reload();
@@ -130,14 +130,14 @@
 
         $(".delete").click(function(){
             $("#deleteModal").modal('toggle');
-            let newsId = $(this).attr("data-id");
+            let casesId = $(this).attr("data-id");
             $(".delete-confirm").click(function(){
                 $.ajax({
-                    url: "/admin/news/dropItem",
+                    url: "/admin/cases/dropItem",
                     dataType:'JSON',
                     method:'GET',
                     data:{
-                        id:newsId
+                        id:casesId
                     },
                     success:function(data,status){
                         window.location.reload();
@@ -152,15 +152,11 @@
 
         $("#clear").click(function(){
             $("#clearModal").modal('show');
-            let newsId = $(this).attr("data-id");
             $(".clear-confirm").click(function(){
                 $.ajax({
-                    url: "/admin/news/clear",
+                    url: "/admin/cases/clear",
                     dataType:'JSON',
                     method:'GET',
-                    data:{
-                        id:newsId
-                    },
                     success:function(data,status){
                         window.location.reload();
                     },

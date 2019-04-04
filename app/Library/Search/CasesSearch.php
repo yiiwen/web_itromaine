@@ -7,13 +7,13 @@ class CasesSearch implements SearchImpl
 {
     public function handle(Request $request)
     {
-        $newsTitle = $request->cases_title ?: null;
+        $casesTitle = $request->cases_title ?: null;
         $startTime = $request->start_time ?: null;
         $endTime   = $request->end_time ?: null;
         $condition = [];
-        if ($newsTitle)
+        if ($casesTitle)
         {
-            $condition[] = ['cases_title','like','%'.$newsTitle .'%'];
+            $condition[] = ['cases_title','like','%'.$casesTitle .'%'];
         }
         if ($startTime && $endTime)
         {

@@ -13,6 +13,15 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+// Route::get('/user', function (Request $request) {
+
+// })->middleware('checkToken');
+
+
+Route::group(['middleware'=>['allowOrigin','checkToken']],function() {
+    Route::any('/user',function(Request $request) {
+        echo "hello world";
+    });
 });
+
+Route::any('/errors','Api\ErrorsController@errors')->middleware('allowOrigin');

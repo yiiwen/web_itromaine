@@ -224,23 +224,34 @@ Route::prefix('admin')->middleware(['checkLogin'])->group(function(){
     Route::post('index/banner','Admin\IndexController@setBannser');
 
     //新闻模块
-    Route::middleware("search")->group(function(){
-        Route::get('news/index','Admin\NewsController@index');
-        Route::get('news/draftsList','Admin\NewsController@draftsList');
-        Route::get('news/trash','Admin\NewsController@trash');
+    Route::middleware("search")->prefix('news')->group(function(){
+        Route::get('index','Admin\NewsController@index');
+        Route::get('draftsList','Admin\NewsController@draftsList');
+        Route::get('trash','Admin\NewsController@trash');
     });
-    Route::post('news/publish','Admin\NewsController@publish');
-    Route::post('news/drafts','Admin\NewsController@drafts');
-    Route::get('news/getOne','Admin\NewsController@getOne');
-    Route::get('news/delete','Admin\NewsController@delete');
-    Route::get('news/recovery','Admin\NewsController@recovery');
-    Route::get('news/clear','Admin\NewsController@clear');
-    Route::get('news/dropItem','Admin\NewsController@dropItem');
+    Route::prefix('news')->group(function(){
+        Route::post('publish','Admin\NewsController@publish');
+        Route::post('drafts','Admin\NewsController@drafts');
+        Route::get('getOne','Admin\NewsController@getOne');
+        Route::get('delete','Admin\NewsController@delete');
+        Route::get('recovery','Admin\NewsController@recovery');
+        Route::get('clear','Admin\NewsController@clear');
+        Route::get('dropItem','Admin\NewsController@dropItem');
+    });
 
     //案例模块
-    Route::middleware("search")->group(function() {
-        Route::get('cases/index', 'Admin\CasesController@index');
+    Route::middleware("search")->prefix('cases')->group(function() {
+        Route::get('index', 'Admin\CasesController@index');
+        Route::get('trash', 'Admin\CasesController@trash');
+        Route::get('draftsList', 'Admin\CasesController@draftsList');
     });
-    Route::post('cases/publish','Admin\CasesController@publish');
-
+    Route::prefix('cases')->group(function(){
+        Route::post('publish','Admin\CasesController@publish');
+        Route::post('drafts','Admin\CasesController@drafts');
+        Route::get('getOne','Admin\CasesController@getOne');
+        Route::get('delete','Admin\CasesController@delete');
+        Route::get('recovery','Admin\CasesController@recovery');
+        Route::get('dropItem', 'Admin\CasesController@dropItem');
+        Route::get('clear', 'Admin\CasesController@clear');
+    });
 });
