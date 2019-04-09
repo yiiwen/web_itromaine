@@ -42,6 +42,7 @@ class IndexController extends Controller
             $banner->path = $item->image;
             $banner->url = $item->url ?? "";
             $banner->alt_info = $item->alt ?? "";
+            $banner->is_mobile = $item->is_mobile;
             if ($banner->save())
                 $count++;
         }

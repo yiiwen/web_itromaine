@@ -226,6 +226,16 @@ section h4{
     width: 100%;
 }
 
+.banner-contain .col-md-4 {
+    margin-bottom: 10px;
+}
+
+.banner-contain .banner-image {
+    max-height: 123px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
 .banner-action-btn {
     margin-top:5px;
 }

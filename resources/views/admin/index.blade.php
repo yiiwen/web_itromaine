@@ -15,19 +15,17 @@
             </h4>
             
             <div class="row banner-contain">
-
                 @foreach ($bannserList as $banner)
-
-                <div class="col-md-2">
+                <div class="col-md-4">
                     <div class="banner-image">
-                        <img src="{{$banner->path}}" data-id="{{$banner->id}}" data-url="{{$banner->url}}" data-alt="{{$banner->alt_info}}"  alt="">
+                        <img src="{{$banner->path}}" data-id="{{$banner->id}}" data-isMobile="{{$banner->is_mobile}}" data-url="{{$banner->url}}" data-alt="{{$banner->alt_info}}"  alt="">
                     </div>
                     <div class="banner-action-btn">
                         <ul>
                             <li><a href="javascript:void(0)" class="toLeft" title="左移动"><i class="glyphicon glyphicon-arrow-left"></i></a></li>
                             <li><a href="javascript:void(0)" class="toRight" title="右移动"><i class="glyphicon glyphicon-arrow-right"></i></a></li>
                             <li><a href="javascript:void(0)" class="banner-delete" title="删除"><i class="glyphicon glyphicon-trash"></i></a></li>
-                            <li><a href="javascript:void(0)" class="edit" title="替换"><i class="glyphicon glyphicon-pencil"></i></a></li>
+                            <li><a href="javascript:void(0)" class="edit" title="编辑"><i class="glyphicon glyphicon-pencil"></i></a></li>
                             <li><a href="javascript:void(0)" class="toBig" title="查看"><i class="glyphicon glyphicon-fullscreen"></i></a></li>
                         </ul>
                     </div>
@@ -117,10 +115,13 @@
                     <br>
                     <input type="text" class="form-control" id="banner-alt" placeholder="alt信息">
                     <br>
+                    <input type="checkbox" id="is-mobile" value="1" name="is_mobile" aria-label="移动端展示">&nbsp;&nbsp;移动端展示
+                    <br>
                     <input type="file" style="display:none;" id="input-banner"/>
+                    <br>
                     <button type="button" class="btn btn-primary btn-sm upload-banner">选择图片</button>
                     <button type="button" id="upload-banner-success" class="btn btn-success btn-sm">确认</button>
-                    <button type="button" class="btn btn-warning btn-sm banner-delete-cannel">取消</button>
+                    <button type="button" class="btn btn-warning btn-sm banner-upload-cannel">取消</button>
                 </div>
             </div>
         </div>
