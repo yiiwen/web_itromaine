@@ -28,46 +28,64 @@
         </div>
     </div>
 
-    <div class="section services">
+    <div class="section services" style="margin-bottom: 120px;">
         <div class="english-title">Our service</div>
         <div class="chinese-title">我们的服务</div>
         <div class="section-seperator"></div>
         <div class="section-content relative">
             <div class="row">
                 <div class="service-item  absolute" style="left:10px;">
-                    <img src="images/ws.png" alt="">
                     <div class="service-item-title">
-                    个性网站建设
+                        高端网站定制
                     </div>
                     <div class="service-item-text">
-                    针对品牌提供定制化网站建设解决方案
+                        <ul class="service-item-ul">
+                            <li>企业&品牌官网</li>
+                            <li>集团上市公司官网</li>
+                            <li>电商/门户网站建设</li>
+                            <li>Html5响应式网站</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="service-item absolute" style="left:310px;">
-                    <img src="images/phone.png" style="width:96px;" alt="">
                     <div class="service-item-title">
-                    程序开发
+                    移动端设计开发
                     </div>
                     <div class="service-item-text">
-                    以安全快的代码展示实力
+                        <ul class="service-item-ul">
+                            <li>手机网站开发</li>
+                            <li>H5页面设计开发</li>
+                            <li>APP/IOS应用开发</li>
+                            <li>微官网/公众号运营</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="service-item absolute" style="left:610px;">
-                    <img src="images/kaifa.png" alt="">
                     <div class="service-item-title">
-                    小程序开发
+                        电商运营
                     </div>
                     <div class="service-item-text">
-                    为您定制专属与您的小程序
+                        <ul class="service-item-ul">
+                            <li>电商外包</li>
+                            <li>电商平台建设</li>
+                            <li>360°展示全景拍摄</li>
+                            <li>全网电子商务网站建设</li>
+                            <li>全网内容管理系统</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="service-item absolute" style="left:910px;">
-                    <img src="images/hlw.png" alt="">
                     <div class="service-item-title">
-                    互联网需求服务
+                        APP应用
                     </div>
                     <div class="service-item-text">
-                    满足各互联网创新项目需求
+                        <ul class="service-item-ul">
+                            <li>APP原生开发</li>
+                            <li>IPad应用开发</li>
+                            <li>IPhone应用开发</li>
+                            <li>Android应用开发</li>
+                            <li>二维码营销平台开发</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -86,9 +104,11 @@
             <div class="section-content relative">
                 <div class="about-us-left absolute">
                     <div class="about-us-text">
-                        我们是一家专注用户体验与互联网品牌建设的高端设计机构，
-                        我们在互联网行业兼具宽阔而前瞻的视野，苛求设计中的每一个环节，每一个细节。为客户提供策略性的思考，
-                        辅助客户在互联网产品开发中实现精准定位。我们的宗旨是竭尽所能为客户提供高品质的解决方案，用设计提升价值。
+                        提供网站、网上商城、APP、小程序、微信公众号等的开发、运营、推广、 托管等一体化、全方位的互联网解决方案。创造不平凡，力求为企业呈现集美与实用为一体的互联网产品，打通用户与企业间的链接，携手客户，一起为用户带去优良的使用体验。我们的服务范围涵盖：实现线上线下的互通服务、分销商城服务、单店商城服务、社会化客户关系管理服务、移动电商服务、 微信轻应用服务、平面广告设计服务等。
+
+                        {{--我们是一家专注用户体验与互联网品牌建设的高端设计机构，--}}
+                        {{--我们在互联网行业兼具宽阔而前瞻的视野，苛求设计中的每一个环节，每一个细节。为客户提供策略性的思考，--}}
+                        {{--辅助客户在互联网产品开发中实现精准定位。我们的宗旨是竭尽所能为客户提供高品质的解决方案，用设计提升价值。--}}
                     </div>
                     <a href="/about" class="know-more" target="_blank">查看更多</a>
                 </div>
