@@ -199,18 +199,34 @@ body{
   text-align: center;
 }
 
-.service-item-title {
-  font-size: 1.5em;
-  font-weight:bold;
+.service-item-title{
+  color: #fff;
+  font-weight: bold;
+  font-size: 24px;
+  background: rgba(57,207,204,1);
   text-align: center;
-  padding:10px;
-  color: #534949;
+  line-height: 74px;
 }
 
 .service-item-text{
+  height: 200px;
+  border: 1px solid #e5e5e5;
+  border-bottom: 2px solid rgba(57,207,204,1);
+  background-image:  url(../images/bg1.jpg);
   text-align: center;
   color: #5C5C5C;
   font-size: 1.1em;
+}
+
+.service-item-ul{
+  margin: 20px 0 0 0;
+  text-align: left;
+  /*margin-left: 36px*/
+}
+
+.service-item-ul li{
+  letter-spacing: 2px;
+  margin-top: 10px;
 }
 
 .about-us{
@@ -1286,9 +1302,14 @@ body{
 
 
 .service-item:hover{
-  transform: rotateY(180deg);
-  -webkit-transform: rotateY(180deg);	/* Safari 和 Chrome */
-  -moz-transform: rotateY(180deg);	/* Firefox */
+  transform:scale(1.1);
+  transition:all .4s;
+  -moz-transition:all .4s;
+  -webkit-transition:all .4s;
+  -o-transition:all .4s;
+  /*transform: rotateY(180deg);*/
+  /*-webkit-transform: rotateY(180deg);	!* Safari 和 Chrome *!*/
+  /*-moz-transform: rotateY(180deg);	!* Firefox *!*/
 }
 
 
@@ -1374,7 +1395,6 @@ body{
   color:#000;
   text-decoration:none;
 }
-
 
 .company-top-image{
   width: 100%;
