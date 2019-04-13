@@ -254,4 +254,10 @@ Route::prefix('admin')->middleware(['checkLogin'])->group(function(){
         Route::get('dropItem', 'Admin\CasesController@dropItem');
         Route::get('clear', 'Admin\CasesController@clear');
     });
+    //文章管理
+    Route::prefix('article')->group(function() {
+        Route::get('create', 'Admin\ArticleController@index');
+        Route::post('publish', 'Admin\ArticleController@publish');
+        Route::post("drafts", 'Admin\ArticleController@drafts');
+    });
 });
