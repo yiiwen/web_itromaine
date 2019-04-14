@@ -24,9 +24,8 @@
 
   </body>
   <script src="/admin/js/jquery-2.1.4.min.js"></script>
-  <script src="/admin/js/icheck.min.js"></script>
   <script src="/js/bootstrap.min.js"></script>
   <script src="/admin/js/bootstrap-datetimepicker.js"></script>
-  <script src="/admin/js/bootstrap-datetimepicker.zh-CN.js"></script>
+  <script src="/admin/js/bootstrap-datetimepicker.zh-CN.js" charset="utf-8"></script>
   @yield('script')
 </html>

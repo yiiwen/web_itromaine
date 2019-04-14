@@ -18,7 +18,7 @@ class News extends Model
         $news->sort = $sort;
         $news->news_status = $newsStatus;
         if (!$id) {
-            $shortUrl = Util::createShortUrl();
+            $shortUrl = "hello world";//Util::createShortUrl();
             $news->author_id = 1;
             $news->author_name = '油麦菜';
             $news->short_url = env('APP_URL') . '/' . $shortUrl;
@@ -27,5 +27,15 @@ class News extends Model
             return $news->id;
         }
         return $news->save();
+    }
+
+    public function getOne($id)
+    {
+        $news = self::find($id);
+        $news->title = $news->news_title;
+        $news->content = $news->news_content;
+        $news->firstImage = $news->first_image;
+        $news->shortUrl = $news->short_url;
+        return $news;
     }
 }

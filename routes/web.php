@@ -256,7 +256,8 @@ Route::prefix('admin')->middleware(['checkLogin'])->group(function(){
     });
     //文章管理
     Route::prefix('article')->group(function() {
-        Route::get('create', 'Admin\ArticleController@index');
+        Route::get('create', 'Admin\ArticleController@create');
+        Route::get('edit', 'Admin\ArticleController@edit');
         Route::post('publish', 'Admin\ArticleController@publish');
         Route::post("drafts", 'Admin\ArticleController@drafts');
     });

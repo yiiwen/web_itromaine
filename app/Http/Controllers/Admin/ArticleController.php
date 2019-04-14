@@ -26,21 +26,32 @@ class ArticleController extends Controller
     }
 
     //创建文章表单
-    public function index(Request $request)
+    public function create()
     {
         return view('admin/article');
+    }
+
+    // 更新文章
+    public function edit(Request $request)
+    {
+        $article = $this->model->getOne($request->id);
+        return view('admin/article', ['article'=> $article]);
     }
 
     // 发表
     public function publish(Request $request)
     {
-        // return "hello world";
         $id = $request->id;
-        $this->model->publish($request->title, $request->content, $request->firstImg, $request->sort, 1, $id);
-        return "hello world";
+        $result = $this->model->publish($request->title, $request->articleContent, $request->firstImg, $request->sort, 1, $id);
+        if ($result) {
+            return ['error' => 'Normal', 'message' => $result];
+        } else {
+            return ['error' => 'update fail'];
+        }
     }
 
     // 草稿箱
     public function drafts(Request $request)
-    { }
+    {
+    }
 }

@@ -23,18 +23,21 @@
   </div>
   <div class="contentPanel">
     <div id="id" class="form-group">
-      <input type="hidden" id="article-id">
+      <input type="hidden" id="article-id" @isset($article) value="{{$article->id}}" @endisset>
     </div>
     <div class="form-group article-input">
-      <input type="text" id="title" data-toggle="tooltip" title="请输入文章标题" placeholder="请输入文章标题" class="form-control">
+      <input type="text" id="title" data-toggle="tooltip" title="请输入文章标题" placeholder="请输入文章标题"
+             @isset($article) value="{{$article->title}}" @endisset class="form-control">
     </div>
     <div id="cases-content" class="from-group">
-      <div id="contBox" data-toggle="tooltip" title="请输入文章内容"></div>
+      <div id="contBox" data-toggle="tooltip" title="请输入文章内容">
+          @isset($article) {!! $article->content !!} @endisset
+      </div>
     </div>
     <div class="article-image">
       <div class="first-image">
         <input type="file" style="display:none;" id="first-image-input" name="first-image" />
-        <img src="/admin/images/pic.png" id="first-image" alt="..." class="img-thumbnail" />
+        <img @if(isset($article)) src="{{$article->firstImage}}" @else src="/admin/images/pic.png" @endif id="first-image" alt="..." class="img-thumbnail" />
         <div id="uploadFirstImgBtn">
           <button onclick="document.getElementById('first-image-input').click()">设置封面</button>
         </div>
@@ -51,7 +54,8 @@
     </div>
     <div style="clear:both;"></div>
     <div class="input-group article-input">
-      <input type="text" class="form-control" placeholder="推广短链,自动生成" id="shortUrl" disabled aria-describedby="basic-addon2">
+      <input type="text" class="form-control" placeholder="推广短链,自动生成" id="shortUrl" @isset($article)
+      value="{{$article->shortUrl}}"  @endisset disabled aria-describedby="basic-addon2">
       <span class="input-group-addon" id="basic-addon2">复制</span>
     </div>
     <div id="article-sort" class="form-group">
@@ -97,7 +101,22 @@
   }
 
   window.onload = function() {
-    render()
+    render();
+    let contentBox = $('#contBox').html();
+    if (contentBox.length > 0) {
+        let reg = /<img[A-Za-z0-9\*\s"'=]*src="[\S]+"/g
+        let srcReg = /src="[\S]+"/g;
+        let matchResult = contentBox.match(reg)
+        $("#candidate-image").empty()
+        if (matchResult != null) {
+            for (let i=0; i<matchResult.length; i++) {
+                let src = matchResult[i].match(srcReg)
+                let img = src[0].substring(5,src[0].length-1)
+                let image = `<div class="outer"><img src="${img}" class="img-thumbnail"></div>`
+                $("#candidate-image").append(image)
+            }
+        }
+    }
   }
 
   $(".article-type .bg").click(function() {
@@ -108,6 +127,7 @@
   // 内容框
   var E = window.wangEditor
   var editor = new E('#contBox')
+
   let firstImg = ''
   const candidateImage = new Array()
   editor.customConfig.uploadImgServer = '/admin/upload'
@@ -125,6 +145,7 @@
     fail: function(xhr, editor, result) {},
   }
   editor.create()
+
 
   $("#candidate-image").on("mouseenter", ".outer", function() {
     let html = `<div class="set-first-btn"><button class="btn btn-success btn-xs set-first">设为封面</button></div>`
@@ -181,7 +202,8 @@
     if (content.length <= 0) {
       return false
     }
-    if (!firstImg) {
+    let firstImage = $('#first-image').attr('src');
+    if (!firstImage) {
       alert("未设置文章封面！！！")
       return false
     }
@@ -191,8 +213,8 @@
     submitData.append('id', id)
     submitData.append('title', articleTitle)
     submitData.append('type',type)
-    submitData.append('content', content)
-    submitData.append('firstImg', firstImg)
+    submitData.append('articleContent', content)
+    submitData.append('firstImg', firstImage)
     return submitData
   }
 
