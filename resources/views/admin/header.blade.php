@@ -14,7 +14,7 @@
                 <li @if($active == '/admin/roles/index') class="active dropdown" @else class="dropdown" @endif>
                     <a href="/admin/roles/index" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">权限管理 <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
+                        <li><a href="#">ACTION</a></li>
                         <li><a href="#">Another action</a></li>
                         <li><a href="#">Something else here</a></li>
                         <li role="separator" class="divider"></li>
@@ -26,7 +26,7 @@
                 <li @if($active == '/admin/options') class="active dropdown" @else class="dropdown" @endif>
                     <a href="/admin/options" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">常用功能 <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
+                        <li><a href="javascript:ajaxRequest('/admin/clear')">清除缓存</a></li>
                         <li><a href="#">Another action</a></li>
                         <li><a href="#">Something else here</a></li>
                         <li role="separator" class="divider"></li>

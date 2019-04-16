@@ -19,3 +19,9 @@ $("#login-form").submit(function(){
       return false;
   }
 });
+
+function ajaxRequest($url) {
+    $.getJSON($url,{},function(data) {
+        console.log(data)
+    });
+}

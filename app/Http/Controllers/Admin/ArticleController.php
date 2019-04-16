@@ -26,9 +26,9 @@ class ArticleController extends Controller
     }
 
     //创建文章表单
-    public function create()
+    public function create(Request $request)
     {
-        return view('admin/article');
+        return view('admin/article',['type'=>$request->type]);
     }
 
     // 更新文章

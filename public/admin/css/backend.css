@@ -6,6 +6,10 @@ a {
     color: #000000 !important;
 }
 
+.modal {
+    z-index: 100000;
+}
+
 .login-page {
     width: 100%;
     height: 100%;
@@ -251,6 +255,7 @@ section h4 {
     border-right: 1px solid #f1f1f1;
     height: 100%;
     float: left;
+    margin-top: 30px;
 }
 
 .article .contentPanel {
@@ -266,23 +271,29 @@ section h4 {
 .article .navPanel .article-type li {
     list-style: none;
     text-align: right;
-    padding: 10px 15px;
     margin-bottom: 5px;
     border-bottom: 1px solid #efefef;
     cursor: pointer;
     height: 49px;
-    position: relative;
 }
 
 .article .navPanel .article-type .bg {
-    position: absolute;
-    background: #FFF;
     width: 100%;
+}
+
+.article .navPanel .article-type .bg a {
+    display: block;
     height: 48px;
     line-height: 48px;
-    top: 0;
-    left: 0;
+    width: 100%;
+    color: #888888 !important;
     padding-right: 20px;
+    text-decoration: none;
+}
+
+.article .navPanel .article-type .bg .active {
+    background: #5cb85c;
+    color: #FFF !important;
 }
 
 .article .navPanel .article-type .radio {
@@ -350,6 +361,7 @@ section h4 {
     margin-top: 20px;
     padding-top: 20px;
     margin-bottom: 30px;
+    text-align: right;
 }
 
 .bottom-button button {

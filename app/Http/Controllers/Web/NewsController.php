@@ -15,11 +15,14 @@ class NewsController extends Controller
         return view('news',['listNews'=>$listNews]);
     }
 
-    public function newsItem(Request $request,int $id)
+    public function newsItem(int $id)
     {
         $news = News::find($id);
         $prev = News::where("id","<",$id)->select("id","news_title")->orderBy("id","asc")->first();
         $next = News::where("id",">",$id)->select("id","news_title")->orderBy("id","asc")->first();
-        return view('newsItem',['newsItem'=>$news,"prev"=>$prev,"next"=>$next]);
+        $html = view('newsItem',['newsItem'=>$news,"prev"=>$prev,"next"=>$next]);
+        //生成静态页面
+        toHtml('news',$id,$html);
+        return $html;
     }
 }

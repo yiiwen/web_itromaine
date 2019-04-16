@@ -1,5 +1,7 @@
 <?php
 use Illuminate\Http\Request;
+use App\Library\ShortUrl;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,12 +30,25 @@ Route::get('/cases',function(){
 });
 
 Route::get('/news','Web\NewsController@index');
-Route::get('/newsitem/{id}','Web\NewsController@newsItem');
+Route::get('/news/{id}','Web\NewsController@newsItem');
 
 Route::get('/link',function(Request $request){
     $message = $request->has('message') ? urldecode($request->message) : "";
     return view('link',['message'=>$message]);
 });
+
+//短链路由
+Route::get('/{short}', function(Request $request,$short) {
+    $longUrl = ShortUrl::getUrl($short);
+    $url = str_replace(env('APP_URL') . '/',"",$longUrl);
+    list($type,$fileName) = explode('/',$url);
+    $fileName = str_replace("id=","",$fileName);
+    $result = getHtml($type,$fileName);
+    if ($result) {
+        return $result;
+    }
+    return redirect($longUrl);
+})->where(['short'=>'[0-9A-Za-z]{6,7}']);
 
 Route::get('/cases/1',function(){
     return view('cases1');
@@ -213,6 +228,8 @@ Route::prefix('admin')->middleware(['checkLogin'])->group(function(){
 
     Route::get('index','Admin\IndexController@index');  //网站首页配置
     Route::post('config','Admin\IndexController@config');//配置网站选项
+
+    Route::get('clear','Admin\ConfigController@clear');  //清除静态页缓存
 
     //文件上传
     Route::post('upload',function(Illuminate\Http\Request $request){

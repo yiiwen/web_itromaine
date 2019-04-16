@@ -18,12 +18,12 @@ class News extends Model
         $news->sort = $sort;
         $news->news_status = $newsStatus;
         if (!$id) {
-            $shortUrl = "hello world";//Util::createShortUrl();
+            $shortUrl = Util::createShortUrl();
             $news->author_id = 1;
             $news->author_name = '油麦菜';
             $news->short_url = env('APP_URL') . '/' . $shortUrl;
             $news->save();
-            ShortUrl::pushUrl($shortUrl, env('APP_URL') . '/news/id=' . $news->id);
+            ShortUrl::pushUrl($shortUrl, env('APP_URL') . '/news/' . $news->id);
             return $news->id;
         }
         return $news->save();

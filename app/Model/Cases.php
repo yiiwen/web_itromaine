@@ -9,7 +9,7 @@ class Cases extends Model
 {
     protected $table = 'cases';
 
-    public function saveCases($title, $content, $firstImage, $sort, $caseStatus, $id = 0)
+    public function publish($title, $content, $firstImage, $sort, $caseStatus, $id = 0)
     {
         $case = $id ? self::find($id) : $this;
         $case->cases_title = $title;
@@ -23,7 +23,7 @@ class Cases extends Model
             $case->author_name = '油麦菜';
             $case->short_url = env('APP_URL') . '/' . $shortUrl;
             $case->save();
-            ShortUrl::pushUrl($shortUrl, env('APP_URL') . '/cases/id=' . $case->id);
+            ShortUrl::pushUrl($shortUrl, env('APP_URL') . '/cases//' . $case->id);
             return $case->id;
         }
         return $case->save();

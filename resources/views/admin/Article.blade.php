@@ -8,16 +8,16 @@
   <div class="navPanel">
     <ul class="article-type">
       <li class="news">
-        <div class="bg">新闻</div>
-        <div class="radio"><input type="radio" checked="true" name="article-type" value="news" hecked="true" /></div>
+        <div class="bg"><a href="/admin/article/create?type=news" data-type="news" @if($type == 'news') class="active" @endif>新闻</a></div>
+        <!-- <div class="radio"><input type="radio" name="article-type" value="news" @if($type == 'news') checked="true" @endif/></div> -->
       </li>
       <li class="cases">
-        <div class="bg">案例</div>
-        <div class="radio"><input type="radio" name="article-type" value="case" /></div>
+        <div class="bg"><a href="/admin/article/create?type=case" data-type="case" @if($type == 'case') class="active" @endif>案例</a></div>
+        <!-- <div class="radio"><input type="radio" name="article-type" value="case" @if($type == 'case') checked="true" @endif/></div> -->
       </li>
       <li class="solution">
-        <div class="bg">解决方案</div>
-        <div class="radio"><input type="radio" name="article-type" value="solution"/></div>
+        <div class="bg"><a href="/admin/article/create?type=solution" data-type="solution" @if($type == 'solution') class="active" @endif>解决方案</a></div>
+        <!-- <div class="radio"><input type="radio" name="article-type" value="solution" @if($type == 'solution') checked="true" @endif/></div> -->
       </li>
     </ul>
   </div>
@@ -36,7 +36,7 @@
     </div>
     <div class="article-image">
       <div class="first-image">
-        <input type="file" style="display:none;" id="first-image-input" name="first-image" />
+        <input type="file" style="display:none;" id="first-image-input" name="first-image" @if(isset($article)) data-value="{{$article->firstImage}}" @endif/>
         <img @if(isset($article)) src="{{$article->firstImage}}" @else src="/admin/images/pic.png" @endif id="first-image" alt="..." class="img-thumbnail" />
         <div id="uploadFirstImgBtn">
           <button onclick="document.getElementById('first-image-input').click()">设置封面</button>
@@ -90,18 +90,25 @@
     </div>
   </div>
 </div>
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" id="outModal" aria-labelledby="outModal">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        修改内容尚未保存，是否继续离开此页面
+      </div>
+      <div class="modal-body">
+        <button type="button" style="margin-left:110px !important;margin-right:10px;" class="btn btn-danger btn-sm delete-confirm">继续前往</button>
+        <button type="button" class="btn btn-default btn-sm delete-cannel">留在此页</button>
+      </div>
+    </div>
+  </div>
+</div>
 @endsection
 
 @section("script")
 <script src="/admin/js/wangEditor.min.js"></script>
 <script type="text/javascript">
-  function render() {
-    $(".article-type input[type=radio]").parents("li").find(".bg").css("background-color", "#FFF").css("color", "rgb(169,169,169)")
-    $(".article-type input[type=radio]:checked").parents("li").find(".bg").css("background-color", "#5cb85c").css("color", "#FFF")
-  }
-
   window.onload = function() {
-    render();
     let contentBox = $('#contBox').html();
     if (contentBox.length > 0) {
         let reg = /<img[A-Za-z0-9\*\s"'=]*src="[\S]+"/g
@@ -118,16 +125,9 @@
         }
     }
   }
-
-  $(".article-type .bg").click(function() {
-    $(this).parent().find(".radio").find("input").click()
-    render()
-    return false
-  });
   // 内容框
   var E = window.wangEditor
   var editor = new E('#contBox')
-
   let firstImg = ''
   const candidateImage = new Array()
   editor.customConfig.uploadImgServer = '/admin/upload'
@@ -146,6 +146,20 @@
   }
   editor.create()
 
+  $(".bg a").click(function () {
+    let href = $(this).attr("href");
+    if ($("#title").val().length > 0 || editor.txt.text().length > 0 || $("#first-image-input").val().length > 0) {
+      $("#outModal").modal('toggle')
+      $(".delete-confirm").click(function() {
+        window.location.href = href
+      })
+      $(".delete-cannel").click(function() {
+        $("#outModal").modal("hide")
+      })
+      return false;
+    }
+    return true;
+  })
 
   $("#candidate-image").on("mouseenter", ".outer", function() {
     let html = `<div class="set-first-btn"><button class="btn btn-success btn-xs set-first">设为封面</button></div>`
@@ -158,6 +172,7 @@
     let firstImageSrc = $(this).parents(".outer").find("img").attr("src")
     firstImg = firstImageSrc
     $("#first-image").attr("src", firstImageSrc)
+    $("#first-image-input").attr("data-value",firstImageSrc)
   })
   $("#first-image-input").change(function(e) {
     var file = e.target.files[0] || e.dataTransfer.files[0]
@@ -182,6 +197,7 @@
         mimeType: "multipart/form-data",
         success: function(data) {
           firstImg = data.data[0]
+          $("#first-image-input").attr("data-value",firstImg)
         },
         error: function(data) {}
       })
@@ -193,7 +209,7 @@
     let id = $("#article-id").val().trim() // id
     let articleTitle = $("#title").val().trim() // 标题
     let content = editor.txt.html().trim() // 内容
-    let type = $('input[name="article-type"]:checked').val();
+    let type = $(".bg").find('.active').attr("data-type");
     if (articleTitle.length <= 0) {
       $("#title").focus()
       $("#title").tooltip('show')
@@ -202,7 +218,7 @@
     if (content.length <= 0) {
       return false
     }
-    let firstImage = $('#first-image').attr('src');
+    let firstImage = $("#first-image-input").attr("data-value");
     if (!firstImage) {
       alert("未设置文章封面！！！")
       return false

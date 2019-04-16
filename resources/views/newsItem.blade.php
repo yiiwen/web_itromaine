@@ -14,11 +14,11 @@
         </div>
         <div class="news-bottom-nav">
         @if ($prev)
-        <p>上一篇:&nbsp;<a href="/newsitem/{{$prev->id}}">{{$prev->news_title}}</a></p>
+        <p>上一篇:&nbsp;<a href="/news/{{$prev->id}}">{{$prev->news_title}}</a></p>
         @endif
 
         @if ($next)
-        <p>下一篇:&nbsp;<a href="/newsitem/{{$next->id}}">{{$next->news_title}}</a></p>
+        <p>下一篇:&nbsp;<a href="/news/{{$next->id}}">{{$next->news_title}}</a></p>
         @endif
         </div>
     </div>
