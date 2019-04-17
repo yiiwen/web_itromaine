@@ -28,14 +28,14 @@ class ArticleController extends Controller
     //创建文章表单
     public function create(Request $request)
     {
-        return view('admin/article',['type'=>$request->type]);
+        return view('admin/article',['type'=>$request->type, 'ref'=>$request->ref]);
     }
 
     // 更新文章
     public function edit(Request $request)
     {
         $article = $this->model->getOne($request->id);
-        return view('admin/article', ['article'=> $article]);
+        return view('admin/article', ['article'=> $article, 'type'=>$request->type, 'ref'=>$request->ref]);
     }
 
     // 发表
@@ -44,14 +44,21 @@ class ArticleController extends Controller
         $id = $request->id;
         $result = $this->model->publish($request->title, $request->articleContent, $request->firstImg, $request->sort, 1, $id);
         if ($result) {
-            return ['error' => 'Normal', 'message' => $result];
+            return ['errno' => 200, 'error'=>''];
         } else {
-            return ['error' => 'update fail'];
+            return ['errno' => 5000, 'error'=>'update fail'];
         }
     }
 
     // 草稿箱
     public function drafts(Request $request)
     {
+        $id = $request->id;
+        $result = $this->model->publish($request->title, $request->articleContent, $request->firstImg, $request->sort, 2, $id);
+        if ($result) {
+            return ['errno' => 200, 'error'=>''];
+        } else {
+            return ['errno' => 5000, 'error'=>'update fail'];
+        }
     }
 }

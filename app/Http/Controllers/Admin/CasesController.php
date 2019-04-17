@@ -33,30 +33,11 @@ class CasesController extends Controller
         ]]);
     }
 
-    public function drafts(Request $request)
-    {
-        $id = $request->id ?: 0;
-        if (!$id) {
-            $cases = new Cases();
-            $id = $cases->saveCases($request->title, $request->content, $request->first_image, $request->sort, 0);
-            return ['errno' => 0, 'id' => $id];
-        }
-        $this->update(
-            $request->title,
-            $request->content,
-            $request->first_image,
-            $request->sort,
-            0,
-            $id
-        );
-        return ['errno' => 0, 'id' => $id];
-    }
-
     //草稿箱
     public function draftsList(Request $request)
     {
         $condition = $request->search;
-        $condition[] = ['cases_status', '=', '0'];
+        $condition[] = ['cases_status', '=', '2'];
         $condition[] = ['is_del', '=', '0'];
         $casesList = Cases::where($condition)->select(
             'id',
@@ -89,46 +70,6 @@ class CasesController extends Controller
             'cases_title' => $request->cases_title,
             'start_time' => $request->start_time, 'end_time' => $request->end_time
         ]]);
-    }
-
-    // 添加编辑
-    public function publish(Request $request)
-    {
-        $id = $request->id ?: 0;
-        if (!$id) {
-            $cases = new Cases();
-            $id = $cases->saveCases($request->title, $request->content, $request->first_image, $request->sort, 1);
-            return ['errno' => 0, 'id' => $id];
-        }
-        $this->update(
-            $request->title,
-            $request->content,
-            $request->first_image,
-            $request->sort,
-            1,
-            $id
-        );
-        return ['errno' => 0, 'id' => $id];
-    }
-
-    // 编辑
-    private function update($caseTitle, $casesContent, $firstImage, $sort, $caseStatus, $id)
-    {
-        $news = Cases::find($id);
-        $news->cases_title   = $caseTitle;
-        $news->cases_content = $casesContent;
-        $news->first_image  = $firstImage;
-        $news->cases_status = $caseStatus;
-        $news->sort = $sort;
-        $news->save();
-    }
-
-    //获取案例相信
-    public function getOne(Request $request)
-    {
-        $id = $request->id;
-        $caseInfo = Cases::find($id);
-        return $caseInfo;
     }
 
     //软删

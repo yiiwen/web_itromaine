@@ -23,6 +23,7 @@
   </div>
   <div class="contentPanel">
     <div id="id" class="form-group">
+      <input type="hidden" id="ref" value="{{$ref}}" />
       <input type="hidden" id="article-id" @isset($article) value="{{$article->id}}" @endisset>
     </div>
     <div class="form-group article-input">
@@ -235,10 +236,18 @@
   }
 
   $("#publish").click(function() {
+     sendData('/admin/article/publish')
+  })
+
+  $("#save").click(function () {
+    sendData('/admin/article/drafts')
+  })
+
+  function sendData(url) {
     let data = collectingData()
     if (data != false) {
       $.ajax({
-        url: '/admin/article/publish',
+        url: url,
         data: data,
         headers: {
           "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr('content')
@@ -247,10 +256,15 @@
         contentType: false,
         method: 'POST',
         dataType: 'JSON',
-        success: function(data, status) {},
+        success: function(data, status) {
+          if (data.errno == 200) {
+            let ref = $("#ref").val()
+            window.location.href = ref
+          }
+        },
         error: function(data) {}
       })
-    } 
-  })
+    }
+  }
 </script>
 @endsection("script")

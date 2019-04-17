@@ -6,8 +6,9 @@
 @section("content")
 <div class="container">
     <br>
-    <button type="button" class="btn btn-success" id="addNew" style="margin-right:20px;display:block;float:left;" data-toggle="modal" data-target="#publishCase">
-        <i class="glyphicon glyphicon-plus"></i> 新增案例</button>
+    <a class="btn btn-success" style="margin-right:20px;display:block;float:left;color: #FFF !important;"
+        href="/admin/article/create?type=case&ref={{urlencode(env('APP_URL') . '/admin/cases/index')}}"><i class="glyphicon glyphicon-plus"></i> 发布案例
+    </a>
     @includeIf('admin.components.casesMenu')
     <div style="clear:both;"></div>
     <br>
@@ -20,7 +21,7 @@
     <br>
     <br>
 
-    <table class="table table-bordered news-action-btn news-table">
+    <table class="table news-table">
         <thead>
             <tr>
                 <th style="width:55px;">#</th>
@@ -49,100 +50,6 @@
     </table>
     {{$list->links()}}
 
-    <!-- 添加Modal start -->
-    <div class="modal fade" id="publishCase" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">发布案例</h4>
-                </div>
-                <div class="modal-body">
-                    <div id="id" class="form-group">
-                        <input type="hidden" id="cases-id">
-                    </div>
-                    <div id="title" class="form-group">
-                        <label for="cases-title">案例标题</label>
-                        <input type="text" id="cases-title" data-toggle="tooltip" title="请输入文章标题" class="form-control">
-                    </div>
-                    <div id="cases-content" class="from-group">
-                        <label for="contBox">案例内容</label>
-                        <div id="contBox" data-toggle="tooltip" title="请输入文章内容"></div>
-                    </div>
-                    <br>
-                    <div class="from-group">
-                        <label>案例封面</label>
-                        <div class="article-image">
-                            <div class="first-image">
-                                <input type="file" style="display:none;" id="first-image-input" name="first-image" />
-                                <img src="/admin/images/pic.png" id="first-image" alt="..." class="img-thumbnail" />
-                                <div id="uploadFirstImgBtn">
-                                    <button onclick="document.getElementById('first-image-input').click()">上传图片</button>
-                                </div>
-                            </div>
-                            <div style="border:1px solid #CCC;border-radius:4px;width:560px;margin-left:210px;padding:10px;">
-                                <label for="">从文章中选取</label>
-                                <div>
-                                    <div class="candidate-image-div">
-                                        <div class="candidate-image" id="candidate-image">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="clear:both;"></div>
-                        </div>
-                    </div>
-                    <br>
-                    <div id="cases-title" class="form-group">
-                        <label for="cases-title">推广短链 （系统自动生成）</label>
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="推广短链" id="shortUrl" disabled aria-describedby="basic-addon2">
-                            <span class="input-group-addon" id="basic-addon2">复制</span>
-                        </div>
-                    </div>
-                    <div id="new-sort" class="form-group">
-                        <label for="news-content">文章排序</label>
-                        <div style="clear:both;"></div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="radio" value="1" name="article-sort" checked> 自然排序
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="radio" value="2" name="article-sort"> 始终第一
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="radio" value="3" name="article-sort"> 始终最后
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="radio" value="4" name="article-sort"> 置顶
-                            </label>
-                        </div>
-                        <div style="clear:both;"></div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal" id="close">取消</button>
-                    <button type="button" class="btn btn-primary" id="save">保存至草稿箱</button>
-                    <button type="button" class="btn btn-success" id="publish">发布</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- 添加Modal end -->
-
-    <!-- 图片查看模态框start -->
-    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" id="imageViewer" aria-labelledby="imageViewer">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content"></div>
-        </div>
-    </div>
-    <!-- 图片查看模态框end -->
     <!-- 列表删除对话框start -->
     <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" id="deleteModal" aria-labelledby="deleteModal">
         <div class="modal-dialog modal-sm" role="document">

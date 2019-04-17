@@ -32,7 +32,7 @@ class NewsController extends Controller
     public function draftsList(Request $request)
     {
         $condition = $request->search;
-        $condition[] = ['news_status', '=', '0'];
+        $condition[] = ['news_status', '=', '2'];
         $condition[] = ['is_del', '=', '0'];
         $newsList = News::where($condition)->select(
             'id',
@@ -66,68 +66,7 @@ class NewsController extends Controller
             'start_time' => $request->start_time, 'end_time' => $request->end_time
         ]]);
     }
-
-    public function publish(Request $request)
-    {
-        $id = $request->news_id ?: 0;
-        if (!$id) {
-                $news = new News();
-                $id = $news->saveNews(
-                    $request->news_title,
-                    $request->abstract,
-                    $request->news_content,
-                    $request->first_image,
-                    $request->sort,
-                    1
-                );
-                return ['errno' => 0, 'id' => $id];
-            }
-        $this->update(
-            $request->news_title,
-            $request->abstract,
-            $request->news_content,
-            $request->first_image,
-            $request->sort,
-            1,
-            $id
-        );
-        return ['errno' => 0, 'id' => $id];
-    }
-
-    public function drafts(Request $request)
-    {
-        $id = $request->news_id ?: 0;
-        if (!$id) {
-                $news = new News();
-                $id = $news->saveNews(
-                    $request->news_title,
-                    $request->abstract,
-                    $request->news_content,
-                    $request->first_image,
-                    $request->sort,
-                    0
-                );
-                return ['errno' => 0, 'id' => $id];
-            }
-        $this->update(
-            $request->news_title,
-            $request->abstract,
-            $request->news_content,
-            $request->first_image,
-            $request->sort,
-            0,
-            $id
-        );
-        return ['errno' => 0, 'id' => $id];
-    }
-
-    public function getOne(Request $request)
-    {
-        $id = $request->id;
-        $news = News::find($id);
-        return $news;
-    }
-
+    
     //软删
     public function delete(Request $request)
     {
@@ -161,15 +100,4 @@ class NewsController extends Controller
         return $result ? ['errno' => 0] : ['errno' => 5000];
     }
 
-    private function update($newsTitle, $newsAbstract, $newsContent, $firstImage, $sort, $newsStatus, $id)
-    {
-        $news = News::find($id);
-        $news->news_title   = $newsTitle;
-        $news->abstract = $newsAbstract;
-        $news->news_content = $newsContent;
-        $news->first_image  = $firstImage;
-        $news->news_status = $newsStatus;
-        $news->sort = $sort;
-        $news->save();
-    }
 }

@@ -5,7 +5,7 @@
     <div class="container">
         <br>
         <a class="btn btn-success" style="margin-right:20px;display:block;float:left;color: #FFF !important;"
-           href="/admin/article/create?type=news"><i class="glyphicon glyphicon-plus"></i> 发布新闻
+           href="/admin/article/create?type=news&ref={{urlencode(env('APP_URL') . '/admin/news/index')}}"><i class="glyphicon glyphicon-plus"></i> 发布新闻
         </a>
         @includeIf('admin.components.newMenu')
         <div style="clear:both;"></div>
@@ -19,7 +19,7 @@
         <br>
         <br>
 
-        <table class="table table-bordered news-action-btn news-table">
+        <table class="table news-table">
             <thead>
             <tr>
                 <th style="width:55px;">#</th>
@@ -41,7 +41,7 @@
                     <td>{{$news->updated_at}}</td>
                     <td>{{$news->created_at}}</td>
                     <td>
-                        <button class="btn btn-warning edit" data-id="{{$news->id}}">编辑</button>
+                        <a href="/admin/article/edit?type=news&id={{$news->id}}&ref={{urlencode(env('APP_URL') . '/admin/news/index')}}" class="btn btn-warning edit">编辑</a>
                         <button class="btn btn-danger delete" data-id="{{$news->id}}">删除</button>
                     </td>
                 </tr>

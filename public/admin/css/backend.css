@@ -97,6 +97,10 @@ a {
     line-height: 40px;
 }
 
+.news-table .edit {
+    color: #FFF !important;
+}
+
 .pagination>li>a, .pagination>li>span {
     background: none;
 }
